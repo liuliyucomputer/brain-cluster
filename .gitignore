@@ -1,4 +1,9 @@
-# === 运行时产物 (绝不上传) ===
+# ============================================================
+# Brain Cluster — .gitignore
+# 只追踪源码，忽略一切依赖、构建产物、运行时数据
+# ============================================================
+
+# === 运行时产物 ===
 output/logs/
 output/memory/
 output/reports/
@@ -6,43 +11,82 @@ output/artifacts/
 output/reviews/
 output/.letta/
 
-# === Grafana 二进制 (需单独下载) ===
+# === Grafana 二进制 ===
 grafana/grafana-v11.6.0/
 grafana/data/
 grafana/plugins/
 grafana/grafana.zip
 
-# === 全局忽略 ===
+# === Python ===
 __pycache__/
 *.pyc
 *.pyo
-*.swp
-*.log
-.DS_Store
-Thumbs.db
-.vscode/
-.idea/
-
-# === Python ===
+*.pyc
 *.egg-info/
 .venv/
 venv/
-**/__pycache__/
+*.egg
 
 # === Node.js ===
 node_modules/
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+.npm/
+.npmrc
+
+# === Build artifacts ===
 dist/
 build/
 .next/
-**/node_modules/
-**/dist/
+.nuxt/
+out/
+*.tsbuildinfo
 
-# === 大型资源文件 ===
+# === IDE / OS ===
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# === 大文件 / 二进制 ===
+*.zip
+*.tar.gz
+*.7z
+*.rar
+*.exe
+*.dll
+*.so
+*.dylib
+*.bin
+*.pth
+*.pt
+*.safetensors
+*.ckpt
+*.onnx
+
+# === 日志 ===
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# === 特定目录 ===
 eyes/MoneyPrinterTurbo/resource/
 eyes/presenton/servers/
 eyes/presenton/eng.traineddata
-**/.venv/
-**/package-lock.json
-
-# === Letta 运行时 ===
 letta/sync_*.json
+
+# === Coverage / Test ===
+coverage/
+.nyc_output/
+.pytest_cache/
+.cypress/
+
+# === Docker ===
+.docker/
+docker-compose.override.yml
