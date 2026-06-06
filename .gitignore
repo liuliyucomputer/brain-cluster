@@ -24,6 +24,23 @@ __pycache__/
 .DS_Store
 Thumbs.db
 
+# === Eyes 子项目 (各自独立 git, 本地参考) ===
+eyes/Anthropic-Cybersecurity-Skills/
+eyes/LongLive/
+eyes/MoneyPrinterTurbo/
+eyes/Understand-Anything/
+eyes/VoxCPM/
+eyes/andrej-karpathy-skills/
+eyes/codegraph/
+eyes/harness/
+eyes/open-notebook/
+eyes/plugins/
+eyes/presenton/
+eyes/supermemory/
+
+# === Letta 运行时数据 ===
+letta/sync_*.json
+
 # === IDE ===
 .vscode/
 .idea/
