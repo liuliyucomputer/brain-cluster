@@ -1,0 +1,34 @@
+# === 运行时产物 (绝不上传) ===
+output/logs/
+output/memory/
+output/reports/
+output/artifacts/
+output/reviews/
+output/.letta/
+
+# === 外部项目 (独立管理) ===
+grafana/grafana-v11.6.0/
+grafana/data/
+grafana/plugins/
+grafana/grafana.zip
+openclaw/
+hermes-agent/
+staroffice-ui/
+
+# === 临时文件 ===
+__pycache__/
+*.pyc
+*.pyo
+*.swp
+*.log
+.DS_Store
+Thumbs.db
+
+# === IDE ===
+.vscode/
+.idea/
+
+# === Python ===
+*.egg-info/
+.venv/
+venv/

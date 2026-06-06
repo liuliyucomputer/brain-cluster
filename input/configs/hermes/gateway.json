@@ -1,0 +1,39 @@
+{
+  "gateway": {
+    "mode": "local",
+    "port": 18789,
+    "bind": "loopback"
+  },
+  "auth": {
+    "profiles": {
+      "ccswitch:default": {
+        "provider": "openai",
+        "mode": "api_key",
+        "base_url": "https://tokenshengsheng.com/v1",
+        "api_key": "sk-xGSsFRUlKUXduzjnwPK4m9J7eNmmVTRwraXROi0dhPiRTvP8",
+        "default_model": "gpt-5.5",
+        "reasoning_effort": "high",
+        "wire_api": "responses"
+      }
+    }
+  },
+  "kanban": {
+    "db_path": "D:\\brain\\output\\memory\\kanban.db",
+    "dispatch_in_gateway": true,
+    "dispatch_interval_seconds": 60,
+    "max_in_progress": 10,
+    "failure_limit": 2,
+    "dispatch_stale_timeout_seconds": 14400
+  },
+  "profiles": {
+    "strategist": { "model": "gpt-5.5", "temperature": 0.7 },
+    "executor-a": { "model": "gpt-5.5", "temperature": 0.5 },
+    "executor-b": { "model": "gpt-5.5", "temperature": 0.5 },
+    "executor-c": { "model": "gpt-5.5", "temperature": 0.5 },
+    "monitor": { "model": "gpt-5.5", "temperature": 0.1 },
+    "reviewer-strict": { "model": "gpt-5.5", "temperature": 0.2 },
+    "reviewer-creative": { "model": "gpt-5.5", "temperature": 0.7 },
+    "arbiter": { "model": "gpt-5.5", "temperature": 0.4 },
+    "learner": { "model": "gpt-5.5", "temperature": 0.3 }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "title": "Brain Cluster 运维大屏",
+  "uid": "brain-main",
+  "panels": [
+    {
+      "type": "stat",
+      "title": "总任务",
+      "gridPos": {"x": 0, "y": 0, "w": 6, "h": 3},
+      "targets": [{"datasource": "Kanban DB", "rawSql": "SELECT COUNT(*) FROM tasks", "format": "table", "refId": "A"}],
+      "options": {"colorMode": "value", "graphMode": "area"}
+    },
+    {
+      "type": "stat",
+      "title": "已完成",
+      "gridPos": {"x": 6, "y": 0, "w": 6, "h": 3},
+      "targets": [{"datasource": "Kanban DB", "rawSql": "SELECT COUNT(*) FROM tasks WHERE status='done'", "format": "table", "refId": "A"}],
+      "options": {"colorMode": "value", "graphMode": "area"},
+      "fieldConfig": {"defaults": {"color": {"mode": "fixed", "fixedColor": "green"}}}
+    },
+    {
+      "type": "stat",
+      "title": "Agent数",
+      "gridPos": {"x": 12, "y": 0, "w": 6, "h": 3},
+      "targets": [{"datasource": "Kanban DB", "rawSql": "SELECT COUNT(DISTINCT assignee) FROM tasks WHERE assignee IS NOT NULL", "format": "table", "refId": "A"}],
+      "options": {"colorMode": "value"}
+    },
+    {
+      "type": "stat",
+      "title": "阻塞",
+      "gridPos": {"x": 18, "y": 0, "w": 6, "h": 3},
+      "targets": [{"datasource": "Kanban DB", "rawSql": "SELECT COUNT(*) FROM tasks WHERE status='blocked'", "format": "table", "refId": "A"}],
+      "options": {"colorMode": "value"},
+      "fieldConfig": {"defaults": {"color": {"mode": "fixed", "fixedColor": "red"}}}
+    },
+    {
+      "type": "table",
+      "title": "Agent 任务分布",
+      "gridPos": {"x": 0, "y": 3, "w": 12, "h": 6},
+      "targets": [{"datasource": "Kanban DB", "rawSql": "SELECT assignee as Agent, COUNT(*) as Tasks FROM tasks WHERE assignee IS NOT NULL GROUP BY assignee ORDER BY Tasks DESC", "format": "table", "refId": "A"}]
+    },
+    {
+      "type": "table",
+      "title": "最近15条记录",
+      "gridPos": {"x": 12, "y": 3, "w": 12, "h": 6},
+      "targets": [{"datasource": "Kanban DB", "rawSql": "SELECT title, assignee, status FROM tasks ORDER BY rowid DESC LIMIT 15", "format": "table", "refId": "A"}]
+    },
+    {
+      "type": "text",
+      "title": "系统信息",
+      "gridPos": {"x": 0, "y": 9, "w": 24, "h": 4},
+      "options": {
+        "mode": "html",
+        "content": "<h3>Brain Cluster v1.0.5 | 服务状态</h3><p>Gateway :18789 | StarOfficeUI <a href='http://localhost:18791/dashboard'>:18791/dashboard</a> | Grafana :3001 | Stats API :19999 | GPT-5.5 tokenshengsheng.com/v1 | SiliconFlow api.siliconflow.cn/v1</p>"
+      }
+    }
+  ],
+  "editable": true,
+  "schemaVersion": 39,
+  "version": 3,
+  "time": {"from": "now-7d", "to": "now"},
+  "refresh": "10s"
+}

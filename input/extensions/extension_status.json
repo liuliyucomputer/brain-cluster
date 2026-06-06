@@ -1,0 +1,100 @@
+{
+  "updated": "2026-06-06T19:01:21.358708",
+  "lines": {
+    "skills": {
+      "name": "CodeBuddy Skills (6)",
+      "integrated": true,
+      "tools": [
+        "github_batch",
+        "financial_analyze",
+        "ppt_generate",
+        "resume_screen",
+        "work_report",
+        "xhs_create_note"
+      ],
+      "verified": true
+    },
+    "publisher": {
+      "name": "Publisher Pipeline",
+      "integrated": true,
+      "tools": [
+        "publish_xiaohongshu"
+      ],
+      "verified": true
+    },
+    "connectors": {
+      "name": "21 Connectors",
+      "integrated": true,
+      "tools": [
+        "wecom",
+        "feishu",
+        "dingtalk",
+        "qq-mail",
+        "netease-mail",
+        "tencent-docs",
+        "kdocs",
+        "tencent-survey",
+        "tencent-weiyun",
+        "tmeet",
+        "github",
+        "gongfeng-woa",
+        "cnb-api",
+        "cnb-woa",
+        "zhiyan-cicd",
+        "tapd",
+        "tapd-woa",
+        "lexiang",
+        "iwiki-woa",
+        "km",
+        "ima-mcp",
+        "tyc-mcp",
+        "qcc-company",
+        "neo-crm",
+        "ctrip-wendao",
+        "pkulaw",
+        "tdx-connector",
+        "baidu-netdisk",
+        "edgeone-pages",
+        "fbs-connector",
+        "notion",
+        "tencent-qidian-cs"
+      ],
+      "verified": true
+    },
+    "agentteam": {
+      "name": "AgentTeam 12 Roles",
+      "integrated": true,
+      "tools": [
+        "expert-coordinator",
+        "hierarchy-delegator",
+        "strategic-planner",
+        "swarm-coordinator",
+        "pipeline-orchestrator",
+        "observer-monitor",
+        "consensus-builder",
+        "feedback-collector",
+        "knowledge-synthesizer",
+        "task-router",
+        "quality-gate",
+        "incident-responder"
+      ],
+      "verified": true
+    },
+    "codewhale": {
+      "name": "codeWhale Executor",
+      "integrated": true,
+      "tools": [
+        "codewhale-executor"
+      ],
+      "verified": true
+    },
+    "finance": {
+      "name": "Finance Automation",
+      "integrated": true,
+      "tools": [
+        "finance-analyzer"
+      ],
+      "verified": true
+    }
+  }
+}

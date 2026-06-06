@@ -1,0 +1,15 @@
+{
+  "provider": "ccswitch",
+  "base_url": "https://tokenshengsheng.com/v1",
+  "api_key": "sk-xGSsFRUlKUXduzjnwPK4m9J7eNmmVTRwraXROi0dhPiRTvP8",
+  "default_model": "gpt-5.5",
+  "reasoning_effort": "high",
+  "wire_api": "responses",
+  "timeout_seconds": 300,
+  "max_retries": 3,
+  "model_routing": {
+    "heavy_reasoning": "gpt-5.5",
+    "light_tasks": "gpt-4o-mini",
+    "code_execution": "codex"
+  }
+}
