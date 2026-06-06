@@ -1,0 +1,77 @@
+{
+  "name": "cursor-plugins",
+  "owner": {
+    "name": "Cursor",
+    "email": "plugins@cursor.com"
+  },
+  "metadata": {
+    "description": "Official Cursor plugin marketplace: developer tools, framework rules, MCP integrations, and agent skills"
+  },
+  "plugins": [
+    {
+      "name": "teaching",
+      "source": "teaching",
+      "description": "Skill mapping, practice plans, and learning retrospectives."
+    },
+    {
+      "name": "continual-learning",
+      "source": "continual-learning",
+      "description": "Incremental transcript-driven memory updates for AGENTS.md using high-signal bullet points only."
+    },
+    {
+      "name": "cursor-team-kit",
+      "source": "cursor-team-kit",
+      "description": "Internal team workflows used by Cursor developers for CI, code review, shipping, local automation, and verification."
+    },
+    {
+      "name": "thermos",
+      "source": "thermos",
+      "description": "Thermo-nuclear branch review: deep security/correctness audits, harsh code-quality rubrics, parallel subagents, thermos orchestration, and optional merge-ready PR flows."
+    },
+    {
+      "name": "create-plugin",
+      "source": "create-plugin",
+      "description": "Scaffold and validate new Cursor plugins."
+    },
+    {
+      "name": "ralph-loop",
+      "source": "ralph-loop",
+      "description": "Iterative self-referential AI loops using the Ralph Wiggum technique."
+    },
+    {
+      "name": "agent-compatibility",
+      "source": "agent-compatibility",
+      "description": "CLI-backed repo compatibility scans plus Cursor agents that audit startup, validation, and docs against reality."
+    },
+    {
+      "name": "cli-for-agent",
+      "source": "cli-for-agent",
+      "description": "Patterns for designing CLIs that coding agents can run reliably: flags, help with examples, pipelines, errors, idempotency, dry-run."
+    },
+    {
+      "name": "pr-review-canvas",
+      "source": "pr-review-canvas",
+      "description": "Render PR diffs as interactive Cursor Canvases organized for reviewer comprehension — groups changes by importance, separates boilerplate from core logic, and highlights tricky or unexpected code."
+    },
+    {
+      "name": "docs-canvas",
+      "source": "docs-canvas",
+      "description": "Render documentation — architecture notes, API references, runbooks, and codebase walkthroughs — as a navigable Cursor Canvas with sections, table of contents, diagrams, and cross-references."
+    },
+    {
+      "name": "cursor-sdk",
+      "source": "cursor-sdk",
+      "description": "Build apps, scripts, CI pipelines, and automations on top of the Cursor TypeScript SDK (@cursor/sdk) — runtime selection, auth, streaming, MCP, error handling, and ready-to-extend integration patterns."
+    },
+    {
+      "name": "orchestrate",
+      "source": "orchestrate",
+      "description": "Fan large tasks out across parallel Cursor cloud agents with planners, workers, verifiers, and structured handoffs."
+    },
+    {
+      "name": "pstack",
+      "source": "pstack",
+      "description": "if you want to go fast, go deep first. pstack helps you write less, but higher quality code. rigorous agent workflows you can parallelize with confidence."
+    }
+  ]
+}
