@@ -27,7 +27,6 @@ Thumbs.db
 # === Eyes 子项目 (各自独立 git, 本地参考) ===
 eyes/Anthropic-Cybersecurity-Skills/
 eyes/LongLive/
-eyes/MoneyPrinterTurbo/
 eyes/Understand-Anything/
 eyes/VoxCPM/
 eyes/andrej-karpathy-skills/
@@ -35,8 +34,17 @@ eyes/codegraph/
 eyes/harness/
 eyes/open-notebook/
 eyes/plugins/
-eyes/presenton/
 eyes/supermemory/
+
+# === Eyes 纳入追踪的子项目 (排除大型资源) ===
+# MoneyPrinterTurbo 源码
+eyes/MoneyPrinterTurbo/resource/
+# presenton 源码
+eyes/presenton/servers/
+eyes/presenton/eng.traineddata
+
+# === 依赖锁文件 (非源码改动) ===
+**/package-lock.json
 
 # === Letta 运行时数据 ===
 letta/sync_*.json
