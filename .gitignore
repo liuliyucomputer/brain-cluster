@@ -6,16 +6,13 @@ output/artifacts/
 output/reviews/
 output/.letta/
 
-# === 外部项目 (独立管理) ===
+# === Grafana 二进制 (需单独下载) ===
 grafana/grafana-v11.6.0/
 grafana/data/
 grafana/plugins/
 grafana/grafana.zip
-openclaw/
-hermes-agent/
-staroffice-ui/
 
-# === 临时文件 ===
+# === 全局忽略 ===
 __pycache__/
 *.pyc
 *.pyo
@@ -23,33 +20,6 @@ __pycache__/
 *.log
 .DS_Store
 Thumbs.db
-
-# === Eyes 子项目 (各自独立 git, 本地参考) ===
-eyes/Anthropic-Cybersecurity-Skills/
-eyes/LongLive/
-eyes/Understand-Anything/
-eyes/VoxCPM/
-eyes/andrej-karpathy-skills/
-eyes/codegraph/
-eyes/harness/
-eyes/open-notebook/
-eyes/plugins/
-eyes/supermemory/
-
-# === Eyes 纳入追踪的子项目 (排除大型资源) ===
-# MoneyPrinterTurbo 源码
-eyes/MoneyPrinterTurbo/resource/
-# presenton 源码
-eyes/presenton/servers/
-eyes/presenton/eng.traineddata
-
-# === 依赖锁文件 (非源码改动) ===
-**/package-lock.json
-
-# === Letta 运行时数据 ===
-letta/sync_*.json
-
-# === IDE ===
 .vscode/
 .idea/
 
@@ -57,3 +27,22 @@ letta/sync_*.json
 *.egg-info/
 .venv/
 venv/
+**/__pycache__/
+
+# === Node.js ===
+node_modules/
+dist/
+build/
+.next/
+**/node_modules/
+**/dist/
+
+# === 大型资源文件 ===
+eyes/MoneyPrinterTurbo/resource/
+eyes/presenton/servers/
+eyes/presenton/eng.traineddata
+**/.venv/
+**/package-lock.json
+
+# === Letta 运行时 ===
+letta/sync_*.json

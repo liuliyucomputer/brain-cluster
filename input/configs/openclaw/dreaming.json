@@ -1,0 +1,38 @@
+{
+  "dreaming": {
+    "enabled": true,
+    "stages": [
+      {
+        "name": "short_term",
+        "interval_hours": 4,
+        "description": "压缩最近4小时的任务日志为结构化摘要",
+        "input": "D:\\brain\\output\\memory\\daily\\",
+        "output": "D:\\brain\\output\\memory\\weekly\\"
+      },
+      {
+        "name": "medium_term",
+        "interval_hours": 24,
+        "description": "每日深度蒸馏，更新策略库和Agent信誉分",
+        "input": "D:\\brain\\output\\memory\\weekly\\",
+        "output": "D:\\brain\\output\\memory\\monthly\\"
+      },
+      {
+        "name": "long_term",
+        "interval_hours": 168,
+        "description": "每周重构知识库，淘汰低效策略，固化最优方案",
+        "input": "D:\\brain\\output\\memory\\monthly\\",
+        "output": "D:\\brain\\output\\memory\\vector\\"
+      }
+    ],
+    "knowledge_base": {
+      "strategy_library": "D:\\brain\\output\\memory\\monthly\\strategies.json",
+      "reputation_scores": "D:\\brain\\output\\memory\\monthly\\reputation.json",
+      "ab_results": "D:\\brain\\output\\memory\\monthly\\ab_results.json"
+    }
+  },
+  "letta_integration": {
+    "lettadb_path": "D:\\brain\\letta\\letta.db",
+    "sync_interval_minutes": 30,
+    "description": "Dreaming压缩产物自动同步到Letta的归档记忆区"
+  }
+}
