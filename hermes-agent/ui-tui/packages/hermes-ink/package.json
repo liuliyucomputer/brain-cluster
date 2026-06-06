@@ -28,6 +28,7 @@
   },
   "dependencies": {
     "@alcalzone/ansi-tokenize": "^0.1.0",
+    "@hermes/ink": "file:",
     "auto-bind": "^5.0.0",
     "bidi-js": "^1.0.0",
     "chalk": "^5.4.0",

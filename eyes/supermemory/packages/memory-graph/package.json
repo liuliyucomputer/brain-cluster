@@ -49,6 +49,7 @@
     "react-dom": ">=18.0.0"
   },
   "dependencies": {
+    "@supermemory/memory-graph": "file:",
     "d3-force": "^3.0.0"
   },
   "devDependencies": {

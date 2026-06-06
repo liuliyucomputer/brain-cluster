@@ -2,7 +2,10 @@
   "name": "supermemory-mcp",
   "version": "4.0.0",
   "type": "module",
-  "portless": { "name": "mcp.dev.supermemory", "script": "dev:app" },
+  "portless": {
+    "name": "mcp.dev.supermemory",
+    "script": "dev:app"
+  },
   "scripts": {
     "build:ui": "vite build",
     "dev": "portless",
@@ -18,6 +21,7 @@
     "hono": "^4.11.1",
     "posthog-node": "^5.18.0",
     "supermemory": "^4.0.0",
+    "supermemory-mcp": "file:",
     "zod": "^3.25.76"
   },
   "devDependencies": {

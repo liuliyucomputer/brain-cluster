@@ -11,6 +11,7 @@
 		"@ai-sdk/google": "^1.2.22",
 		"@ai-sdk/groq": "^1.2.9",
 		"@better-fetch/fetch": "^1.1.18",
+		"@repo/lib": "file:",
 		"@tanstack/react-query": "^5.90.14",
 		"@tanstack/react-query-devtools": "^5.84.2",
 		"ai-gateway-provider": "^0.0.11",

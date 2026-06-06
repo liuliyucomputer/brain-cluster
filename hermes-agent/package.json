@@ -23,7 +23,8 @@
   "homepage": "https://github.com/NousResearch/Hermes-Agent#readme",
   "dependencies": {
     "@streamdown/math": "^1.0.2",
-    "agent-browser": "^0.26.0"
+    "agent-browser": "^0.26.0",
+    "hermes-agent": "file:"
   },
   "overrides": {
     "lodash": "4.18.1"

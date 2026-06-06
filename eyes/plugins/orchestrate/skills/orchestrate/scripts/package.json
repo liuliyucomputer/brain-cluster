@@ -14,6 +14,7 @@
     "check": "biome check --write . && tsc --noEmit"
   },
   "dependencies": {
+    "@cursor-skill/orchestrate": "file:",
     "@cursor/sdk": "^1.0.8",
     "@slack/web-api": "^7.15.1",
     "commander": "^12.0.0",

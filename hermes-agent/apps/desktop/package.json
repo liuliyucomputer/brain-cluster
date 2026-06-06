@@ -74,6 +74,7 @@
     "cmdk": "^1.1.1",
     "hast-util-from-html-isomorphic": "^2.0.0",
     "hast-util-to-text": "^4.0.2",
+    "hermes": "file:",
     "ignore": "^7.0.5",
     "katex": "^0.16.45",
     "leva": "^0.10.1",

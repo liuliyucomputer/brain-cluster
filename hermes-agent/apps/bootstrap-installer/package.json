@@ -14,9 +14,10 @@
     "tauri:build:debug": "tauri build --debug"
   },
   "dependencies": {
+    "@hermes/bootstrap-installer": "file:",
     "@nous-research/ui": "0.16.0",
-    "@tailwindcss/vite": "^4.2.1",
     "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.2.1",
     "@tauri-apps/api": "^2.0.0",
     "@tauri-apps/plugin-dialog": "^2.0.0",
     "@tauri-apps/plugin-opener": "^2.0.0",

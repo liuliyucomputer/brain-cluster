@@ -20,6 +20,7 @@
 		"posthog-js": "^1.261.7",
 		"react": "19.2.2",
 		"react-dom": "19.2.2",
+		"supermemory-browser-extension": "file:",
 		"tailwindcss": "^4.1.12",
 		"turndown": "^7.1.3"
 	},
