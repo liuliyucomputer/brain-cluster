@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Brain Cluster Dashboard</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Microsoft YaHei', sans-serif; background: #0d1117; color: #c9d1d9; padding: 24px; }
+  h1 { font-size: 24px; margin-bottom: 24px; color: #58a6ff; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+  .card { background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 20px; }
+  .card h2 { font-size: 14px; color: #8b949e; text-transform: uppercase; margin-bottom: 12px; }
+  .stat { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #21262d; }
+  .stat:last-child { border-bottom: none; }
+  .stat .label { color: #8b949e; }
+  .stat .value { font-weight: bold; font-size: 18px; }
+  .pass { color: #3fb950; }
+  .warn { color: #d2991d; }
+  .fail { color: #f85149; }
+  .info { color: #58a6ff; }
+  .bar { display: flex; height: 6px; border-radius: 3px; overflow: hidden; margin-top: 8px; }
+  .bar div { transition: width 0.3s; }
+  .bar .done { background: #3fb950; }
+  .bar .run { background: #58a6ff; }
+  .bar .block { background: #f85149; }
+  .bar .other { background: #30363d; }
+  .service-row { display: flex; justify-content: space-between; padding: 4px 0; font-size: 13px; }
+  .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; }
+  .dot.online { background: #3fb950; }
+  .dot.offline { background: #f85149; }
+  #refresh { font-size: 11px; color: #8b949e; text-align: right; margin-top: 16px; }
+  table { width: 100%; font-size: 13px; border-collapse: collapse; }
+  th, td { text-align: left; padding: 6px 8px; border-bottom: 1px solid #21262d; }
+  th { color: #8b949e; font-weight: normal; }
+</style>
+</head>
+<body>
+<h1>Brain Cluster Dashboard</h1>
+<div class="grid" id="dash"></div>
+<div id="refresh"></div>
+<script>
+async function render() {
+  let stats = {};
+  try {
+    const r = await fetch('/api/stats');
+    stats = await r.json();
+  } catch(e) {}
+
+  // Services (from server-side checks)
+  const svc = stats.services || {};
+  let servicesHtml = '<div class="card"><h2>SERVICES</h2>';
+  const svcList = ['StarOfficeUI','Grafana','Gateway','Dashboard','StatsAPI'];
+  for (let name of svcList) {
+    let ok = svc[name] || false;
+    servicesHtml += '<div class="service-row"><span><span class="dot '+ (ok?'online':'offline') +'"></span>'+name+'</span><span class="'+ (ok?'pass':'fail') +'">'+ (ok?'online':'off') +'</span></div>';
+  }
+  servicesHtml += '</div>';
+
+  // Kanban
+  const ks = stats.kanban?.by_status || {};
+  const ka = stats.kanban?.by_agent || {};
+  const total = Object.values(ks).reduce((a,b)=>a+Number(b), 0);
+  let kanbanHtml = '<div class="card"><h2>KANBAN</h2>';
+  kanbanHtml += '<div class="stat"><span class="label">Total</span><span class="value info">'+total+'</span></div>';
+  kanbanHtml += '<div class="stat"><span class="label">Done</span><span class="value pass">'+(ks.done||0)+'</span></div>';
+  kanbanHtml += '<div class="stat"><span class="label">Archived</span><span class="value info">'+(ks.archived||0)+'</span></div>';
+  kanbanHtml += '<div class="bar"><div class="done" style="width:'+(total?((ks.done||0)/total*100):0)+'%"></div><div class="other" style="flex:1"></div></div>';
+  kanbanHtml += '</div>';
+
+  // Agents
+  let agentHtml = '<div class="card"><h2>AGENTS</h2><table><tr><th>Agent</th><th>Tasks</th></tr>';
+  for (let a of ['strategist','executor-a','executor-b','executor-c','monitor','reviewer-strict','reviewer-creative','arbiter','learner']) {
+    let c = ka[a]||0;
+    agentHtml += '<tr><td>'+a+'</td><td class="'+(c?'pass':'warn')+'">'+c+'</td></tr>';
+  }
+  agentHtml += '</table></div>';
+
+  // Learning
+  let learnHtml = '<div class="card"><h2>LEARNING</h2>';
+  learnHtml += '<div class="stat"><span class="label">Letta syncs</span><span class="value info">'+(stats.letta_sync_files||0)+'</span></div>';
+  learnHtml += '<div class="stat"><span class="label">Total tasks</span><span class="value">'+total+'</span></div>';
+  learnHtml += '</div>';
+
+  // Memory
+  let memHtml = '<div class="card"><h2>MEMORY</h2>';
+  memHtml += '<div class="stat"><span class="label">Layers</span><span class="value info">4</span></div>';
+  memHtml += '<div class="stat"><span class="label">Daily</span><span class="value pass">active</span></div>';
+  memHtml += '<div class="stat"><span class="label">Monthly</span><span class="value pass">active</span></div>';
+  memHtml += '</div>';
+
+  // Extensions
+  let extHtml = '<div class="card"><h2>EXTENSIONS</h2>';
+  for (let [e,s] of Object.entries({AgentTeam:'guide',Skills:'guide',Publisher:'ready',Connectors:'pending',CodeWhale:'guide',Finance:'guide'})) {
+    extHtml += '<div class="stat"><span class="label">'+e+'</span><span class="value '+ (s==='ready'?'pass':'warn') +'">'+s+'</span></div>';
+  }
+  extHtml += '</div>';
+
+  document.getElementById('dash').innerHTML = servicesHtml + kanbanHtml + agentHtml + learnHtml + memHtml + extHtml;
+  document.getElementById('refresh').textContent = 'Updated: '+new Date().toLocaleTimeString()+' | Auto: 5s';
+}
+render();
+setInterval(render, 5000);
+</script>
+</body>
+</html>
