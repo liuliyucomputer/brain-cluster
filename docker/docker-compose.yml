@@ -1,0 +1,59 @@
+version: "3.8"
+
+services:
+  # ===== StarOfficeUI 后端 (监控 API) =====
+  staroffice-backend:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: brain-staroffice
+    ports:
+      - "18791:18791"
+    environment:
+      - KANBAN_DB=/app/data/kanban.db
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - PYTHONIOENCODING=utf-8
+      - TZ=Asia/Shanghai
+    volumes:
+      - ../output/memory:/app/output/memory
+      - brain_data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:18791/api/monitor"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # ===== Frontend Dev Server (optional) =====
+  # staroffice-frontend:
+  #   build:
+  #     context: ..
+  #     dockerfile: docker/Dockerfile.frontend
+  #   container_name: brain-frontend
+  #   ports:
+  #     - "5173:5173"
+  #   depends_on:
+  #     - staroffice-backend
+  #   restart: unless-stopped
+
+  # ===== Nginx (Production SPA + API Proxy) =====
+  nginx:
+    image: nginx:alpine
+    container_name: brain-nginx
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ../staroffice-ui/frontend-v2/dist:/usr/share/nginx/html:ro
+    depends_on:
+      - staroffice-backend
+    restart: unless-stopped
+
+volumes:
+  brain_data:
+    driver: local
+
+networks:
+  default:
+    name: brain-cluster-net

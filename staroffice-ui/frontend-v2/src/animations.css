@@ -1,0 +1,62 @@
+/* ============================================================
+   Brain Cluster — Flow Animations ("血脉流动")
+   ============================================================ */
+
+/* Heartbeat pulse */
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  14% { transform: scale(1.15); opacity: 0.9; }
+  28% { transform: scale(1); opacity: 1; }
+  42% { transform: scale(1.1); opacity: 0.9; }
+  56% { transform: scale(1); opacity: 1; }
+}
+
+/* Blood flow — horizontal particle */
+@keyframes flow-right {
+  0% { left: -10%; opacity: 0; }
+  20% { opacity: 0.6; }
+  80% { opacity: 0.6; }
+  100% { left: 105%; opacity: 0; }
+}
+
+@keyframes flow-left {
+  0% { right: -10%; opacity: 0; }
+  20% { opacity: 0.6; }
+  80% { opacity: 0.6; }
+  100% { right: 105%; opacity: 0; }
+}
+
+@keyframes flow-down {
+  0% { top: -10%; opacity: 0; }
+  20% { opacity: 0.6; }
+  80% { opacity: 0.6; }
+  100% { top: 105%; opacity: 0; }
+}
+
+/* Depth card stacking */
+.card-depth { transition: all 0.3s ease; }
+.card-depth:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.06);
+}
+
+/* Flow connector pulse */
+.flow-connector {
+  position: relative;
+  overflow: hidden;
+}
+.flow-connector::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.6), transparent);
+  animation: flow-right 3s ease-in-out infinite;
+}
+
+/* Breathe glow for active stages */
+.active-stage-glow {
+  box-shadow: 0 0 20px rgba(99,102,241,0.2), 0 0 4px rgba(99,102,241,0.4);
+}
