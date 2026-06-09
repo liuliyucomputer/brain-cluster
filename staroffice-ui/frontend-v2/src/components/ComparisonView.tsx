@@ -10,11 +10,11 @@ interface Props {
 
 function DiffBadge({ cur, prev }: { cur: number; prev: number }) {
   const diff = cur - prev
-  if (diff === 0) return <span className="text-2xs text-text-tertiary">{'\u2194'} 0</span>
+  if (diff === 0) return <span className="text-2xs text-text-tertiary">{'↔'} 0</span>
   const up = diff > 0
   return (
     <span className={`text-2xs font-semibold ${up ? 'text-success' : 'text-danger'}`}>
-      {up ? '\u2191' : '\u2193'} {Math.abs(diff)}
+      {up ? '↑' : '↓'} {Math.abs(diff)}
     </span>
   )
 }

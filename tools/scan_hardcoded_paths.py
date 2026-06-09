@@ -23,7 +23,7 @@ for root, dirs, files in os.walk('D:/brain'):
                     # 排除已经是相对/变量路径的
                     if len(path) > 6:
                         results.append((fpath.replace('D:\\brain\\', ''), i, path[:130]))
-        except:
+except Exception:
             pass
 
 # 按盘符分组

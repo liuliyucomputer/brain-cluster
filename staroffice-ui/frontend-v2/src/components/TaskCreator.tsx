@@ -31,13 +31,13 @@ export function TaskCreator() {
       })
       const d = await r.json()
       if (d.ok) {
-        setResult(`\u2713 已创建: ${d.task_id} \u2192 ${d.assignee}`)
+        setResult(`✓ 已创建: ${d.task_id} → ${d.assignee}`)
         setTitle(''); setBody('')
       } else {
-        setResult(`\u2717 ${d.msg}`)
+        setResult(`✗ ${d.msg}`)
       }
     } catch {
-      setResult('\u2717 网络错误')
+      setResult('✗ 网络错误')
     }
     setSending(false)
   }
@@ -83,7 +83,7 @@ export function TaskCreator() {
         />
 
         {result && (
-          <div className={`text-2xs px-2 py-1.5 rounded ${result.startsWith('\u2713') ? 'bg-success/10 text-success' : 'bg-danger/10 text-danger'}`}>
+          <div className={`text-2xs px-2 py-1.5 rounded ${result.startsWith('✓') ? 'bg-success/10 text-success' : 'bg-danger/10 text-danger'}`}>
             {result}
           </div>
         )}

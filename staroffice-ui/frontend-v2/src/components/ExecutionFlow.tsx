@@ -7,18 +7,18 @@ interface StageConfig {
 }
 
 const STAGES: StageConfig[] = [
-  { key: 'trigger',  num: 1, zh: '触发入队', en: 'TRIGGER',  color: '#6366f1', desc: '用户CLI / Cron \u2192 Kanban DB' },
-  { key: 'dispatch', num: 2, zh: '状态调度', en: 'DISPATCH',  color: '#3b82f6', desc: 'Gateway 60s轮询 \u2192 启动Agent' },
-  { key: 'strategy', num: 3, zh: '智能路由', en: 'STRATEGY',  color: '#f59e0b', desc: 'Strategist 任务分解 \u2192 分配' },
+  { key: 'trigger',  num: 1, zh: '触发入队', en: 'TRIGGER',  color: '#6366f1', desc: '用户CLI / Cron → Kanban DB' },
+  { key: 'dispatch', num: 2, zh: '状态调度', en: 'DISPATCH',  color: '#3b82f6', desc: 'Gateway 60s轮询 → 启动Agent' },
+  { key: 'strategy', num: 3, zh: '智能路由', en: 'STRATEGY',  color: '#f59e0b', desc: 'Strategist 任务分解 → 分配' },
   { key: 'execute',  num: 4, zh: '并行执行', en: 'EXECUTE',   color: '#10b981', desc: 'A/B/C 三路并行创作' },
-  { key: 'review',   num: 5, zh: '双审仲裁', en: 'REVIEW',    color: '#a855f7', desc: '双审 \u2192 三路分支 \u2192 仲裁' },
-  { key: 'memory',   num: 6, zh: '记忆沉淀', en: 'MEMORY',    color: '#22d3ee', desc: '蒸馏 \u2192 固化 \u2192 长期知识' },
+  { key: 'review',   num: 5, zh: '双审仲裁', en: 'REVIEW',    color: '#a855f7', desc: '双审 → 三路分支 → 仲裁' },
+  { key: 'memory',   num: 6, zh: '记忆沉淀', en: 'MEMORY',    color: '#22d3ee', desc: '蒸馏 → 固化 → 长期知识' },
 ]
 
 const MODULES = [
   { name: 'execution_flow.py',     role: '策略路由+双审判定', status: 'ready' as const },
   { name: 'pipeline_orchestrator.py', role: '30秒后台守护',   status: 'ready' as const },
-  { name: 'memory_bridge.py',      role: 'kanban\u2192日志同步',status: 'ready' as const },
+  { name: 'memory_bridge.py',      role: 'kanban→日志同步',status: 'ready' as const },
   { name: 'memory_engine.py',      role: 'Letta记忆CRUD',     status: 'ready' as const },
   { name: 'extension_bridge.py',   role: '6条扩展线管理',     status: 'ready' as const },
   { name: 'stats_api.py',          role: 'Grafana数据源 :19999',status: 'running' as const },
@@ -68,10 +68,10 @@ export function ExecutionFlow({ stats, monitor }: Props) {
           {/* Playback controls */}
           <button onClick={() => { setPlaying(!playing); if (!playing) setPlaybackStage(0) }}
             className={`text-2xs px-1.5 py-0.5 rounded border transition-all ${playing ? 'border-brand-cyan/40 text-brand-cyan bg-brand-cyan/10' : 'border-border-default text-text-tertiary hover:text-text-secondary'}`}>
-            {playing ? '\u23f8\u23f8 Pause' : '\u25b6 Play'}
+            {playing ? '⏸⏸ Pause' : '▶ Play'}
           </button>
           <button onClick={() => setPlaybackStage(-1)}
-            className="text-2xs text-text-tertiary hover:text-text-secondary px-1">\u23f9</button>
+            className="text-2xs text-text-tertiary hover:text-text-secondary px-1">⏹</button>
           {[1, 2, 5].map(s => (
             <button key={s} onClick={() => setSpeed(s)}
               className={`text-2xs px-1 rounded ${speed === s ? 'text-brand-indigo' : 'text-text-tertiary/50'}`}>{s}x</button>
@@ -217,8 +217,8 @@ export function ExecutionFlow({ stats, monitor }: Props) {
           <h3 className="text-2xs font-medium text-text-tertiary mb-2">审查链 / Review Chain</h3>
           <div className="space-y-1.5">
             {[
-              { name: 'reviewer-strict',   zh: '严格审查 (\u226560)', color: '#f87171' },
-              { name: 'reviewer-creative', zh: '创意审查 (\u226550)', color: '#fb923c' },
+              { name: 'reviewer-strict',   zh: '严格审查 (≥60)', color: '#f87171' },
+              { name: 'reviewer-creative', zh: '创意审查 (≥50)', color: '#fb923c' },
               { name: 'arbiter',           zh: '仲裁裁决',           color: '#fbbf24' },
             ].map(r => {
               const agent = monitor?.agents?.[r.name]
@@ -236,7 +236,7 @@ export function ExecutionFlow({ stats, monitor }: Props) {
             <h3 className="text-2xs font-medium text-text-tertiary mb-1.5">分支判定</h3>
             <div className="grid grid-cols-3 gap-1">
               {[
-                { label: 'PASS',  color: '#10b981', cond: 'S\u226560 & C\u226550' },
+                { label: 'PASS',  color: '#10b981', cond: 'S≥60 & C≥50' },
                 { label: 'SPLIT', color: '#fbbf24', cond: '一个通过' },
                 { label: 'FAIL',  color: '#f87171', cond: '均不通过' },
               ].map(b => (
@@ -254,7 +254,7 @@ export function ExecutionFlow({ stats, monitor }: Props) {
           <h3 className="text-2xs font-medium text-text-tertiary mb-2">管道记忆 / Pipeline Memory</h3>
 
           <div className="flex items-center gap-2 mb-2 pb-2 border-b border-border-default">
-            <span className="text-xs">{'\ud83d\uddc4'}</span>
+            <span className="text-xs">{'🗄'}</span>
             <span className="text-xs text-text-secondary">kanban.db</span>
             <span className="text-2xs text-text-tertiary ml-auto">{monitor?.memory?.kanban_mb ?? 0} MB</span>
           </div>
@@ -332,9 +332,9 @@ export function ExecutionFlow({ stats, monitor }: Props) {
         </motion.span>
         <span className="text-text-tertiary/50">
           {activeStage === 0 && '等待新任务触发入队'}
-          {activeStage === 3 && `Strategist 调度中 \u00b7 ${inProgress} 个任务并行执行中`}
+          {activeStage === 3 && `Strategist 调度中 · ${inProgress} 个任务并行执行中`}
           {activeStage === 4 && `${review} 个任务等待双审裁决`}
-          {activeStage >= 5 && '流程完成 \u2192 记忆沉淀 + 知识固化'}
+          {activeStage >= 5 && '流程完成 → 记忆沉淀 + 知识固化'}
         </span>
       </motion.div>
     </div>

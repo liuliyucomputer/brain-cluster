@@ -46,7 +46,7 @@ export function StatCard({ label, value, color, trend, trendLabel, sparklineData
           <span
             className={`text-2xs font-semibold ${trend >= 0 ? 'text-success' : 'text-danger'}`}
           >
-            {trend >= 0 ? '\u2191' : '\u2193'} {Math.abs(trend)}%
+            {trend >= 0 ? '↑' : '↓'} {Math.abs(trend)}%
           </span>
         )}
       </div>

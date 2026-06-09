@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { fetchStatsV2, fetchMonitor, type ClusterStatsV2, type MonitorData } from './lib/api'
 import { formatTime } from './lib/utils'
-import { PipelineFlow } from './components/PipelineFlow'
+import { ShutdownButton } from './components/ShutdownButton'
 import { AgentMatrix } from './components/AgentMatrix'
 import { EventStream } from './components/EventStream'
 import { ServicePanel } from './components/ServicePanel'
@@ -11,6 +11,10 @@ import { LogPanel } from './components/LogPanel'
 import { ExecutionFlow } from './components/ExecutionFlow'
 import { TaskCreator } from './components/TaskCreator'
 import { MemoryManager } from './components/MemoryManager'
+import { DirectorPanel } from './components/DirectorPanel'
+import { CommanderPanel } from './components/CommanderPanel'
+import { TaskManager } from './components/TaskManager'
+import { ToolsPanel } from './components/ToolsPanel'
 
 const EMPTY_STATS: ClusterStatsV2 = {
   overview: { total: 0, active: 0, done: 0, done_today: 0, avg_duration: 0 },
@@ -92,6 +96,7 @@ export default function App() {
               {connected ? '实时' : '轮询'}
             </span>
             <span className="text-white/25 tabular-nums">{formatTime(lastUpdate)}</span>
+            <ShutdownButton />
           </div>
         </div>
       </header>
@@ -124,7 +129,47 @@ export default function App() {
           ))}
         </div>
 
-        {/* === EXECUTION FLOW — "血脉" === */}
+        {/* === VITAL ORGANS ROW === */}
+        <div className="grid grid-cols-4 gap-2">
+          {[
+            { icon: '♥', label: '心脏·网关', sub: 'Gateway', role: '任务调度 / 状态机', port: 18789, key: 'gateway' },
+            { icon: '🧠', label: '神经·编排器', sub: 'Orchestrator', role: '双审链 / 仲裁', key: 'orchestrator' },
+            { icon: '👁', label: '眼睛·监控', sub: 'Monitor', role: 'SSE实时看板 / 数据源', port: 19997, key: 'monitor' },
+            { icon: '🛡', label: '免疫·指挥官', sub: 'Commander', role: '自主巡检 / 智能修复', key: 'commander' },
+          ].map((org, i) => {
+            const isUp = (org.key === 'monitor' || org.key === 'orchestrator' || org.key === 'commander')
+              ? true
+              : stats.services?.Gateway === true
+            return (
+              <motion.div
+                key={org.key}
+                className="card-depth rounded-xl p-3 flex items-center gap-3"
+                style={{
+                  background: 'hsl(240,6%,10%)',
+                  border: `1px solid ${isUp ? 'rgba(74,222,128,0.08)' : 'rgba(245,158,11,0.08)'}`,
+                }}
+                initial={{ opacity: 0, y: 6 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: i * 0.06 + 0.3, duration: 0.3 }}
+              >
+                <div className="text-xl shrink-0" style={{ animation: 'heartbeat 2.5s ease-in-out infinite' }}>{org.icon}</div>
+                <div className="min-w-0 flex-1">
+                  <div className="flex items-center gap-1.5">
+                    <span className="w-1.5 h-1.5 rounded-full shrink-0" style={{
+                      background: isUp ? '#4ade80' : '#fbbf24',
+                      boxShadow: isUp ? '0 0 6px rgba(74,222,128,0.5)' : 'none',
+                    }} />
+                    <span className="text-[11px] font-semibold text-white/75">{org.label}</span>
+                  </div>
+                  <div className="text-[9px] text-white/30">{org.role}</div>
+                </div>
+                <span className="text-[9px] text-white/15 shrink-0">{org.sub}</span>
+              </motion.div>
+            )
+          })}
+        </div>
+
+        {/* === EXECUTION FLOW === */}
         <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.2 }}>
           <ExecutionFlow stats={stats} monitor={monitor} />
         </motion.div>
@@ -134,12 +179,15 @@ export default function App() {
 
           {/* COL 1: Agents + Extensions */}
           <div className="space-y-3">
+            <DirectorPanel />
+            <CommanderPanel />
             <AgentMatrix agents={monitor?.agents ?? null} />
             <ExtensionsPanel extensions={stats.extensions?.lines ?? null} />
           </div>
 
           {/* COL 2: Events + Task Creator */}
           <div className="space-y-3">
+            <TaskManager />
             <EventStream events={monitor?.recent_events ?? []} />
             <TaskCreator />
           </div>

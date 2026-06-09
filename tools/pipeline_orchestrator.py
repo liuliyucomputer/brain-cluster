@@ -141,7 +141,7 @@ def check_review_results(review_task_ids):
         if row and row[0] == "done":
             try:
                 result = json.loads(row[1]) if row[1] else {"total": 50}
-            except:
+except Exception:
                 result = {"total": 50}
             scores[r["reviewer"]] = result.get("total", 50)
 

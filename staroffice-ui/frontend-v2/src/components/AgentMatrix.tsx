@@ -11,15 +11,15 @@ interface Props {
 }
 
 const AGENT_NAMES: Record<string, [string, string]> = {
-  strategist:       ['\u7b56\u7565', '#6366f1'],
-  'executor-a':     ['\u6587\u6848', '#22d3ee'],
+  strategist:       ['策略', '#6366f1'],
+  'executor-a':     ['文案', '#22d3ee'],
   'executor-b':     ['PPT',  '#a855f7'],
-  'executor-c':     ['\u6570\u636e', '#f59e0b'],
-  monitor:          ['\u76d1\u63a7', '#c084fc'],
-  'reviewer-strict':  ['\u4e25\u5ba1', '#f87171'],
-  'reviewer-creative':['\u521b\u5ba1', '#fb923c'],
-  arbiter:          ['\u4ef2\u88c1', '#6366f1'],
-  learner:          ['\u5b66\u4e60', '#10b981'],
+  'executor-c':     ['数据', '#f59e0b'],
+  monitor:          ['监控', '#c084fc'],
+  'reviewer-strict':  ['严审', '#f87171'],
+  'reviewer-creative':['创审', '#fb923c'],
+  arbiter:          ['仲裁', '#6366f1'],
+  learner:          ['学习', '#10b981'],
 }
 
 function heatColor(load: number): string {
@@ -33,7 +33,7 @@ export function AgentMatrix({ agents }: Props) {
   const [expanded, setExpanded] = useState<string | null>(null)
 
   if (!agents || Object.keys(agents).length === 0) return (
-    <div className="surface-card p-4 text-center text-text-tertiary text-xs">\u6682\u65e0\u667a\u80fd\u4f53\u6570\u636e</div>
+    <div className="surface-card p-4 text-center text-text-tertiary text-xs">暂无智能体数据</div>
   )
 
   const entries = Object.entries(agents).sort(([, a], [, b]) => b.total - a.total)
@@ -44,7 +44,7 @@ export function AgentMatrix({ agents }: Props) {
     <div className="surface-card p-4">
       <div className="flex items-center justify-between mb-3">
         <h2 className="text-2xs font-medium text-text-tertiary uppercase tracking-wider">
-          \u667a\u80fd\u4f53\u8d1f\u8f7d / Agent Load
+          智能体负载 / Agent Load
         </h2>
         <span className="text-2xs text-text-tertiary">
           avg success {avgHours.toFixed(0)}%
@@ -92,7 +92,7 @@ export function AgentMatrix({ agents }: Props) {
 
               {/* Stats row */}
               <div className="flex items-center gap-1.5 text-2xs">
-                <span className="text-success/80" title="done">\u2713{a.done}</span>
+                <span className="text-success/80" title="done">✓{a.done}</span>
                 <span className="text-warning/80" title="active">{a.in_progress}</span>
                 <span className="text-danger/70" title="failed">{a.failed}</span>
                 <span className="text-text-secondary ml-auto font-semibold" title="total" style={{ color: heatBg }}>{a.total}</span>

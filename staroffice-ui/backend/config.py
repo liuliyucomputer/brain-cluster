@@ -1,7 +1,33 @@
 """Star Office UI - Backend Configuration"""
 
+import json
 import os
 from datetime import datetime
+
+
+def _load_api_key():
+    """Auto-load API key from config files if env var not set"""
+    if os.environ.get("OPENAI_API_KEY"):
+        return os.environ.get("OPENAI_API_KEY")
+    for cfg_path in [
+        os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "..", "input", "configs", "ccswitch", "endpoint.json"),
+        os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "..", "input", "configs", "siliconflow", "endpoint.json"),
+    ]:
+        if os.path.exists(cfg_path):
+            try:
+                with open(cfg_path, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+                    key = data.get("api_key")
+                    if key:
+                        os.environ["OPENAI_API_KEY"] = key
+                        return key
+            except (json.JSONDecodeError, IOError):
+                continue
+    return None
+
+
+# Auto-load API key on module import
+_load_api_key()
 
 # Paths (project-relative, no hardcoded absolute paths)
 ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -86,10 +112,11 @@ SERVICE_CONFIGS = {
         "zh": "仪表盘",
     },
     "StatsAPI": {
-        "cmd": [os.path.join(ROOT_DIR, "..", "tools", "stats_api.py")],
+        "cmd": [],  # Merged into StarOfficeUI main app at /grafana/*
         "port": 19999,
         "cwd": os.path.join(ROOT_DIR, ".."),
         "zh": "统计接口",
+        "merged": True,
     },
 }
 

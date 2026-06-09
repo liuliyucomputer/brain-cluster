@@ -5,10 +5,10 @@ interface MemFile { label: string; name: string; path: string; size_kb: number; 
 interface Category { key: string; zh: string; icon: string; color: string; desc: string; files: MemFile[] }
 
 const CATEGORY_DEFS: Omit<Category, 'files'>[] = [
-  { key: 'daily',       zh: '每日记忆', icon: '\ud83d\udcc5', color: '#6366f1', desc: '每日工作日志，自动追加不覆盖' },
-  { key: 'project',     zh: '项目记忆', icon: '\ud83e\udde0', color: '#10b981', desc: '工作区长期记忆和约定' },
-  { key: 'maintenance', zh: '维护日志', icon: '\ud83d\udd27', color: '#f59e0b', desc: '系统修复记录和维护历史' },
-  { key: 'user',        zh: '用户记忆', icon: '\ud83d\udc64', color: '#a855f7', desc: '跨项目的个人习惯和偏好' },
+  { key: 'daily',       zh: '每日记忆', icon: '📅', color: '#6366f1', desc: '每日工作日志，自动追加不覆盖' },
+  { key: 'project',     zh: '项目记忆', icon: '🧠', color: '#10b981', desc: '工作区长期记忆和约定' },
+  { key: 'maintenance', zh: '维护日志', icon: '🔧', color: '#f59e0b', desc: '系统修复记录和维护历史' },
+  { key: 'user',        zh: '用户记忆', icon: '👤', color: '#a855f7', desc: '跨项目的个人习惯和偏好' },
 ]
 
 export function MemoryManager() {
@@ -139,7 +139,7 @@ export function MemoryManager() {
                     className="flex items-center justify-between py-1.5 px-2 rounded hover:bg-surface-2 cursor-pointer group"
                   >
                     <div className="flex items-center gap-2 min-w-0">
-                      <span className="text-xs">{'\ud83d\udcc4'}</span>
+                      <span className="text-xs">{'📄'}</span>
                       <span className="text-xs text-text-secondary truncate">{f.name}</span>
                     </div>
                     <div className="flex items-center gap-2 shrink-0 opacity-50 group-hover:opacity-100 transition-opacity">

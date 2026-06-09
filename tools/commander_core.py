@@ -67,13 +67,13 @@ FIX_RULES = [
     },
     {
         "name": "fix_fcntl_import",
-        "pattern": r"import fcntl",
+# import fcntl  # Windows 不兼容，已注释
         "risk": RISK_LOW,
         "auto_fix": True,
-        "fix": "# import fcntl  # Windows 不兼容，已注释",
+# import fcntl  # Windows 不兼容，已注释
         "description": "Unix fcntl 在 Windows 上不可用",
         "fix_type": "replace_import",
-        "replacement": "# import fcntl  # Windows 不兼容，已注释",
+# import fcntl  # Windows 不兼容，已注释
         "llm_fixable": True,
     },
     {

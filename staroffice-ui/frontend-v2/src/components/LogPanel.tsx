@@ -1,14 +1,14 @@
 import { useState, useEffect, useCallback, useMemo, useRef } from 'react'
 import { motion } from 'framer-motion'
 
-const AGENT_ZH: Record<string, string> = { strategist: '\u7b56\u7565', 'executor-a': '\u6587\u6848', 'executor-b': 'PPT', 'executor-c': '\u6570\u636e', monitor: '\u76d1\u63a7', 'reviewer-strict': '\u4e25\u5ba1', 'reviewer-creative': '\u521b\u5ba1', arbiter: '\u4ef2\u88c1', learner: '\u5b66\u4e60' }
+const AGENT_ZH: Record<string, string> = { strategist: '策略', 'executor-a': '文案', 'executor-b': 'PPT', 'executor-c': '数据', monitor: '监控', 'reviewer-strict': '严审', 'reviewer-creative': '创审', arbiter: '仲裁', learner: '学习' }
 
 const TABS = [
-  { key: 'alerts', label: '\u544a\u8b66' },
-  { key: 'system', label: '\u7cfb\u7edf' },
-  { key: 'app', label: '\u9762\u677f' },
-  { key: 'gateway', label: '\u7f51\u5173' },
-  { key: 'commander', label: '\u6307\u6325\u5b98' },
+  { key: 'alerts', label: '告警' },
+  { key: 'system', label: '系统' },
+  { key: 'app', label: '面板' },
+  { key: 'gateway', label: '网关' },
+  { key: 'commander', label: '指挥官' },
   ...Object.entries(AGENT_ZH).map(([key, label]) => ({ key, label })),
 ]
 
@@ -69,8 +69,8 @@ export function LogPanel() {
     let result = lines
     if (search.trim()) result = result.filter(l => l.toLowerCase().includes(search.toLowerCase()))
     if (levelFilter !== 'ALL') result = result.filter(l => {
-      if (levelFilter === 'ERROR') return l.includes('ERROR') || l.includes('FAIL') || l.includes('CRITICAL') || l.includes('\u274c')
-      if (levelFilter === 'WARN') return l.includes('WARN') || l.includes('\u26a0')
+      if (levelFilter === 'ERROR') return l.includes('ERROR') || l.includes('FAIL') || l.includes('CRITICAL') || l.includes('❌')
+      if (levelFilter === 'WARN') return l.includes('WARN') || l.includes('⚠')
       if (levelFilter === 'INFO') return l.includes('INFO') || l.includes('SUCCESS')
       return true
     })
@@ -85,8 +85,8 @@ export function LogPanel() {
   const warnCount = lines.filter(l => l.includes('WARN')).length
 
   const getLineColor = (line: string) => {
-    if (line.includes('ERROR') || line.includes('FAIL') || line.includes('\u274c') || line.includes('CRITICAL')) return 'text-danger/80'
-    if (line.includes('WARN') || line.includes('\u26a0')) return 'text-amber-400/70'
+    if (line.includes('ERROR') || line.includes('FAIL') || line.includes('❌') || line.includes('CRITICAL')) return 'text-danger/80'
+    if (line.includes('WARN') || line.includes('⚠')) return 'text-amber-400/70'
     if (line.includes('INFO') || line.includes('SUCCESS')) return 'text-text-secondary/60'
     return 'text-text-tertiary/40'
   }
@@ -94,7 +94,7 @@ export function LogPanel() {
   return (
     <div className="surface-card p-4">
       <div className="flex items-center justify-between mb-2">
-        <h2 className="text-2xs font-medium text-text-tertiary uppercase tracking-wider">\u65e5\u5fd7 / Logs</h2>
+        <h2 className="text-2xs font-medium text-text-tertiary uppercase tracking-wider">日志 / Logs</h2>
         <div className="flex items-center gap-1.5">
           {errorCount > 0 && <span className="text-2xs bg-danger/10 text-danger px-1.5 py-0.5 rounded">{errorCount} ERR</span>}
           {warnCount > 0 && <span className="text-2xs bg-warning/10 text-warning px-1.5 py-0.5 rounded">{warnCount} WRN</span>}
@@ -105,7 +105,7 @@ export function LogPanel() {
       <div className="flex items-center gap-2 mb-2">
         <input
           type="text" value={search} onChange={e => setSearch(e.target.value)}
-          placeholder="\u641c\u7d22\u65e5\u5fd7..."
+          placeholder="搜索日志..."
           className="flex-1 bg-surface-0 border border-border-default rounded-md px-2 py-1 text-2xs text-text-primary placeholder:text-text-tertiary focus:outline-none focus:border-brand-indigo/40 transition-all"
         />
         <div className="flex gap-0.5">
@@ -122,7 +122,7 @@ export function LogPanel() {
           className={`text-2xs px-1.5 py-0.5 rounded transition-colors ${
             clusterMode ? 'bg-brand-cyan/15 text-brand-cyan' : 'text-text-tertiary hover:text-text-secondary hover:bg-surface-2'
           }`}>
-          {clusterMode ? '\u5c55\u5f00' : '\u805a\u7c7b'}
+          {clusterMode ? '展开' : '聚类'}
         </button>
       </div>
 
@@ -140,7 +140,7 @@ export function LogPanel() {
       <motion.div key={tab} initial={{ opacity: 0 }} animate={{ opacity: 1 }}
         className="bg-black/30 rounded-lg p-3 font-mono text-xs leading-relaxed max-h-[240px] overflow-y-auto scrollbar-thin">
         {displayed.length === 0 ? (
-          <span className="text-text-tertiary/30">{search.trim() ? '\u65e0\u5339\u914d\u7ed3\u679c' : '\u6682\u65e0\u65e5\u5fd7'}</span>
+          <span className="text-text-tertiary/30">{search.trim() ? '无匹配结果' : '暂无日志'}</span>
         ) : (
           displayed.map((item, i) => {
             const color = getLineColor(item.line)
@@ -150,7 +150,7 @@ export function LogPanel() {
               <div key={i}>
                 <div className={`py-0.5 flex items-start gap-2 ${color} ${isError ? 'bg-danger/5 -mx-1.5 px-1.5 rounded' : ''}`}
                   onClick={() => isError && setContextIndex(showContext ? null : i)}>
-                  {item.count > 1 && <span className="text-text-tertiary/40 shrink-0">[{item.count}\u00d7]</span>}
+                  {item.count > 1 && <span className="text-text-tertiary/40 shrink-0">[{item.count}×]</span>}
                   <span className="truncate flex-1">{item.line}</span>
                 </div>
                 {showContext && isError && (
@@ -168,7 +168,7 @@ export function LogPanel() {
       </motion.div>
 
       {search && (
-        <div className="text-2xs text-text-tertiary/40 mt-1">\u663e\u793a {displayed.length}/{lines.length} \u884c</div>
+        <div className="text-2xs text-text-tertiary/40 mt-1">显示 {displayed.length}/{lines.length} 行</div>
       )}
     </div>
   )
