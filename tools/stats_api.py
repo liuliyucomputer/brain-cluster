@@ -6,8 +6,11 @@ Brain 集群 — 统计 API (Grafana JSON Datasource)
 from flask import Flask, jsonify, request
 import sqlite3, os
 
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from paths import KANBAN_DB
+
 app = Flask(__name__)
-KANBAN_DB = r"D:\brain\output\memory\kanban.db"
 
 @app.route("/", methods=["GET"])
 def root():

@@ -1,24 +1,16 @@
 {
   "provider": "siliconflow",
-  "name": "硅基流动 (SiliconFlow)",
   "base_url": "https://api.siliconflow.cn/v1",
   "api_key": "sk-ukkghdobyfyttizuaxhtqmmdcprycxvdcixoviwhrzlywksx",
-  "type": "openai_compatible",
-  "use_case": "fallback_provider",
-  "status": "verified_ok",
-  "available_models": [
-    "deepseek-ai/DeepSeek-V4-Pro",
-    "deepseek-ai/DeepSeek-V4-Flash",
-    "Pro/moonshotai/Kimi-K2.6",
-    "Pro/zai-org/GLM-5.1",
-    "nex-agi/Nex-N2-Pro",
-    "MiniMaxAI/MiniMax-M2.5",
-    "Pro/MiniMaxAI/MiniMax-M2.5"
-  ],
-  "recommended": {
-    "default": "deepseek-ai/DeepSeek-V4-Pro",
-    "reasoning": "Pro/zai-org/GLM-5.1",
-    "fast": "deepseek-ai/DeepSeek-V4-Flash"
-  },
-  "notes": "已连通验证。ccswitch 不可用时自动切换。"
+  "default_model": "deepseek-ai/DeepSeek-V4-Pro",
+  "fallback_model": "deepseek-ai/DeepSeek-V4-Flash",
+  "reasoning_model": "deepseek-ai/DeepSeek-R1",
+  "wire_api": "chat_completions",
+  "timeout_seconds": 300,
+  "max_retries": 3,
+  "model_routing": {
+    "heavy_reasoning": "deepseek-ai/DeepSeek-V4-Pro",
+    "light_tasks": "deepseek-ai/DeepSeek-V4-Flash",
+    "code_execution": "deepseek-ai/DeepSeek-V3"
+  }
 }

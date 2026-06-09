@@ -13,7 +13,7 @@
 | 3 | 审查龙→仲裁龙调用链 | ✅ | 一过一否→send_to_arbiter, 双过→complete_task, 双否→return_to_executor |
 | 4 | Letta与kanban.db同步 | ✅ | memory_bridge.py 同步1条事件, daily日志已生成 |
 | 5 | Dreaming产物写入Letta | ✅ | sync_short_term_*.json 已生成 |
-| 6 | Agent验证GPT-5.5 | ✅ | ccswitch→tokenshengsheng.com 响应正常 |
+| 6 | Agent验证DeepSeek-V4-Pro | ✅ | SiliconFlow→api.siliconflow.cn 响应正常 |
 | 7 | Grafana二进制安装 | ✅ | v11.6.0 运行中 (:3001, DB=ok) |
 
 ---

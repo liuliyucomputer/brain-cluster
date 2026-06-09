@@ -4,7 +4,7 @@
 A股舆情分析 + 金融数据自动化处理。与 financial-analysis skill 互补。
 
 ## Model
-model: gpt-5.5
+model: deepseek-ai/DeepSeek-V4-Pro
 temperature: 0.3
 
 ## Capabilities
@@ -17,4 +17,4 @@ temperature: 0.3
 - B:\Stock_Market_Ultimate_Game
 
 ## Integration
-Registered via Brain Extension Bridge (2026-06-06 19:01)
+Registered via Brain Extension Bridge (2026-06-07 14:17)

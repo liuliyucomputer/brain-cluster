@@ -1,12 +1,15 @@
 # -*- coding: utf-8 -*-
 """
 Brain 集群 — 日志聚合引擎
-从各服务真实日志位置采集 → 统一写入 D:/brain/output/logs/
+从各服务真实日志位置采集 → 统一写入 output/logs/
 """
 import os, sys, time, glob, shutil
 from datetime import datetime
 
-LOG_ROOT = r"D:\brain\output\logs"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from paths import LOGS_DIR
+
+LOG_ROOT = LOGS_DIR
 
 REAL_LOGS = {
     "gateway": {
@@ -143,7 +146,7 @@ if __name__ == "__main__":
 
     if args.action == "sync":
         n = sync_logs_once()
-        print(f"Synced {n} log files to D:\\brain\\output\\logs\\")
+        print(f"Synced {n} log files to {LOG_ROOT}")
     elif args.action == "tail":
         tail_all(args.service, args.lines)
     elif args.action == "errors":

@@ -6,14 +6,17 @@ Brain 集群 — 扩展线统一集成引擎 (Extension Bridge)
 import os, json, sys, sqlite3
 from datetime import datetime
 
-SKILLS_DIR = r"C:\Users\Administrator\.workbuddy\skills"
-PUBLISHER_CODE = r"C:\Users\Administrator\WorkBuddy\Claw"
-B_DRIVE_AGENTTEAM = r"B:\AgentTeam"
-B_DRIVE_CODEWHALE = r"B:\codeWhale"
-B_DRIVE_FINANCE_A = r"B:\A_share_News_Face_Analysis_System"
-B_DRIVE_FINANCE_S = r"B:\Stock_Market_Ultimate_Game"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from paths import SKILLS_DIR, PUBLISHER_DIR, B_DRIVE_ROOT, EXTENSION_STATUS, EXTENSIONS_DIR, PROFILES_DIR
 
-EXTENSION_STATUS_FILE = r"D:\brain\input\extensions\extension_status.json"
+SKILLS_DIR = SKILLS_DIR
+PUBLISHER_CODE = PUBLISHER_DIR
+B_DRIVE_AGENTTEAM = os.path.join(B_DRIVE_ROOT, "AgentTeam")
+B_DRIVE_CODEWHALE = os.path.join(B_DRIVE_ROOT, "codeWhale")
+B_DRIVE_FINANCE_A = os.path.join(B_DRIVE_ROOT, "A_share_News_Face_Analysis_System")
+B_DRIVE_FINANCE_S = os.path.join(B_DRIVE_ROOT, "Stock_Market_Ultimate_Game")
+
+EXTENSION_STATUS_FILE = EXTENSION_STATUS
 
 # ─── 集成状态管理 ───
 
@@ -109,6 +112,7 @@ def verify_skills():
     """验证所有 Skill 文件完整性"""
     skills = discover_skills()
     results = {}
+    tools = []
     for name, info in skills.items():
         skill_dir = info["path"]
         has_scripts = os.path.isdir(os.path.join(skill_dir, "scripts"))
@@ -121,7 +125,8 @@ def verify_skills():
             "assets": has_assets,
             "status": "ok" if has_scripts else "partial"
         }
-    mark_integrated("skills", tools=[r["tool"] for r in register_skills()["tools"]], verified=True)
+        tools.append(name)
+    mark_integrated("skills", tools=tools, verified=all(r["status"] == "ok" for r in results.values()))
     return results
 
 # ─── 扩展 2: Publisher (小红书发布管道) ───
@@ -143,7 +148,7 @@ def register_publisher():
         })
     
     # 检查 B: 盘发布目录
-    b_publish = r"B:\CLI\电商项目\袜子测试"
+    b_publish = os.path.join(B_DRIVE_ROOT, "CLI", "电商项目", "袜子测试")
     if os.path.isdir(b_publish):
         publisher_tools.append({
             "tool": "publish_queue",
@@ -171,9 +176,9 @@ def verify_publisher():
     results = {
         "xhs_publisher.py": os.path.exists(publisher_py),
         "importable": publisher_importable,
-        "status": "ok" if publisher_importable else "partial"
+        "status": "ok" if publisher_importable else "not_importable"
     }
-    mark_integrated("publisher", verified=True)
+    mark_integrated("publisher", verified=publisher_importable)
     return results
 
 # ─── 扩展 3: Connectors (MCP 连接器) ───
@@ -215,20 +220,28 @@ def register_connectors():
     }
 
 def verify_connectors():
-    """验证连接器 - 21 MCP 服务器已配置在系统层面"""
-    mark_integrated("connectors", verified=True, tools=CONNECTOR_LIST)
-    return {"count": len(CONNECTOR_LIST), "status": "configured", "note": "MCP servers at system level"}
-
-# 已知的 21 个 MCP 连接器
-CONNECTOR_LIST = [
-    "wecom","feishu","dingtalk","qq-mail","netease-mail",
-    "tencent-docs","kdocs","tencent-survey","tencent-weiyun","tmeet",
-    "github","gongfeng-woa","cnb-api","cnb-woa","zhiyan-cicd",
-    "tapd","tapd-woa","lexiang","iwiki-woa","km","ima-mcp",
-    "tyc-mcp","qcc-company","neo-crm","ctrip-wendao","pkulaw",
-    "tdx-connector","baidu-netdisk","edgeone-pages","fbs-connector",
-    "notion","tencent-qidian-cs"
-]
+    """验证连接器 — 读取实际 MCP JSON 配置"""
+    mcp_json = os.path.expanduser(r"~\.workbuddy\mcp.json")
+    actual_connectors = []
+    
+    if os.path.exists(mcp_json):
+        try:
+            with open(mcp_json, "r", encoding="utf-8") as f:
+                mcp_config = json.load(f)
+            servers = mcp_config.get("mcpServers", {})
+            for name, config in servers.items():
+                actual_connectors.append({
+                    "name": name,
+                    "command": config.get("command", ""),
+                    "args": config.get("args", []),
+                })
+        except Exception:
+            actual_connectors = []
+    
+    tools = [c["name"] for c in actual_connectors]
+    status = "configured" if actual_connectors else "empty"
+    mark_integrated("connectors", verified=len(actual_connectors) > 0, tools=tools)
+    return {"count": len(actual_connectors), "status": status, "connectors": tools[:10]}
 
 # ─── 扩展 4: AgentTeam (基于 D:\eyes\harness 6 种架构模式) ───
 
@@ -238,18 +251,233 @@ def register_agentteam():
     harness_exists = os.path.isdir(harness_path)
     
     profiles = [
-        {"name": "expert-coordinator", "role": "Expert Pool Coordinator", "model": "gpt-5.5", "temperature": 0.3, "desc": "根据任务类型自动调配领域专家"},
-        {"name": "hierarchy-delegator", "role": "Hierarchical Delegator", "model": "gpt-5.5", "temperature": 0.4, "desc": "复杂任务拆解为子任务并逐层下派"},
-        {"name": "strategic-planner", "role": "Strategic Planner", "model": "gpt-5.5", "temperature": 0.5, "desc": "多 Agent 编队策略制定"},
-        {"name": "swarm-coordinator", "role": "Swarm Coordinator", "model": "gpt-5.5", "temperature": 0.6, "desc": "大规模并行任务扇出/扇入调度"},
-        {"name": "pipeline-orchestrator", "role": "Pipeline Orchestrator", "model": "gpt-5.5", "temperature": 0.3, "desc": "线性流水线协调 (策略→执行→审查→仲裁)"},
-        {"name": "observer-monitor", "role": "Observer Monitor", "model": "gpt-5.5", "temperature": 0.2, "desc": "多 Agent 行为观察与异常检测"},
-        {"name": "consensus-builder", "role": "Consensus Builder", "model": "gpt-5.5", "temperature": 0.4, "desc": "多 Agent 表决 + 共识达成"},
-        {"name": "feedback-collector", "role": "Feedback Collector", "model": "gpt-5.5", "temperature": 0.3, "desc": "收集各 Agent 执行反馈并生成改进建议"},
-        {"name": "knowledge-synthesizer", "role": "Knowledge Synthesizer", "model": "gpt-5.5", "temperature": 0.4, "desc": "跨 Agent 知识融合与策略库更新"},
-        {"name": "task-router", "role": "Task Router", "model": "gpt-5.5", "temperature": 0.2, "desc": "基于信誉评分的智能任务路由"},
-        {"name": "quality-gate", "role": "Quality Gate", "model": "gpt-5.5", "temperature": 0.2, "desc": "多阶段质量闸门 (输出必须通过才能进入下一阶段)"},
-        {"name": "incident-responder", "role": "Incident Responder", "model": "gpt-5.5", "temperature": 0.1, "desc": "集群异常事件应急响应与止损"},
+        {"name": "expert-coordinator", "role": "Expert Pool Coordinator", "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.3,
+         "desc": "根据任务类型自动调配领域专家",
+         "prompt": """你是 Brain 集群的 Expert Pool Coordinator。你有以下领域专家可用:
+- executor-a: 内容创作(小红书/抖音文案)  
+- executor-b: PPT和可视化设计
+- executor-c: 数据分析和代码执行
+- finance-analyzer: A股舆情与财务分析
+- codewhale-executor: 重型代码编译构建
+
+任务路由流程:
+1. 分析任务描述，提取 task_type (xiaohongshu_copy/ppt_design/data_analysis/code_execution/financial)
+2. 查询 output/memory\\monthly\\reputation.json 获取各Agent信誉分
+3. 选择该 task_type 下信誉分最高的 Agent
+4. 创建 Kanban 任务: hermes kanban create \"{任务标题}\" --assignee {最佳Agent}
+5. 如果最佳Agent的 task_type 信誉分<0.4，则将任务路由到 strategist 进行二次策略规划"""},
+        
+        {"name": "hierarchy-delegator", "role": "Hierarchical Delegator", "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.4,
+         "desc": "复杂任务拆解为子任务并逐层下派",
+         "prompt": """你是 Brain 集群的 Hierarchy Delegator。对于复杂项目，按层级拆解:
+Level 1: 策略规划 → 分配给 strategist
+Level 2: 内容/设计/数据并行执行 → 分配给 executor-a/b/c
+Level 3: 双审+仲裁质量管控 → pipeline_orchestrator 自动处理
+
+拆解步骤:
+1. 分析任务复杂度 (简单/中等/复杂/巨量)
+2. 复杂以上: 先创建 strategist 规划任务
+3. 中等: 直接分配给对应 executor
+4. 每个子任务在 Kanban 中用 --idempotency-key 防重复
+5. 子任务完成条件: 双审通过 (pass) 或仲裁通过 (approve)"""},
+        
+        {"name": "strategic-planner", "role": "Strategic Planner", "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.5,
+         "desc": "多 Agent 编队策略制定",
+         "prompt": """你是 Brain 集群的 Strategic Planner。制定多Agent协同策略:
+
+核心决策维度:
+1. 并行度: 同时启动 executor-a/b/c 还是串行
+2. 质量锁: 是否需要双审+仲裁 (默认需要)
+3. A/B实验: 是否创建对照实验 (新策略类型时推荐)
+4. 记忆查询: 先查询 output/memory\\monthly\\strategies.json 有无历史成功策略
+
+输出格式 (JSON):
+{
+  "strategy_name": "策略名",
+  "parallel_executors": ["executor-a", "executor-b"],
+  "quality_check": "dual_review", 
+  "ab_experiment": false,
+  "subtasks": [{"title": "...", "assignee": "executor-a", "priority":1}],
+  "estimated_time": "5-10min"
+}"""},
+        
+        {"name": "swarm-coordinator", "role": "Swarm Coordinator", "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.6,
+         "desc": "大规模并行任务扇出/扇入调度",
+         "prompt": """你是 Brain 集群的 Swarm Coordinator。大规模并行调度:
+
+扇出 (Fan-out):
+- 将一个大主题拆分为 N 个独立子任务
+- 每个子任务分配给不同的 executor
+- 使用 hermes kanban swarm 批量创建
+  
+扇入 (Fan-in):
+- 等待所有子任务完成
+- 收集结果，按质量排序
+- 选出最佳产出，其余的存档到 memory/vector
+
+关键参数:
+- 最大并行数: 10 (受 Gateway 限制)
+- 超时: 每个子任务 300s
+- 失败重试: 3次, 每次更换 Agent"""},
+        
+        {"name": "pipeline-orchestrator", "role": "Pipeline Orchestrator", "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.3,
+         "desc": "线性流水线协调 (策略→执行→审查→仲裁)",
+         "prompt": """你是 Brain 集群的 Pipeline Orchestrator。管理线性流水线:
+
+阶段1: Strategy → 调用 strategist 规划
+阶段2: Execute → 分配 executor-a/b/c 执行  
+阶段3: Review → 创建 reviewer-strict + reviewer-creative 双审任务
+阶段4: Arbiter → 双审分歧时创建 arbiter 仲裁任务
+阶段5: Complete → 所有审查通过后标记任务完成
+
+状态追踪:
+- 监控 Kanban: hermes kanban list
+- 每30秒扫描一次任务状态变迁
+- 阻塞检测: 任务 >5分钟未完成 → 自动 reassign
+- 工具: tools/pipeline_orchestrator.py (cron或daemon模式)"""},
+        
+        {"name": "observer-monitor", "role": "Observer Monitor", "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.2,
+         "desc": "多 Agent 行为观察与异常检测",
+         "prompt": """你是 Brain 集群的 Observer Monitor。持续监控集群健康:
+
+检查项 (每5分钟):
+1. Gateway 状态: hermes gateway status
+2. Agent 在线率: hermes profile list (检查 stopped 状态)
+3. 任务积压: hermes kanban stats (blocked/done 比例)
+4. API 连通性: ccswitch deepseek-ai/DeepSeek-V4-Pro 测试调用
+5. 记忆层健康: output/memory\\kanban.db 文件完整性
+
+告警阈值:
+- 连续失败 >2次: WARN
+- Agent 离线 >1个: WARN  
+- 积压 >20个任务: WARN
+- API 不可达: CRITICAL
+- kanban.db 损坏: CRITICAL
+
+告警写入: output/logs\\agents\\alerts.log"""},
+        
+        {"name": "consensus-builder", "role": "Consensus Builder", "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.4,
+         "desc": "多 Agent 表决 + 共识达成",
+         "prompt": """你是 Brain 集群的 Consensus Builder。在以下场景促进多Agent共识:
+
+1. 策略选择分歧: 多个 strategist 给出不同方案时投票
+2. 审查分歧升级: 双审 split → 收集更多 reviewer 意见
+3. A/B实验评估: 收集 reviewer 评估后决定胜出策略
+
+投票规则:
+- 投票团: arbiter + quality-gate + incident-responder (3票)
+- 多数决: 至少2票同意
+- 平票: escalate_to_human
+- 工具: tools/arbiter_vote\\arbiter.py"""},
+        
+        {"name": "feedback-collector", "role": "Feedback Collector", "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.3,
+         "desc": "收集各 Agent 执行反馈并生成改进建议",
+         "prompt": """你是 Brain 集群的 Feedback Collector。收集并分析反馈:
+
+数据来源:
+1. 双审评分记录: output/memory\\monthly\\review_log.jsonl
+2. 仲裁记录: output/memory\\monthly\\arbiter_log.jsonl
+3. 信誉分变动: output/memory\\monthly\\reputation.json
+4. A/B实验结果: output/memory\\monthly\\ab_results.json
+
+输出:
+- 周度 Agent 表现报告
+- 策略改进建议列表
+- 低效 Agent 标记 (信誉分 <0.3 持续7天)
+- 推荐策略更新目标 output/memory\\monthly\\strategies.json"""},
+        
+        {"name": "knowledge-synthesizer", "role": "Knowledge Synthesizer", "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.4,
+         "desc": "跨 Agent 知识融合与策略库更新",
+         "prompt": """你是 Brain 集群的 Knowledge Synthesizer。知识融合:
+
+输入:
+- 每日日志: output/memory\\daily\\*.json
+- 审查记录: output/memory\\monthly\\review_log.jsonl
+- 仲裁记录: output/memory\\monthly\\arbiter_log.jsonl
+
+输出:
+- 更新 output/memory\\monthly\\strategies.json (策略模板库)
+- 更新 output/memory\\vector\\ (向量化知识片段)
+- 淘汰低效策略 (使用次数<3 且 成功率<30%)
+
+处理频率:
+- 短期: 每4小时 (通过 learner cron 触发)
+- 中期: 每日02:00 (深度学习)
+- 长期: 每周一03:00 (知识重构)"""},
+        
+        {"name": "task-router", "role": "Task Router", "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.2,
+         "desc": "基于信誉评分的智能任务路由",
+         "prompt": """你是 Brain 集群的 Task Router。智能任务路由逻辑:
+
+路由算法:
+1. 解析 task_type (从任务标题/元数据提取)
+2. 加载 output/memory\\monthly\\reputation.json
+3. 按 task_type 信誉分排序 Agent
+4. 选择信誉分最高的 Agent (但需 >0.35 最低阈值)
+5. 如果所有 Agent 信誉分都 <0.35，路由到 strategist 重新规划
+
+可用 Agent 池:
+- executor-a: xiaohongshu_copy, content_review
+- executor-b: ppt_design, content_review  
+- executor-c: data_analysis, code_execution
+- codewhale-executor: code_execution (重型)
+- finance-analyzer: strategy_planning (金融)
+
+路由结果写入 Kanban: hermes kanban assign <task_id> <best_agent>"""},
+        
+        {"name": "quality-gate", "role": "Quality Gate", "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.2,
+         "desc": "多阶段质量闸门 (输出必须通过才能进入下一阶段)",
+         "prompt": """你是 Brain 集群的 Quality Gate。多阶段质量闸门:
+
+Gate 1 — 内容生成后:
+- 检查字数是否符合要求
+- 检查是否包含必要元素 (emoji, 标签, 格式)
+- 不通过 → 打回 executor 重做
+
+Gate 2 — 双审后:
+- Strict 评分 ≥60 AND Creative 评分 ≥50 → 放行
+- 其他 → 触发仲裁或打回
+
+Gate 3 — 仲裁后:
+- 仲裁结果 approve → 放行
+- 仲裁结果 reject → 打回或废弃
+- 仲裁结果 retry → 打回 executor 换策略重做
+
+Gate 4 — 发布前:
+- 合规检查: 无禁词/敏感内容
+- 最终确认: 信誉分 ≥0.5 的 Agent 产出无需人工审核
+
+不通过处理:
+- 第一次不通过: 打回原 executor + 扣信誉分 0.1
+- 第二次不通过: 换 executor + 扣信誉分 0.2
+- 第三次不通过: escalate_to_human"""},
+        
+        {"name": "incident-responder", "role": "Incident Responder", "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.1,
+         "desc": "集群异常事件应急响应与止损",
+         "prompt": """你是 Brain 集群的 Incident Responder。应急响应流程:
+
+紧急操作 (一键执行):
+- 停止所有任务: hermes kanban block --all
+- 暂停某 Agent: hermes profile pause <name>
+- 清空队列: hermes kanban clear --status pending
+
+异常场景处理:
+1. API 不可达 (ccswitch 故障):
+   - 切换到 SiliconFlow 备用: 修改 input/configs/siliconflow/endpoint.json
+   - 自动: hermes auth add openai-api --api-key <siliconflow-key> --label fallback
+   
+2. Agent 连续失败 (>3次):
+   - 暂停该 Agent
+   - 重新路由其任务到备用 Agent
+   - 更新 output/memory\\monthly\\reputation.json (扣分 +0.3 惩罚)
+
+3. kanban.db 损坏:
+   - 从备份恢复: output/memory\\*.backup
+   - 无备份: 重建数据库 + 从 daily logs 恢复任务状态
+
+4. 仲裁升级的事件:
+   - 即使 approve，高风险事件也写入 escalation log
+   - 通过 tools/arbiter_vote\\arbiter.py escalate_to_human"""},
     ]
     
     # 写入 SOUL.md 文件
@@ -267,6 +495,9 @@ def register_agentteam():
 ## Model
 model: {p['model']}
 temperature: {p['temperature']}
+
+## Instructions
+{p.get('prompt', p['desc'])}
 
 ## Source
 Harness Architecture Pattern: Expert Pool / Hierarchical / Pipeline / Swarm / Observer / Consensus
@@ -287,16 +518,32 @@ Registered via Brain Extension Bridge ({datetime.now().strftime('%Y-%m-%d %H:%M'
     }
 
 def verify_agentteam():
-    """验证 AgentTeam 配置"""
+    """验证 AgentTeam 配置（检查 SOUL.md 内容质量）"""
     profiles_dir = r"D:\brain\input\profiles\agentteam"
-    if not os.path.isdir(profiles_dir): return {"status": "missing"}
+    if not os.path.isdir(profiles_dir):
+        mark_integrated("agentteam", verified=False)
+        return {"status": "missing"}
+    
     souls = []
     for p in os.listdir(profiles_dir):
         soul_file = os.path.join(profiles_dir, p, "SOUL.md")
         if os.path.exists(soul_file):
-            souls.append(p)
-    mark_integrated("agentteam", verified=True)
-    return {"profiles": len(souls), "status": "ok", "souls": souls}
+            with open(soul_file, "r", encoding="utf-8") as f:
+                content = f.read()
+            # 检查是否有实质内容（不只是模板占位符）
+            has_role = "## Role" in content
+            has_model = "## Model" in content or "model:" in content
+            quality = len(content) > 200  # 模板最少 200 字符
+            souls.append({
+                "name": p, 
+                "has_role": has_role,
+                "has_model": has_model,
+                "content_quality": "ok" if quality else "placeholder"
+            })
+    
+    all_ok = all(s["content_quality"] == "ok" for s in souls)
+    mark_integrated("agentteam", verified=all_ok)
+    return {"profiles": len(souls), "status": "ok" if all_ok else "placeholder", "souls": souls}
 
 # ─── 扩展 5: codeWhale ───
 
@@ -311,7 +558,7 @@ def register_codewhale():
 处理需要终端操作、编译、复杂代码生成的重型任务。与 executor-c (轻量数据/代码) 互补。
 
 ## Model
-model: gpt-5.5
+model: deepseek-ai/DeepSeek-V4-Pro
 temperature: 0.2
 
 ## Capabilities
@@ -321,7 +568,7 @@ temperature: 0.2
 - System-level scripting
 
 ## Source
-B:\\codeWhale Rust-based terminal programming agent
+{B_DRIVE_ROOT}codeWhale Rust-based terminal programming agent
 
 ## Integration
 Registered via Brain Extension Bridge ({datetime.now().strftime('%Y-%m-%d %H:%M')})
@@ -351,7 +598,7 @@ def register_finance():
 A股舆情分析 + 金融数据自动化处理。与 financial-analysis skill 互补。
 
 ## Model
-model: gpt-5.5
+model: deepseek-ai/DeepSeek-V4-Pro
 temperature: 0.3
 
 ## Capabilities
@@ -360,8 +607,8 @@ temperature: 0.3
 - 财务报告自动生成
 
 ## Source
-- B:\\A_share_News_Face_Analysis_System
-- B:\\Stock_Market_Ultimate_Game
+- {B_DRIVE_ROOT}A_share_News_Face_Analysis_System
+- {B_DRIVE_ROOT}Stock_Market_Ultimate_Game
 
 ## Integration
 Registered via Brain Extension Bridge ({datetime.now().strftime('%Y-%m-%d %H:%M')})
@@ -434,4 +681,4 @@ def print_summary():
 if __name__ == "__main__":
     r = integrate_all()
     print_summary()
-    print(f"\n完整报告: D:\\brain\\output\\reports\\extension_integration.json")
+    print(f"\n完整报告: output/reports\\extension_integration.json")

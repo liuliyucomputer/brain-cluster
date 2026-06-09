@@ -8,9 +8,22 @@ E2E Integration Project — 一次跑通 5 个差距
   5. 测试扩展线 (publisher模拟)
 """
 import subprocess, os, json, time, sys
-sys.path.insert(0, r"D:\brain\tools")
-os.environ["OPENAI_API_KEY"] = "sk-xGSsFRUlKUXduzjnwPK4m9J7eNmmVTRwraXROi0dhPiRTvP8"
-os.environ["OPENAI_BASE_URL"] = "https://tokenshengsheng.com/v1"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from paths import CCSWITCH_ENDPOINT, MEMORY_DAILY, PROJECT_ROOT, EXTENSIONS_DIR
+
+# 从 endpoint 或环境变量读取 API 配置
+def _load_creds():
+    if os.path.exists(CCSWITCH_ENDPOINT):
+        with open(CCSWITCH_ENDPOINT, encoding="utf-8") as f:
+            cfg = json.load(f)
+        return cfg.get("api_key", ""), cfg.get("base_url", "https://api.siliconflow.cn/v1")
+    return os.environ.get("OPENAI_API_KEY", ""), os.environ.get("OPENAI_BASE_URL", "")
+
+api_key, base_url = _load_creds()
+if api_key:
+    os.environ["OPENAI_API_KEY"] = api_key
+if base_url:
+    os.environ["OPENAI_BASE_URL"] = base_url
 
 def run(cmd):
     r = subprocess.run(cmd, capture_output=True, text=True, shell=True, timeout=30)
@@ -80,12 +93,12 @@ count = sync_kanban_to_memory()
 print(f"  Memory bridge: {count} events synced")
 
 sync_to_letta(f"E2E project task {task_id}", "short_term")
-letta_files = [f for f in os.listdir(r"D:\brain\letta") if f.startswith("sync")]
+letta_files = [f for f in os.listdir(os.path.join(PROJECT_ROOT, "letta")) if f.startswith("sync")]
 print(f"  Letta sync files: {len(letta_files)}")
 
 # Check daily log
 today = time.strftime("%Y-%m-%d")
-daily_file = f"D:/brain/output/memory/daily/{today}.json"
+daily_file = os.path.join(MEMORY_DAILY, f"{today}.json")
 if os.path.exists(daily_file):
     with open(daily_file, encoding="utf-8") as f:
         data = json.load(f)
@@ -99,7 +112,11 @@ print("  Test 4: Grafana Data (kanban.db)")
 print("=" * 50)
 
 import sqlite3
-conn = sqlite3.connect(r"D:\brain\output\memory\kanban.db")
+import sys, os
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from paths import KANBAN_DB
+
+conn = sqlite3.connect(KANBAN_DB)
 tables = conn.execute("SELECT name FROM sqlite_master WHERE type='table'").fetchall()
 print(f"  Tables: {[t[0] for t in tables[:8]]}")
 stats = conn.execute("SELECT status, COUNT(*) FROM tasks GROUP BY status").fetchall()
@@ -142,7 +159,7 @@ with open(publish_log, "w", encoding="utf-8") as f:
     f.write(f"Status: ready_to_publish\n")
     f.write(f"Next: Use xhs-creator-studio skill for actual publish\n")
 print(f"  Publisher log: {publish_log}")
-print("  Extension guide: D:/brain/input/extensions/publisher/接入指南.md")
+print(f"  Extension guide: {os.path.join(EXTENSIONS_DIR, 'publisher', '接入指南.md')}")
 print("  [PASS] Extension Pipeline ✅")
 
 # ====== Final Summary ======

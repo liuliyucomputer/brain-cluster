@@ -50,7 +50,7 @@
       "gridPos": {"x": 0, "y": 9, "w": 24, "h": 4},
       "options": {
         "mode": "html",
-        "content": "<h3>Brain Cluster v1.0.5 | 服务状态</h3><p>Gateway :18789 | StarOfficeUI <a href='http://localhost:18791/dashboard'>:18791/dashboard</a> | Grafana :3001 | Stats API :19999 | GPT-5.5 tokenshengsheng.com/v1 | SiliconFlow api.siliconflow.cn/v1</p>"
+        "content": "<h3>Brain Cluster v1.0.6 | 服务状态</h3><p>Gateway :18789 | StarOfficeUI <a href='http://localhost:18791/dashboard'>:18791/dashboard</a> | Grafana :3001 | Stats API :19999 | SiliconFlow api.siliconflow.cn/v1 (DeepSeek-V4-Pro)</p>"
       }
     }
   ],

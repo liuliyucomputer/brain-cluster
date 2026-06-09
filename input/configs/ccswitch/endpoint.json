@@ -1,15 +1,11 @@
 {
-  "provider": "ccswitch",
-  "base_url": "https://tokenshengsheng.com/v1",
-  "api_key": "sk-xGSsFRUlKUXduzjnwPK4m9J7eNmmVTRwraXROi0dhPiRTvP8",
-  "default_model": "gpt-5.5",
-  "reasoning_effort": "high",
-  "wire_api": "responses",
+  "provider": "siliconflow",
+  "base_url": "https://api.siliconflow.cn/v1",
+  "api_key": "sk-ukkghdobyfyttizuaxhtqmmdcprycxvdcixoviwhrzlywksx",
+  "model": "deepseek-ai/DeepSeek-V4-Pro",
+  "fallback_model": "deepseek-ai/DeepSeek-V4-Flash",
+  "reasoning_model": "deepseek-ai/DeepSeek-R1",
+  "wire_api": "chat_completions",
   "timeout_seconds": 300,
-  "max_retries": 3,
-  "model_routing": {
-    "heavy_reasoning": "gpt-5.5",
-    "light_tasks": "gpt-4o-mini",
-    "code_execution": "codex"
-  }
+  "max_retries": 3
 }

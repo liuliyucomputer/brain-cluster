@@ -3,15 +3,13 @@
 执行流串联引擎 — 连接 A/B实验 + 信誉评分 + 审查双审 + 仲裁表决
 被策略龙和执行龙在任务生命周期各阶段调用
 """
-import json
-import os
-import sys, os
+import json, os, sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 from ab_test.ab_runner import get_winning_strategy
 from reputation.scorer import route_task, update_score
 
-TOOLS_DIR = r"D:\brain\tools"
+TOOLS_DIR = os.path.dirname(os.path.abspath(__file__))
 
 def strategist_route_task(task_type, task_description):
     """

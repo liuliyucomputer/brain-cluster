@@ -8,11 +8,11 @@
 
 ### 1.1 定位
 
-D:\eyes 是一个**开源项目研究与参考库**，精选 12 个 GitHub 近期高星项目，覆盖 AI 开发工具链的四大领域：
+D:\eyes 是一个**开源项目研究与参考库**，精选 13 个 GitHub 近期高星项目，覆盖 AI 开发工具链的四大领域：
 
 | 领域 | 项目 | Stars | 角色 |
 |------|------|-------|------|
-| **Skill/规则体系** | andrej-karpathy-skills, harness, Anthropic-Cybersecurity-Skills, Cursor Plugins | 55K/5.9K/14.1K/2K | 规则定义、技能架构、规模化范本 |
+| **Skill/规则体系** | andrej-karpathy-skills, harness, Anthropic-Cybersecurity-Skills, Cursor Plugins, claude-plugins-official | 55K/5.9K/14.1K/2K/20.2K | 规则定义、技能架构、规模化范本、插件生态规范 |
 | **代码理解** | CodeGraph, Understand-Anything | 40.7K/51.9K | 代码图谱、语义索引 |
 | **内容生成** | presenton, MoneyPrinterTurbo, VoxCPM, LongLive, open-notebook | 7.9K/79K/25.8K/8.9K/24.8K | PPT/视频/语音/笔记 |
 | **AI 基础设施** | supermemory | 25.5K | 记忆引擎、跨会话上下文 |
@@ -61,6 +61,7 @@ D:\eyes
 │   ├── andrej-karpathy-skills/   → 规则哲学（Think First / Simplicity / Surgical / Goal-Driven）
 │   ├── harness/                  → 元技能工厂（7 Phase 工作流，6 种架构模式）
 │   ├── Anthropic-Cybersecurity-Skills/ → 技能规模化范本（YAML frontmatter + index.json）
+│   ├── claude-plugins-official/  → 官方插件生态规范（plugin.json 标准、Skills/Commands/MCP 扩展）
 │   └── plugins/                  → Cursor 插件市场结构参考
 │
 ├── [代码理解层]
@@ -180,6 +181,27 @@ Node 22.22.2    # CodeGraph/前端项目
 - Python 3.12: `uv python install 3.12` ✅
 - VoxCPM venv: D:\eyes\.venv（Python 3.12，已从 D:\eyes_venv 移入）
 - **VoxCPM 安装成功**：CPU-only PyTorch 经官方 CDN (16.3MB/s) + PowerShell 分批安装余下 20+ 依赖，全量验证通过
+
+### v1.2 — 2026-06-08（补充 claude-plugins-official）
+
+**新增项目：claude-plugins-official (20.2K Stars)**
+
+| 项目 | 获取方式 | 备注 |
+|------|---------|------|
+| claude-plugins-official | git clone | Anthropic 官方 Claude Code 插件注册表，含 30+ 内部插件 + 15 外部合作伙伴插件 |
+
+**定位：** 作为 Skill/规则层的重要补充，提供：
+- `plugin.json` 标准规范（插件清单格式）
+- Skills / Commands / Agents / Hooks / MCP 五种扩展方式
+- `plugin-dev` 插件开发工具包（含 agent-creator、skill-reviewer、plugin-validator）
+- `skill-creator` 技能创建器（eval 评估框架）
+- `hookify` Hook 规则引擎（Python 实现）
+- 外部合作伙伴插件参考（GitHub、Linear、Firebase 等）
+
+**与现有项目的互补关系：**
+- `andrej-karpathy-skills` 提供哲学层面的规则思想 → `claude-plugins-official` 提供工程化的插件规范实现
+- `harness` 提供元技能工厂模式 → `claude-plugins-official` 提供标准化的插件分发机制
+- 为 mdskills 框架提供插件架构的官方参考范本
 
 ### v1.1 — 2026-06-05 12:57（D 盘根目录清理）
 - 移动 D:\eyes_venv → D:\eyes\.venv（遵循项目内原则）

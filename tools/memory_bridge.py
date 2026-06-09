@@ -3,16 +3,11 @@
 记忆桥接引擎 — 串联 kanban.db → Letta → Dreaming → 长期智慧
 每次Dreaming cron触发时自动调用
 """
-import sqlite3
-import json
-import os
+import sqlite3, json, os, sys
 from datetime import datetime, timedelta
 
-KANBAN_DB = r"D:\brain\output\memory\kanban.db"
-MEMORY_DAILY = r"D:\brain\output\memory\daily"
-MEMORY_WEEKLY = r"D:\brain\output\memory\weekly"
-MEMORY_MONTHLY = r"D:\brain\output\memory\monthly"
-LETTA_DB = r"D:\brain\letta\letta.db"
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from paths import KANBAN_DB, MEMORY_DAILY, MEMORY_WEEKLY, MEMORY_MONTHLY, MEMORY_DIR, LETTA_DIR
 
 def sync_kanban_to_memory():
     """从kanban.db提取最近的task_events，写入每日记忆目录"""
@@ -20,51 +15,53 @@ def sync_kanban_to_memory():
     cursor = conn.cursor()
     
     # 获取最近4小时的task_events
-    cutoff = (datetime.now() - timedelta(hours=4)).isoformat()
+    # task_events 真实 schema: id, task_id, run_id, kind, payload, created_at
+    cutoff_ts = int((datetime.now() - timedelta(hours=4)).timestamp())
     
     try:
         cursor.execute("""
-            SELECT task_id, event_type, old_status, new_status, timestamp, metadata
+            SELECT task_id, kind, run_id, payload, created_at
             FROM task_events 
-            WHERE timestamp > ?
-            ORDER BY timestamp DESC
-        """, (cutoff,))
+            WHERE created_at > ?
+            ORDER BY created_at DESC
+            LIMIT 100
+        """, (cutoff_ts,))
         events = cursor.fetchall()
     except sqlite3.OperationalError:
-        # 表结构可能不同，尝试简化查询
-        cursor.execute("SELECT name FROM sqlite_master WHERE type='table'")
-        tables = [r[0] for r in cursor.fetchall()]
-        events = [("tables_found", str(tables), "", "", datetime.now().isoformat(), "{}")]
+        # task_events 表不存在 — 不构造虚假事件，返回 0
+        conn.close()
+        return 0
     finally:
         conn.close()
     
-    # 写入daily日志
+    # 写入daily日志 (JSON Lines 格式: 每行一条独立记录，支持追加)
     today = datetime.now().strftime("%Y-%m-%d")
-    log_path = os.path.join(MEMORY_DAILY, f"{today}.json")
+    log_path = os.path.join(MEMORY_DAILY, f"{today}.jsonl")
     
     log_entry = {
         "timestamp": datetime.now().isoformat(),
         "events_count": len(events),
-        "events": [{"task_id": str(e[0]), "type": str(e[1]), "old": str(e[2]), 
-                     "new": str(e[3]), "time": str(e[4]), "meta": str(e[5])} 
-                    for e in events[:100]]  # 最多100条
+        "events": [{"task_id": str(e[0]), "kind": str(e[1]), "run_id": str(e[2]),
+                     "payload": str(e[3]), "created_at": str(e[4])}
+                    for e in events]
     }
     
-    with open(log_path, "w", encoding="utf-8") as f:
-        json.dump(log_entry, f, ensure_ascii=False, indent=2)
+    with open(log_path, "a", encoding="utf-8") as f:
+        f.write(json.dumps(log_entry, ensure_ascii=False) + "\n")
     
     return len(events)
 
 def sync_to_letta(summary_text, stage="short_term"):
     """将Dreaming压缩产物同步到Letta归档记忆"""
+    stage_dir = os.path.join(MEMORY_DIR, stage)
     letta_entry = {
         "stage": stage,
         "timestamp": datetime.now().isoformat(),
         "summary": summary_text,
-        "source": f"D:\\brain\\output\\memory\\{stage}\\"
+        "source": stage_dir + os.sep
     }
     
-    letta_log = os.path.join(r"D:\brain\letta", f"sync_{stage}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
+    letta_log = os.path.join(LETTA_DIR, f"sync_{stage}_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
     with open(letta_log, "w", encoding="utf-8") as f:
         json.dump(letta_entry, f, ensure_ascii=False, indent=2)
     

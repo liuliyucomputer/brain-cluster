@@ -6,18 +6,30 @@ Brain 集群 — 全链路端到端测试 v2
 import subprocess, json, os, sys, time
 from datetime import datetime
 
-sys.path.insert(0, r"D:\brain\tools")
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from paths import CCSWITCH_ENDPOINT, TOOLS_DIR, LETTA_DIR, MEMORY_DIR
 
-PASS = 0; FAIL = 0
+pass_count = 0; fail_count = 0
 def check(label, cond, detail=""):
-    global PASS, FAIL
+    global pass_count, fail_count
     s = f"  [PASS] {label}" if cond else f"  [FAIL] {label}"
     print(f"{s} {detail}")
-    if cond: PASS += 1
-    else: FAIL += 1
+    if cond: pass_count += 1
+    else: fail_count += 1
 
-os.environ["OPENAI_API_KEY"] = "sk-xGSsFRUlKUXduzjnwPK4m9J7eNmmVTRwraXROi0dhPiRTvP8"
-os.environ["OPENAI_BASE_URL"] = "https://tokenshengsheng.com/v1"
+# 从 endpoint 或环境变量读取 API 配置
+def _load_creds():
+    if os.path.exists(CCSWITCH_ENDPOINT):
+        with open(CCSWITCH_ENDPOINT, encoding="utf-8") as f:
+            cfg = json.load(f)
+        return cfg.get("api_key", ""), cfg.get("base_url", "https://api.siliconflow.cn/v1")
+    return os.environ.get("OPENAI_API_KEY", ""), os.environ.get("OPENAI_BASE_URL", "")
+
+api_key, base_url = _load_creds()
+if api_key:
+    os.environ["OPENAI_API_KEY"] = api_key
+if base_url:
+    os.environ["OPENAI_BASE_URL"] = base_url
 
 print("="*60)
 print("  Brain E2E 全链路测试")
@@ -39,17 +51,17 @@ check("任务创建", task_id is not None, f"task_id={task_id}")
 if not task_id:
     print("ABORT: no task_id"); sys.exit(1)
 
-# === STEP 2: GPT-5.5 生成内容 ===
-print("\n[Step 2] GPT-5.5 生成内容")
+# === STEP 2: DeepSeek-V4-Pro 生成内容 ===
+print("\n[Step 2] DeepSeek-V4-Pro 生成内容")
 import openai
 client = openai.OpenAI(base_url=os.environ["OPENAI_BASE_URL"], api_key=os.environ["OPENAI_API_KEY"])
 resp = client.chat.completions.create(
-    model="gpt-5.5",
+    model="deepseek-ai/DeepSeek-V4-Pro",
     messages=[{"role": "user", "content": "写一句防晒霜卖点文案,10字以内"}],
     max_tokens=30
 )
 content = resp if isinstance(resp, str) else str(resp)
-check("GPT-5.5 响应", len(content) > 5, f"len={len(content)}")
+check("DeepSeek-V4-Pro 响应", len(content) > 5, f"len={len(content)}")
 
 # === STEP 3: 模拟双审 ===
 print("\n[Step 3] 模拟双审")
@@ -74,7 +86,7 @@ from memory_bridge import sync_kanban_to_memory, sync_to_letta
 count = sync_kanban_to_memory()
 check("kanban→daily同步", count >= 0, f"{count}条事件")
 sync_to_letta(f"E2E test completed. Task {task_id} done.", "short_term")
-letta_files = [f for f in os.listdir(r"D:\brain\letta") if f.startswith("sync")]
+letta_files = [f for f in os.listdir(LETTA_DIR) if f.startswith("sync")]
 check("Letta同步", len(letta_files) >= 2, f"{len(letta_files)}个sync文件")
 
 # === STEP 6: 信誉评分更新 ===
@@ -100,6 +112,6 @@ check("Grafana", graf["database"] == "ok", f"v{graf['version']}")
 
 # === 汇总 ===
 print("\n" + "="*60)
-print(f"  E2E 完成: {PASS}/{PASS+FAIL} 通过, {FAIL}/{PASS+FAIL} 失败")
+print(f"  E2E 完成: {pass_count}/{pass_count+fail_count} 通过, {fail_count}/{pass_count+fail_count} 失败")
 print(f"  任务ID: {task_id}")
 print("="*60)

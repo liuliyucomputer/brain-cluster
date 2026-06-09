@@ -3,12 +3,13 @@
 A/B 策略实验引擎
 学习龙提出假设 → 创建双任务 → 审查龙评估 → 自动选优
 """
-import json
-import os
+import json, os, sys
 from datetime import datetime
 
-MEMORY_DIR = r"D:\brain\memory"
-AB_RESULTS = os.path.join(MEMORY_DIR, "monthly", "ab_results.json")
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+from paths import MEMORY_MONTHLY
+
+AB_RESULTS = os.path.join(MEMORY_MONTHLY, "ab_results.json")
 
 def create_ab_experiment(hypothesis, strategy_a, strategy_b, task_type, kanban_api):
     """创建一组A/B实验任务"""
@@ -21,13 +22,12 @@ def create_ab_experiment(hypothesis, strategy_a, strategy_b, task_type, kanban_a
         "status": "running",
         "created_at": datetime.now().isoformat()
     }
-    # 通过 Hermes Kanban API 创建两个并行任务
-    # task_a = kanban_api.create(title, assignee="executor-a", metadata={"ab_group":"A", ...})
-    # task_b = kanban_api.create(title, assignee="executor-b", metadata={"ab_group":"B", ...})
     return tasks
 
 def evaluate_ab_result(experiment_id):
     """审查龙评估后，自动选出优胜策略"""
+    if not os.path.exists(AB_RESULTS):
+        return None
     with open(AB_RESULTS, "r", encoding="utf-8") as f:
         results = json.load(f)
     
@@ -35,8 +35,8 @@ def evaluate_ab_result(experiment_id):
     if not exp or exp["status"] != "running":
         return None
     
-    score_a = exp["group_a"]["result"]["review_score"]
-    score_b = exp["group_b"]["result"]["review_score"]
+    score_a = exp.get("group_a", {}).get("result", {}).get("review_score", 0)
+    score_b = exp.get("group_b", {}).get("result", {}).get("review_score", 0)
     
     winner = "A" if score_a > score_b else "B"
     exp["winner"] = winner

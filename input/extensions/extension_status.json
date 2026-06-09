@@ -1,18 +1,18 @@
 {
-  "updated": "2026-06-06T19:01:21.358708",
+  "updated": "2026-06-07T14:17:03.774665",
   "lines": {
     "skills": {
       "name": "CodeBuddy Skills (6)",
       "integrated": true,
       "tools": [
-        "github_batch",
-        "financial_analyze",
-        "ppt_generate",
-        "resume_screen",
-        "work_report",
-        "xhs_create_note"
+        "batch-github-setup",
+        "financial-analysis",
+        "ppt-pro-master",
+        "resume-screener",
+        "work-report",
+        "xhs-creator-studio"
       ],
-      "verified": true
+      "verified": false
     },
     "publisher": {
       "name": "Publisher Pipeline",
@@ -20,46 +20,13 @@
       "tools": [
         "publish_xiaohongshu"
       ],
-      "verified": true
+      "verified": false
     },
     "connectors": {
       "name": "21 Connectors",
       "integrated": true,
-      "tools": [
-        "wecom",
-        "feishu",
-        "dingtalk",
-        "qq-mail",
-        "netease-mail",
-        "tencent-docs",
-        "kdocs",
-        "tencent-survey",
-        "tencent-weiyun",
-        "tmeet",
-        "github",
-        "gongfeng-woa",
-        "cnb-api",
-        "cnb-woa",
-        "zhiyan-cicd",
-        "tapd",
-        "tapd-woa",
-        "lexiang",
-        "iwiki-woa",
-        "km",
-        "ima-mcp",
-        "tyc-mcp",
-        "qcc-company",
-        "neo-crm",
-        "ctrip-wendao",
-        "pkulaw",
-        "tdx-connector",
-        "baidu-netdisk",
-        "edgeone-pages",
-        "fbs-connector",
-        "notion",
-        "tencent-qidian-cs"
-      ],
-      "verified": true
+      "tools": [],
+      "verified": false
     },
     "agentteam": {
       "name": "AgentTeam 12 Roles",

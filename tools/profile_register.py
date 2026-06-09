@@ -19,10 +19,13 @@ import os, json, subprocess, sys, yaml
 from pathlib import Path
 from datetime import datetime
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+from paths import PROFILES_DIR, CCSWITCH_ENDPOINT, PROJECT_ROOT
+
 # ── 路径配置 ──
-BRAIN_PROFILES = Path(r"D:\brain\input\profiles")
+BRAIN_PROFILES = Path(PROFILES_DIR)
 HERMES_PROFILES = Path(os.path.expandvars(r"%LOCALAPPDATA%\hermes\profiles"))
-ENDPOINT_CONFIG = Path(r"D:\brain\input\configs\ccswitch\endpoint.json")
+ENDPOINT_CONFIG = Path(CCSWITCH_ENDPOINT)
 
 # ── 读取 ccswitch 凭据 ──
 def load_credentials():
@@ -32,12 +35,12 @@ def load_credentials():
         return {
             "api_key": cfg.get("api_key", ""),
             "base_url": cfg.get("base_url", ""),
-            "model": cfg.get("model", "gpt-5.5"),
+            "model": cfg.get("model", "deepseek-ai/DeepSeek-V4-Pro"),
         }
     return {
         "api_key": os.environ.get("OPENAI_API_KEY", ""),
-        "base_url": os.environ.get("OPENAI_BASE_URL", "https://tokenshengsheng.com/v1"),
-        "model": "gpt-5.5",
+        "base_url": os.environ.get("OPENAI_BASE_URL", "https://api.siliconflow.cn/v1"),
+        "model": "deepseek-ai/DeepSeek-V4-Pro",
     }
 
 # ── 扫描所有 Profile ──
@@ -67,8 +70,10 @@ def register_profile(name, soul_path, creds, force=False):
             ["hermes", "profile", "create", name, "--description", f"Brain集群Agent - {name}"],
             capture_output=True, text=True, timeout=30
         )
-        if r.returncode != 0 and "already exists" not in r.stderr.lower():
-            return {"name": name, "status": "failed", "reason": f"create: {r.stderr[:100]}"}
+        combined_output = (r.stderr + r.stdout).lower()
+        if r.returncode != 0 and "already exists" not in combined_output:
+            err_msg = (r.stderr + r.stdout).strip()[:150]
+            return {"name": name, "status": "failed", "reason": f"create: {err_msg}"}
     except Exception as e:
         return {"name": name, "status": "failed", "reason": str(e)}
 
@@ -200,7 +205,7 @@ def main(force=False, verify=True):
         "failed": failed,
         "details": results,
     }
-    report_path = Path(r"D:\brain\output\reports\profile_register.json")
+    report_path = Path(os.path.join(PROJECT_ROOT, "output", "reports", "profile_register.json"))
     report_path.parent.mkdir(parents=True, exist_ok=True)
     with open(report_path, "w", encoding="utf-8") as f:
         json.dump(report, f, ensure_ascii=False, indent=2)

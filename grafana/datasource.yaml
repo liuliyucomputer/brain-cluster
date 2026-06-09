@@ -4,7 +4,7 @@
 
 [database]
 type = sqlite3
-path = D:\brain\memory\kanban.db
+path = D:\brain\output\memory\kanban.db
 
 [server]
 http_port = 3001

@@ -1,7 +1,7 @@
 # Brain 集群 — 熟练使用手册
 
-> 版本: 1.0 | 日期: 2026-06-05
-> 涵盖: 日常指令、Agent提示词、紧急处理、升级方案
+> 版本: 2.0 | 日期: 2026-06-07
+> 涵盖: 日常指令、Agent提示词、紧急处理、升级方案、长期任务
 
 ---
 
@@ -218,9 +218,9 @@ hermes profile list          # 检查Agent状态
 hermes kanban reassign <task_id> <new_agent>  # 重新分配
 ```
 
-### GPT-5.5 不通
+### API 不通 (SiliconFlow)
 ```bash
-python -c "import openai; c=openai.OpenAI(base_url='https://tokenshengsheng.com/v1', api_key='...'); print(c.chat.completions.create(model='gpt-5.5', messages=[{'role':'user','content':'test'}], max_tokens=5))"
+python -c "import openai; c=openai.OpenAI(base_url='https://api.siliconflow.cn/v1', api_key='your-key'); print(c.chat.completions.create(model='deepseek-ai/DeepSeek-V4-Pro', messages=[{'role':'user','content':'test'}], max_tokens=5))"
 ```
 
 ---
@@ -354,4 +354,107 @@ hermes gateway status              # Gateway 运行中?
 hermes kanban stats                # 有积压吗?
 hermes profile list                # Agent 都在线吗?
 python D:\brain\tools\e2e_full_test.py  # 全链路测试
+
+# v2.0 自愈检查
+python D:\brain\tools\watchdog.py --status     # Watchdog 恢复次数
+python D:\brain\tools\pipeline_orchestrator.py --status  # 重试状态
+python D:\brain\tools\checkpoint.py --list     # 快照列表
 ```
+
+---
+
+## 十、长期自主任务 (v2.0)
+
+### 10.1 提交长期任务
+
+```bash
+# 方式1: 智能拆解 (推荐)
+python tools\task_graph.py build 50 10 种草风,干货风,故事风
+# 输出: Root task ID: t_abc123
+
+# 方式2: 手动提交给 strategist 规划
+hermes kanban create "用3种风格写50篇夏季防晒小红书文案，每篇配主题标签，生成最终汇总报告" --assignee strategist
+```
+
+### 10.2 查看进度
+
+```bash
+# 实时进度 (推荐)
+python tools\task_graph.py progress <root_id>
+
+# 输出:
+# {
+#   "total_tasks": 15,
+#   "done": 8,
+#   "running": 3,
+#   "completion_pct": 53.3,
+#   "total_items": 50,
+#   "batches": {"1": {"done": 3, "total": 3}, "2": {"done": 2, "total": 3}, ...}
+# }
+
+# Web API (适合外部监控)
+curl http://localhost:19997/api/task_progress?task_id=<root_id>
+```
+
+### 10.3 依赖树可视化
+
+```bash
+# 查看完整任务树
+python tools\task_graph.py tree <root_id>
+
+# 检查某个任务的依赖是否完成
+python tools\task_graph.py deps <task_id>
+python tools\task_graph.py ready <task_id>
+```
+
+### 10.4 自愈系统操作
+
+```bash
+# 查看 Watchdog 状态 (crash恢复次数)
+python tools\watchdog.py --status
+
+# 查看重试状态 (哪些任务在重试)
+python tools\pipeline_orchestrator.py --status
+
+# 查看 Checkpoint 快照
+python tools\checkpoint.py --list
+
+# 从断点恢复 (系统崩溃后)
+python tools\checkpoint.py --restore
+# 或指定快照:
+python tools\checkpoint.py --restore checkpoint_2026-06-07_22-45-00.json
+```
+
+### 10.5 自愈闭环说明
+
+```
+任务执行中发生故障:
+  ├─ Agent crash → Watchdog 30秒内自动重启 + 重新派发
+  ├─ FAIL (双否决) → 3轮渐进式重试:
+  │    第1轮: 换策略模板 + 原Agent (扣信誉0.1)
+  │    第2轮: 换Agent + 换策略   (扣信誉0.2)
+  │    第3轮: strategist重新分析  (扣信誉0.3)
+  │    第4轮: escalate_to_human  (记录到 escalations.jsonl)
+  ├─ 系统崩溃 → 最近 Checkpoint 5分钟内，自动恢复
+  └─ API不可达 → Watchdog 检测 → 切换backup模型
+```
+
+### 10.6 成本估算
+
+```bash
+# 查看预估API费用
+curl http://localhost:19997/api/task_cost
+
+# 输出:
+# {"total_tasks": 50, "estimated_api_calls": 250, "estimated_cost_cny": 0.5, ...}
+```
+
+### 10.7 48h 任务检查清单
+
+| 时间点 | 检查项 |
+|--------|--------|
+| 启动后 5min | `python tools\watchdog.py --status` 确认运行 |
+| 每 2h | `python tools\task_graph.py progress <root_id>` 看进度 |
+| 每 6h | `python tools\checkpoint.py --list` 确认快照生成 |
+| 异常时 | `python tools\pipeline_orchestrator.py --status` 看重试状态 |
+| 完成后 | `python tools\checkpoint.py --restore` 存档最终状态 |
