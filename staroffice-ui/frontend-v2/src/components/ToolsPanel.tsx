@@ -26,6 +26,7 @@ export function ToolsPanel() {
   const [data, setData] = useState<EyesToolsData | null>(null)
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null)
   const [hovered, setHovered] = useState<string | null>(null)
+  const [expandedTool, setExpandedTool] = useState<EyesTool | null>(null)
 
   useEffect(() => {
     fetchEyesTools().then(setData).catch(() => {})
@@ -103,19 +104,31 @@ export function ToolsPanel() {
             index={i}
             isHovered={hovered === tool.name}
             onHover={(v) => setHovered(v ? tool.name : null)}
+            onClick={() => setExpandedTool(tool)}
           />
         ))}
       </div>
+
+      {/* Expanded modal */}
+      {expandedTool && (
+        <ToolDetailModal
+          tool={expandedTool}
+          statusLabel={status_labels[expandedTool.status]}
+          category={categories[expandedTool.category]}
+          onClose={() => setExpandedTool(null)}
+        />
+      )}
     </div>
   )
 }
 
-function ToolCard({ tool, statusLabel, index, isHovered, onHover }: {
+function ToolCard({ tool, statusLabel, index, isHovered, onHover, onClick }: {
   tool: EyesTool
   statusLabel: { zh: string; en: string; cls: string }
   index: number
   isHovered: boolean
   onHover: (v: boolean) => void
+  onClick: () => void
 }) {
   const color = COLOR_MAP[tool.color] || 'var(--brand-indigo)'
   const bg = BG_MAP[tool.color] || 'rgba(99,102,241,0.08)'
@@ -129,6 +142,7 @@ function ToolCard({ tool, statusLabel, index, isHovered, onHover }: {
       transition={{ delay: index * 0.03, duration: 0.3, ease: [0.16, 1, 0.3, 1] }}
       onMouseEnter={() => onHover(true)}
       onMouseLeave={() => onHover(false)}
+      onClick={onClick}
     >
       {/* Left accent bar */}
       <div
@@ -161,6 +175,95 @@ function ToolCard({ tool, statusLabel, index, isHovered, onHover }: {
           background: `radial-gradient(circle at 50% 0%, ${color}, transparent 70%)`,
         }}
       />
+    </motion.div>
+  )
+}
+
+function ToolDetailModal({ tool, statusLabel, category, onClose }: {
+  tool: EyesTool
+  statusLabel: { zh: string; en: string; cls: string }
+  category: { zh: string; en: string }
+  onClose: () => void
+}) {
+  const color = COLOR_MAP[tool.color] || 'var(--brand-indigo)'
+  const bg = BG_MAP[tool.color] || 'rgba(99,102,241,0.08)'
+
+  return (
+    <motion.div
+      className="fixed inset-0 z-50 flex items-center justify-center p-4"
+      style={{ background: 'rgba(0,0,0,0.6)', backdropFilter: 'blur(8px)' }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      onClick={onClose}
+    >
+      <motion.div
+        className="relative w-full max-w-lg rounded-2xl border border-border-default overflow-hidden"
+        style={{ background: 'hsl(240,6%,10%)' }}
+        initial={{ scale: 0.9, opacity: 0, y: 20 }}
+        animate={{ scale: 1, opacity: 1, y: 0 }}
+        exit={{ scale: 0.9, opacity: 0, y: 20 }}
+        transition={{ type: 'spring', damping: 25, stiffness: 300 }}
+        onClick={e => e.stopPropagation()}
+      >
+        {/* Header gradient */}
+        <div className="relative h-32" style={{ background: bg }}>
+          <div
+            className="absolute inset-0"
+            style={{
+              background: `radial-gradient(circle at 30% 50%, ${color}15, transparent 60%)`,
+            }}
+          />
+          <button
+            onClick={onClose}
+            className="absolute top-3 right-3 w-8 h-8 rounded-full flex items-center justify-center text-white/40 hover:text-white/80 hover:bg-white/10 transition-all"
+          >
+            ✕
+          </button>
+          <div className="absolute bottom-4 left-6">
+            <span
+              className="text-2xs px-2 py-0.5 rounded-full border mb-2 inline-block"
+              style={{ borderColor: `${color}30`, color, background: `${color}10` }}
+            >
+              {category?.zh || tool.category}
+            </span>
+            <h2 className="text-xl font-bold text-white/90">{tool.zh}</h2>
+            <p className="text-xs text-white/40 mt-0.5">{tool.name}</p>
+          </div>
+        </div>
+
+        {/* Content */}
+        <div className="p-6 space-y-4">
+          {/* Description */}
+          <div>
+            <h3 className="text-2xs font-medium text-white/30 uppercase tracking-wider mb-1.5">介绍</h3>
+            <p className="text-sm text-white/70 leading-relaxed">{tool.desc}</p>
+          </div>
+
+          {/* Status & Stars */}
+          <div className="flex items-center gap-3">
+            <span className={`text-xs px-2.5 py-1 rounded-full ${STATUS_CLS[statusLabel.cls] || 'bg-success/10 text-success'}`}>
+              {statusLabel.zh}
+            </span>
+            <span className="text-xs text-white/30">
+              ⭐ {tool.stars}
+            </span>
+            <span className="text-xs text-white/30">
+              📦 {tool.category}
+            </span>
+          </div>
+
+          {/* Color indicator */}
+          <div className="flex items-center gap-2">
+            <span className="text-2xs text-white/30">主题色:</span>
+            <span
+              className="w-4 h-4 rounded-full border border-white/10"
+              style={{ background: color }}
+            />
+            <span className="text-2xs text-white/40">{tool.color}</span>
+          </div>
+        </div>
+      </motion.div>
     </motion.div>
   )
 }

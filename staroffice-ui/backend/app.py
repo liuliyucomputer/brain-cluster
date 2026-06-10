@@ -353,7 +353,211 @@ def api_tasks_control():
             else: return jsonify({"ok":False,"msg":f"未知操作:{action}"}),400
         except Exception as e: results.append(f"失败:{e}")
     conn.commit(); conn.close()
+    logger.info(f"[TaskManager] {action}: {len(task_ids)} tasks -> {len(results)}")
     return jsonify({"ok":True,"results":results})
+
+
+# ── Project Engine API ──
+
+@app.route("/api/project/status", methods=["GET"])
+def api_project_status():
+    """Get project-level status: task trees from director sessions"""
+    kanban_db = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "output", "memory", "kanban.db")
+    live_db = os.path.join(os.environ.get("LOCALAPPDATA", ""), "hermes", "kanban.db")
+    db = live_db if os.path.exists(live_db) else kanban_db
+    try:
+        conn = sql.connect(db); conn.row_factory = sql.Row
+        rows = conn.execute("SELECT id,title,assignee,status,created_at,completed_at,created_by,result FROM tasks WHERE created_by IN ('director','dashboard') ORDER BY created_at DESC LIMIT 100").fetchall()
+        conn.close()
+        projects: dict = {}
+        for r in rows:
+            key = r["created_by"]
+            if key not in projects:
+                projects[key] = {"name": "总监项目" if key == "director" else "面板任务", "tasks": [], "total": 0, "done": 0, "active": 0}
+            p = projects[key]; p["total"] += 1
+            if r["status"] in ("done","archived"): p["done"] += 1
+            elif r["status"] not in ("done","archived"): p["active"] += 1
+            p["tasks"].append({"id":r["id"],"title":r["title"],"assignee":r["assignee"] or "?","status":r["status"],"created_at":r["created_at"],"completed_at":r["completed_at"]})
+        return jsonify({"projects": list(projects.values())})
+    except Exception as e:
+        return jsonify({"projects": [], "error": str(e)})
+
+
+@app.route("/api/project/plan", methods=["POST"])
+def api_project_plan():
+    """Director generates a complete project plan with milestones"""
+    data = json.loads(request.get_data(as_text=True) or '{}')
+    goal = (data.get("goal") or "").strip()
+    if not goal: return jsonify({"ok":False,"msg":"请输入项目目标"}),400
+    import urllib.request as _ur, uuid
+    pid = f"proj_{uuid.uuid4().hex[:8]}"
+    prompt = f"""你是项目总监。目标:"{goal}"。生成分阶段执行计划。
+输出 JSON(无代码块):
+{{"summary":"总体分析","milestones":[{{"name":"里程碑名","goal":"阶段目标","tasks":[{{"title":"任务","assignee":"agent-key","prompt":"提示词"}}]}}]}}
+Agent: strategist,executor-a,executor-b,executor-c,reviewer-strict,reviewer-creative,arbiter,monitor,learner
+3-5个里程碑,每个2-4个任务."""
+    try:
+        payload = json.dumps({"model":DIRECTOR_MODEL,"messages":[{"role":"user","content":prompt}],"temperature":0.4,"max_tokens":3000}).encode("utf-8")
+        req = _ur.Request(f"{DIRECTOR_BASE_URL}/chat/completions",data=payload,headers={"Content-Type":"application/json","Authorization":f"Bearer {DIRECTOR_API_KEY}"})
+        resp = _ur.urlopen(req,timeout=60); body = json.loads(resp.read())
+        if body.get("code",0)!=0: return jsonify({"ok":False,"msg":body.get("message","")}),500
+        content = body["choices"][0]["message"]["content"].strip()
+        for mk in ("```json","```"): 
+            if mk in content: content = content.split(mk)[1].split(mk)[0] if content.count(mk)>=2 else content.split(mk)[1]
+        plan = json.loads(content); plan["id"]=pid; plan["goal"]=goal
+        plan["created_at"]=datetime.now().isoformat(); plan["status"]="active"
+        for m in plan.get("milestones",[]): m["status"]="pending"; m["id"]=f"m_{uuid.uuid4().hex[:6]}"
+        if plan["milestones"]: plan["milestones"][0]["status"]="active"
+        proj_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),"..","..","output","memory","projects")
+        os.makedirs(proj_dir,exist_ok=True)
+        with open(os.path.join(proj_dir,f"{pid}.json"),"w",encoding="utf-8") as f: json.dump(plan,f,ensure_ascii=False,indent=2)
+        return jsonify({"ok":True,"project":plan})
+    except Exception as e: return jsonify({"ok":False,"msg":str(e)}),500
+
+
+@app.route("/api/project/advance", methods=["POST"])
+def api_project_advance():
+    """Director evaluates completed tasks and generates next batch"""
+    data = json.loads(request.get_data(as_text=True) or '{}')
+    pid = (data.get("project_id") or "").strip()
+    proj_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),"..","..","output","memory","projects")
+    pf = os.path.join(proj_dir,f"{pid}.json")
+    if not os.path.exists(pf): return jsonify({"ok":False,"msg":"项目不存在"}),404
+    with open(pf,"r",encoding="utf-8") as f: plan = json.load(f)
+    import urllib.request as _ur, uuid
+    kanban_db = os.path.join(os.path.dirname(os.path.abspath(__file__)),"..","..","output","memory","kanban.db")
+    conn = sql.connect(kanban_db); conn.row_factory = sql.Row
+    done = conn.execute("SELECT title,assignee,result FROM tasks WHERE status IN ('done','archived') AND completed_at IS NOT NULL ORDER BY completed_at DESC LIMIT 15").fetchall()
+    pending = conn.execute("SELECT COUNT(*) FROM tasks WHERE status NOT IN ('done','archived')").fetchone()[0]
+    conn.close()
+    summary = "; ".join([f"{t['title']}({t['assignee']})→{(t['result'] or '')[:60]}" for t in done])
+    active_ms = next((m for m in plan.get("milestones",[]) if m.get("status")=="active"), None)
+    ms_idx = plan["milestones"].index(active_ms) if active_ms else 0
+    prompt = f"""项目:"{plan['goal']}" 里程碑{ms_idx+1}/{len(plan['milestones'])}: "{active_ms['name'] if active_ms else ''}"
+完成:{summary or '无'} 待处理:{pending}
+评估进展输出JSON:
+{{"milestone_done":bool,"summary":"评估","next_tasks":[{{"title":"","assignee":"","prompt":""}}],"project_done":bool}}"""
+    try:
+        payload = json.dumps({"model":DIRECTOR_MODEL,"messages":[{"role":"user","content":prompt}],"temperature":0.3,"max_tokens":2000}).encode("utf-8")
+        req = _ur.Request(f"{DIRECTOR_BASE_URL}/chat/completions",data=payload,headers={"Content-Type":"application/json","Authorization":f"Bearer {DIRECTOR_API_KEY}"})
+        resp = _ur.urlopen(req,timeout=45); body = json.loads(resp.read())
+        if body.get("code",0)!=0: return jsonify({"ok":False,"msg":body.get("message","")}),500
+        content = body["choices"][0]["message"]["content"].strip()
+        for mk in ("```json","```"): 
+            if mk in content: content = content.split(mk)[1].split(mk)[0] if content.count(mk)>=2 else content.split(mk)[1]
+        ev = json.loads(content)
+        # Dispatch tasks
+        kdb = os.path.join(os.path.dirname(os.path.abspath(__file__)),"..","..","output","memory","kanban.db")
+        conn = sql.connect(kdb); now = int(time.time()); created = []
+        for t in ev.get("next_tasks",[]):
+            tid = f"t_{uuid.uuid4().hex[:8]}"
+            conn.execute("INSERT INTO tasks (id,title,body,assignee,status,created_by,created_at,workspace_kind) VALUES (?,?,?,?,'ready','director',?,'scratch')",
+                         (tid,t.get("title",""),t.get("prompt",""),t.get("assignee","strategist"),now))
+            created.append({"task_id":tid,"title":t.get("title","")})
+        conn.commit(); conn.close()
+        # Update milestone
+        if ev.get("milestone_done") and active_ms:
+            active_ms["status"]="done"
+            if ms_idx+1 < len(plan["milestones"]): plan["milestones"][ms_idx+1]["status"]="active"
+        if ev.get("project_done"): plan["status"]="completed"
+        plan["updated_at"]=datetime.now().isoformat(); plan["director_summary"]=ev.get("summary","")
+        os.makedirs(proj_dir,exist_ok=True)
+        with open(pf,"w",encoding="utf-8") as f: json.dump(plan,f,ensure_ascii=False,indent=2)
+        return jsonify({"ok":True,"summary":ev.get("summary",""),"milestone_done":ev.get("milestone_done",False),"next_tasks":created,"project":plan})
+    except Exception as e: return jsonify({"ok":False,"msg":str(e)}),500
+
+
+@app.route("/api/project/list", methods=["GET"])
+def api_project_list():
+    """List all project plans"""
+    proj_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)),"..","..","output","memory","projects")
+    if not os.path.isdir(proj_dir): return jsonify({"projects":[]})
+    projects = []
+    for f in sorted(os.listdir(proj_dir),reverse=True):
+        if f.endswith(".json"):
+            with open(os.path.join(proj_dir,f),"r",encoding="utf-8") as fp:
+                p = json.load(fp)
+                md = sum(1 for m in p.get("milestones",[]) if m.get("status")=="done")
+                projects.append({"id":p["id"],"goal":p.get("goal",""),"status":p.get("status","active"),
+                    "milestones_done":md,"milestones_total":len(p.get("milestones",[])),
+                    "summary":p.get("summary",""),"created_at":p.get("created_at",""),
+                    "director_summary":p.get("director_summary",""),"milestones":p.get("milestones",[])})
+    return jsonify({"projects":projects})
+
+
+# ── Notifications / Results API ──
+
+@app.route("/api/notifications", methods=["GET"])
+def api_notifications():
+    """Get recent task completions as notifications"""
+    kanban_db = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "output", "memory", "kanban.db")
+    live_db = os.path.join(os.environ.get("LOCALAPPDATA", ""), "hermes", "kanban.db")
+    db = live_db if os.path.exists(live_db) else kanban_db
+    try:
+        conn = sql.connect(db); conn.row_factory = sql.Row
+        rows = conn.execute("SELECT id,title,assignee,status,completed_at,result FROM tasks WHERE status IN ('done','archived') AND completed_at IS NOT NULL ORDER BY completed_at DESC LIMIT 10").fetchall()
+        conn.close()
+        notifs = [{"id":r["id"],"title":r["title"],"assignee":r["assignee"] or "?","status":r["status"],"result":(r["result"] or "")[:200],"time":r["completed_at"]} for r in rows]
+        return jsonify({"notifications": notifs})
+    except:
+        return jsonify({"notifications":[]})
+
+
+# ── Self-Discovery API ──
+
+@app.route("/api/discover/scan", methods=["POST"])
+def api_discover_scan():
+    """Autonomous discovery: scan for opportunities and suggest tasks"""
+    suggestions = []
+    # Check system health
+    try:
+        kanban_db = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "output", "memory", "kanban.db")
+        live_db = os.path.join(os.environ.get("LOCALAPPDATA", ""), "hermes", "kanban.db")
+        db = live_db if os.path.exists(live_db) else kanban_db
+        if os.path.exists(db):
+            conn = sql.connect(db)
+            blocked = conn.execute("SELECT COUNT(*) FROM tasks WHERE status='blocked'").fetchone()[0]
+            failed = conn.execute("SELECT COUNT(*) FROM tasks WHERE status='failed'").fetchone()[0]
+            orphan = conn.execute("SELECT COUNT(*) FROM tasks WHERE status='ready' AND created_at < ?", (int(time.time())-3600,)).fetchone()[0]
+            conn.close()
+            if blocked > 0: suggestions.append({"title": f"恢复 {blocked} 个暂停任务", "assignee": "monitor", "reason": f"{blocked} 个任务被阻塞"})
+            if failed > 0: suggestions.append({"title": f"重新执行 {failed} 个失败任务", "assignee": "strategist", "reason": f"{failed} 个任务执行失败需重试"})
+            if orphan > 0: suggestions.append({"title": f"清理 {orphan} 个过期任务", "assignee": "monitor", "reason": "超过1小时未处理"})
+        # Memory health
+        memory_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", ".workbuddy", "memory")
+        if os.path.isdir(memory_dir):
+            logs = [f for f in os.listdir(memory_dir) if f.endswith('.md')]
+            if len(logs) < 1: suggestions.append({"title": "初始化每日记忆日志", "assignee": "learner", "reason": "无记忆日志文件"})
+    except: pass
+    return jsonify({"suggestions": suggestions, "total": len(suggestions)})
+
+
+# ── Goal Loop API ──
+
+@app.route("/api/goal/evaluate", methods=["POST"])
+def api_goal_evaluate():
+    """Evaluate a completed task and decide if it needs retry"""
+    data = json.loads(request.get_data(as_text=True) or '{}')
+    task_id = (data.get("task_id") or "").strip()
+    if not task_id: return jsonify({"ok":False,"msg":"need task_id"}),400
+    kanban_db = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "output", "memory", "kanban.db")
+    live_db = os.path.join(os.environ.get("LOCALAPPDATA", ""), "hermes", "kanban.db")
+    db = live_db if os.path.exists(live_db) else kanban_db
+    conn = sql.connect(db); conn.row_factory = sql.Row
+    task = conn.execute("SELECT * FROM tasks WHERE id=?",(task_id,)).fetchone()
+    if not task: conn.close(); return jsonify({"ok":False,"msg":"not found"}),404
+    if task["status"] not in ("done","archived"):
+        conn.close(); return jsonify({"ok":False,"status":"pending","msg":"task not done yet"})
+    # Check result quality (simple heuristic: result must be >50 chars)
+    result = task["result"] or ""
+    needs_retry = len(result) < 50 and task["consecutive_failures"] < 3
+    if needs_retry:
+        conn.execute("UPDATE tasks SET status='ready', consecutive_failures=consecutive_failures+1 WHERE id=?",(task_id,))
+        conn.commit(); conn.close()
+        logger.info(f"[GoalLoop] Retry {task_id} (result too short)")
+        return jsonify({"ok":True,"action":"retry","reason":"结果不完整，自动重试"})
+    conn.close()
+    return jsonify({"ok":True,"action":"pass","reason":"结果合格"})
 
 
 # ── Director Agent API ──
@@ -361,6 +565,69 @@ def api_tasks_control():
 DIRECTOR_API_KEY = "sk-ukkghdobyfyttizuaxhtqmmdcprycxvdcixoviwhrzlywksx"
 DIRECTOR_BASE_URL = "https://api.siliconflow.cn/v1"
 DIRECTOR_MODEL = "deepseek-ai/DeepSeek-V3"
+
+@app.route("/api/director/chat", methods=["POST"])
+def api_director_chat():
+    """Multi-turn Director chat with task decomposition"""
+    data = json.loads(request.get_data(as_text=True) or '{}')
+    user_request = (data.get("request") or "").strip()
+    history = data.get("history", [])
+    if not user_request:
+        return jsonify({"ok": False, "msg": "请输入内容"}), 400
+
+    import urllib.request as _ur
+    # Build conversation context
+    msgs = [{"role": "system", "content": """你是 Brain 集群的总监(Director)，凌驾于所有 Agent 之上。
+你的职责：与用户对话澄清需求 → 拆解任务 → 分配 Agent → 生成提示词。
+
+可选 Agent: strategist(策略), executor-a(文案), executor-b(PPT), executor-c(数据),
+reviewer-strict(严审), reviewer-creative(创审), arbiter(仲裁), monitor(监控), learner(学习)
+
+规则:
+1. 如果需求不够清晰，先追问细节，不要急于拆解
+2. 确认清晰后，拆解为 2-4 个子任务，每个指定 agent 和详细提示词
+3. 用中文回复
+4. 如果不需要拆解（只是一般对话），正常回复即可
+
+输出格式（仅当需要拆解任务时在末尾附加 JSON，禁止写在代码块中）:
+---TASKS---
+[{"title":"任务标题","assignee":"agent-key","prompt":"详细执行提示词"}]
+---END---"""}]
+    
+    for h in history[-8:]:
+        role = "assistant" if h["role"] == "director" else "user"
+        content = h.get("content","")[:500]
+        msgs.append({"role": role, "content": content})
+    msgs.append({"role": "user", "content": user_request[:2000]})
+
+    try:
+        payload = json.dumps({"model": DIRECTOR_MODEL, "messages": msgs, "temperature": 0.5, "max_tokens": 3000, "stream": False}).encode("utf-8")
+        req = _ur.Request(f"{DIRECTOR_BASE_URL}/chat/completions", data=payload,
+            headers={"Content-Type": "application/json", "Authorization": f"Bearer {DIRECTOR_API_KEY}"})
+        resp = _ur.urlopen(req, timeout=45)
+        body = json.loads(resp.read())
+
+        if body.get("code") and body.get("code") != 0:
+            return jsonify({"ok": False, "msg": f"AI: {body.get('message','')}" }), 500
+
+        content = body["choices"][0]["message"]["content"].strip()
+        
+        # Extract tasks if present
+        tasks = []
+        reply = content
+        if "---TASKS---" in content:
+            parts = content.split("---TASKS---")
+            reply = parts[0].strip()
+            task_text = parts[1].split("---END---")[0].strip() if "---END---" in parts[1] else parts[1]
+            try:
+                tasks = json.loads(task_text)
+            except: pass
+
+        logger.info(f"[Director Chat] {len(tasks)} tasks from '{user_request[:30]}...'")
+        return jsonify({"ok": True, "reply": reply, "tasks": tasks})
+    except Exception as e:
+        logger.error(f"[Director Chat] Failed: {e}")
+        return jsonify({"ok": False, "msg": str(e)}), 500
 
 @app.route("/api/director/analyze", methods=["POST"])
 def api_director_analyze():

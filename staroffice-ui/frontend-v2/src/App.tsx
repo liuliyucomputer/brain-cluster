@@ -11,8 +11,9 @@ import { LogPanel } from './components/LogPanel'
 import { ExecutionFlow } from './components/ExecutionFlow'
 import { TaskCreator } from './components/TaskCreator'
 import { MemoryManager } from './components/MemoryManager'
-import { DirectorPanel } from './components/DirectorPanel'
 import { CommanderPanel } from './components/CommanderPanel'
+import { DirectorChat } from './components/DirectorChat'
+import { ProjectDashboard } from './components/ProjectDashboard'
 import { TaskManager } from './components/TaskManager'
 import { ToolsPanel } from './components/ToolsPanel'
 
@@ -174,13 +175,17 @@ export default function App() {
           <ExecutionFlow stats={stats} monitor={monitor} />
         </motion.div>
 
+        {/* === DIRECTOR CHAT === */}
+        <motion.div initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.15 }}>
+          <DirectorChat />
+        </motion.div>
+
         {/* === 3-COLUMN DETAIL === */}
         <div className="grid grid-cols-3 gap-3">
 
           {/* COL 1: Agents + Extensions */}
           <div className="space-y-3">
-            <DirectorPanel />
-            <CommanderPanel />
+            <ProjectDashboard />
             <AgentMatrix agents={monitor?.agents ?? null} />
             <ExtensionsPanel extensions={stats.extensions?.lines ?? null} />
           </div>
@@ -188,6 +193,7 @@ export default function App() {
           {/* COL 2: Events + Task Creator */}
           <div className="space-y-3">
             <TaskManager />
+            <ToolsPanel />
             <EventStream events={monitor?.recent_events ?? []} />
             <TaskCreator />
           </div>
