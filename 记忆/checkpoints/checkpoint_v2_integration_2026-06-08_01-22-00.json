@@ -1,0 +1,34 @@
+{
+  "version": "2.0.0",
+  "timestamp": "2026-06-08T01:22:00.961792",
+  "type": "integration_self_test",
+  "v2_components": {
+    "watchdog.py": "verified (detection logic)",
+    "checkpoint.py": "verified (save/load/eta)",
+    "task_graph.py": "verified (deps/children/progress)",
+    "pipeline_orchestrator.py": "verified (retry state)",
+    "memory_bridge.py": "verified (no pollution, JSONL)",
+    "dreaming_compressor.py": "verified (3-stage pipeline)"
+  },
+  "daily_data": {
+    "days_covered": 4,
+    "total_events": 42,
+    "format": "JSONL"
+  },
+  "weekly_data": {
+    "latest_distillation": "2026-06-08"
+  },
+  "monthly_data": {
+    "reputation_active": true,
+    "high_performer": "executor-a (0.7063)",
+    "strategies_generated": true
+  },
+  "vector_data": {
+    "latest_reconstruction": "2026-06-08"
+  },
+  "identity_system": {
+    "name": "脑机",
+    "user": "礼宇",
+    "bootstrap_complete": true
+  }
+}

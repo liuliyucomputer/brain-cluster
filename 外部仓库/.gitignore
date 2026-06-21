@@ -1,0 +1,32 @@
+# === 子项目各自独立 git ===
+# eyes 本身不管理子项目的版本，子项目有自己的 .git
+# 只跟踪 PROJECT_DESIGN.md 和全局配置
+
+# === 虚拟环境 ===
+.venv/
+
+# === Node.js ===
+node_modules/
+dist/
+build/
+
+# === 大型资源/模型 (不跟踪) ===
+MoneyPrinterTurbo/resource/
+presenton/servers/
+presenton/eng.traineddata
+LongLive/assets/
+LongLive/*.pth
+LongLive/*.safetensors
+LongLive/*.ckpt
+LongLive/*.pt
+
+# === 临时文件 ===
+__pycache__/
+*.pyc
+*.pyo
+.DS_Store
+Thumbs.db
+
+# === IDE ===
+.vscode/
+.idea/

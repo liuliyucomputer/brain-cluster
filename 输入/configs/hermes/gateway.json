@@ -1,0 +1,38 @@
+{
+  "gateway": {
+    "mode": "local",
+    "port": 18789,
+    "bind": "loopback"
+  },
+  "auth": {
+    "profiles": {
+      "siliconflow:default": {
+        "provider": "openai",
+        "mode": "api_key",
+        "base_url": "https://api.siliconflow.cn/v1",
+        "default_model": "deepseek-ai/DeepSeek-V4-Pro",
+        "reasoning_effort": "high",
+        "wire_api": "chat_completions"
+      }
+    }
+  },
+  "kanban": {
+    "db_path": "D:\\brain\\output\\memory\\kanban.db",
+    "dispatch_in_gateway": true,
+    "dispatch_interval_seconds": 60,
+    "max_in_progress": 10,
+    "failure_limit": 2,
+    "dispatch_stale_timeout_seconds": 14400
+  },
+  "profiles": {
+    "strategist": { "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.7 },
+    "executor-a": { "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.5 },
+    "executor-b": { "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.5 },
+    "executor-c": { "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.5 },
+    "monitor": { "model": "deepseek-ai/DeepSeek-V4-Flash", "temperature": 0.1 },
+    "reviewer-strict": { "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.2 },
+    "reviewer-creative": { "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.7 },
+    "arbiter": { "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.4 },
+    "learner": { "model": "deepseek-ai/DeepSeek-V4-Pro", "temperature": 0.3 }
+  }
+}

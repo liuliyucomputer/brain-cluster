@@ -1,0 +1,16 @@
+{
+  "apiVersion": 1,
+  "datasources": [
+    {
+      "name": "Brain Stats API",
+      "type": "simPod-json-datasource",
+      "url": "http://localhost:19999",
+      "access": "proxy",
+      "basicAuth": false,
+      "isDefault": false,
+      "jsonData": {},
+      "readOnly": false,
+      "editable": true
+    }
+  ]
+}

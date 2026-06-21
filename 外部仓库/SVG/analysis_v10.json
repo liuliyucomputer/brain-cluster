@@ -1,0 +1,290 @@
+{
+  "version": "v10-final",
+  "input_size": [
+    312,
+    243
+  ],
+  "output_size": [
+    936,
+    729
+  ],
+  "scale": 3,
+  "mars": {
+    "cx": 612,
+    "cy": 393,
+    "r": 99
+  },
+  "orbits": [
+    {
+      "name": "I",
+      "r": 321,
+      "center": [
+        612,
+        393
+      ]
+    },
+    {
+      "name": "II",
+      "r": 225,
+      "center": [
+        612,
+        393
+      ]
+    },
+    {
+      "name": "III",
+      "r": 150,
+      "center": [
+        612,
+        393
+      ]
+    }
+  ],
+  "markers": [
+    {
+      "name": "S",
+      "cx": 612,
+      "cy": 81,
+      "circularity": 0.91
+    },
+    {
+      "name": "Q",
+      "cx": 585,
+      "cy": 84,
+      "circularity": 0.64
+    },
+    {
+      "name": "P",
+      "cx": 759,
+      "cy": 117,
+      "circularity": 0.65
+    },
+    {
+      "name": "M3",
+      "cx": 447,
+      "cy": 129,
+      "circularity": 0.7
+    },
+    {
+      "name": "M4",
+      "cx": 786,
+      "cy": 135,
+      "circularity": 0.64
+    },
+    {
+      "name": "M5",
+      "cx": 423,
+      "cy": 147,
+      "circularity": 0.65
+    },
+    {
+      "name": "M6",
+      "cx": 402,
+      "cy": 165,
+      "circularity": 0.65
+    },
+    {
+      "name": "M7",
+      "cx": 831,
+      "cy": 171,
+      "circularity": 0.69
+    },
+    {
+      "name": "M8",
+      "cx": 381,
+      "cy": 186,
+      "circularity": 0.64
+    },
+    {
+      "name": "M9",
+      "cx": 360,
+      "cy": 210,
+      "circularity": 0.65
+    },
+    {
+      "name": "M10",
+      "cx": 345,
+      "cy": 234,
+      "circularity": 0.65
+    },
+    {
+      "name": "M11",
+      "cx": 885,
+      "cy": 240,
+      "circularity": 0.65
+    },
+    {
+      "name": "M12",
+      "cx": 330,
+      "cy": 261,
+      "circularity": 0.65
+    },
+    {
+      "name": "M13",
+      "cx": 687,
+      "cy": 285,
+      "circularity": 0.64
+    },
+    {
+      "name": "M14",
+      "cx": 321,
+      "cy": 288,
+      "circularity": 0.65
+    },
+    {
+      "name": "M15",
+      "cx": 513,
+      "cy": 312,
+      "circularity": 0.65
+    },
+    {
+      "name": "M16",
+      "cx": 915,
+      "cy": 324,
+      "circularity": 0.64
+    },
+    {
+      "name": "M17",
+      "cx": 492,
+      "cy": 333,
+      "circularity": 0.65
+    },
+    {
+      "name": "M18",
+      "cx": 471,
+      "cy": 357,
+      "circularity": 0.65
+    },
+    {
+      "name": "M19",
+      "cx": 777,
+      "cy": 360,
+      "circularity": 0.64
+    },
+    {
+      "name": "M20",
+      "cx": 921,
+      "cy": 441,
+      "circularity": 0.64
+    },
+    {
+      "name": "M21",
+      "cx": 309,
+      "cy": 462,
+      "circularity": 0.65
+    },
+    {
+      "name": "M22",
+      "cx": 906,
+      "cy": 498,
+      "circularity": 0.64
+    },
+    {
+      "name": "M23",
+      "cx": 327,
+      "cy": 516,
+      "circularity": 0.65
+    },
+    {
+      "name": "M24",
+      "cx": 894,
+      "cy": 525,
+      "circularity": 0.64
+    },
+    {
+      "name": "M25",
+      "cx": 879,
+      "cy": 552,
+      "circularity": 0.65
+    },
+    {
+      "name": "M26",
+      "cx": 864,
+      "cy": 576,
+      "circularity": 0.64
+    },
+    {
+      "name": "M27",
+      "cx": 450,
+      "cy": 582,
+      "circularity": 0.64
+    },
+    {
+      "name": "M28",
+      "cx": 795,
+      "cy": 585,
+      "circularity": 0.64
+    },
+    {
+      "name": "M29",
+      "cx": 375,
+      "cy": 591,
+      "circularity": 0.69
+    },
+    {
+      "name": "M30",
+      "cx": 465,
+      "cy": 609,
+      "circularity": 0.65
+    },
+    {
+      "name": "M31",
+      "cx": 396,
+      "cy": 615,
+      "circularity": 0.69
+    },
+    {
+      "name": "M32",
+      "cx": 417,
+      "cy": 633,
+      "circularity": 0.69
+    },
+    {
+      "name": "M33",
+      "cx": 762,
+      "cy": 636,
+      "circularity": 0.69
+    },
+    {
+      "name": "M34",
+      "cx": 801,
+      "cy": 639,
+      "circularity": 0.69
+    },
+    {
+      "name": "M35",
+      "cx": 501,
+      "cy": 654,
+      "circularity": 0.7
+    },
+    {
+      "name": "M36",
+      "cx": 741,
+      "cy": 657,
+      "circularity": 0.65
+    },
+    {
+      "name": "M37",
+      "cx": 696,
+      "cy": 690,
+      "circularity": 0.74
+    },
+    {
+      "name": "M38",
+      "cx": 666,
+      "cy": 699,
+      "circularity": 0.64
+    }
+  ],
+  "ocr": [
+    {
+      "text": "火星",
+      "cx": 615,
+      "cy": 393
+    }
+  ],
+  "trajectory": {
+    "control_points": 0,
+    "detected": false
+  }
+}

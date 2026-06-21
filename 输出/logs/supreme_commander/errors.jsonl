@@ -1,0 +1,915 @@
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:24:35.614498"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:24:37.631543"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:25:14.212146"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:25:15.230861"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:26:16.242578"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:28:23.125462"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:28:24.156700"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:29:25.203047"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:30:23.129713"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:30:26.221684"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:31:27.252911"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:32:23.133641"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:32:28.292509"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:33:29.335116"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:34:23.137279"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:34:30.372229"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:35:31.411090"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:36:23.141066"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:36:32.422799"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:37:33.458505"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:38:23.145124"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:38:34.482641"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:39:35.496222"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:40:23.150159"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:40:36.543247"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:41:37.578085"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:42:23.156060"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:42:38.606337"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:43:39.640931"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:44:23.161328"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:44:40.679621"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:45:41.708378"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:46:23.165932"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:46:42.756988"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:47:43.777888"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:48:23.170848"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:48:44.804968"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:49:45.841666"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:50:23.176572"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:50:46.890968"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:51:47.917586"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:52:23.181099"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:52:48.963342"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:53:50.000910"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:54:23.184877"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:54:51.043473"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:55:52.071629"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:56:23.189513"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:56:53.118341"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T02:58:54.505962"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:58:56.513874"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T02:59:57.532355"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:00:54.510595"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:00:58.560881"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:01:59.580788"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:02:54.515332"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:03:00.595240"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:04:01.614701"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:04:54.520248"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:05:02.662611"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:07:21.251583"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:07:22.277780"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:08:23.307537"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:09:21.255000"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:09:24.325171"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:10:25.374367"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:11:21.259322"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:11:26.377572"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:12:27.412444"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:13:21.262940"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:13:28.449449"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:14:29.471658"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:15:21.266891"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:15:30.513418"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:16:31.548758"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:17:21.270764"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:17:32.566310"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:18:33.591680"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:19:21.274126"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:19:34.618107"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:20:35.662674"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:21:21.277963"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:21:36.697468"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:22:37.734348"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:23:21.281703"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:23:38.747745"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:24:39.792348"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:25:21.285080"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:25:40.813653"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:26:41.856762"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:27:21.288926"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:27:42.891016"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:28:43.938629"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:29:21.292483"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:29:44.975907"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:30:46.019175"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:31:21.296340"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:31:47.025771"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:32:48.067700"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:33:21.300082"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:33:49.103660"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:34:50.145059"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:35:21.304319"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:35:51.173586"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:36:52.209181"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:37:21.308619"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:37:53.246834"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:38:54.289606"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:39:21.312221"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:39:55.325875"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:40:56.338250"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:41:21.316590"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:41:57.380085"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:42:58.423115"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:43:21.320037"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:43:59.459327"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:45:00.491120"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:45:21.323758"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:46:01.528549"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:47:02.555124"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:47:21.327378"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:48:03.594787"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:49:04.630121"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:49:21.331008"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:50:05.661734"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:51:06.688890"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:51:21.335153"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:52:07.697322"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:53:08.744296"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:53:21.338888"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:54:09.762794"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:55:10.791045"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:55:21.343000"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:56:11.822147"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:57:12.859118"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:57:21.347389"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:58:13.886362"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T03:59:14.934906"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T03:59:21.351835"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:00:15.972037"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:01:16.997861"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:01:21.355963"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:02:18.019675"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:03:19.057494"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:03:21.359570"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:04:20.076935"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:05:21.117552"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:05:21.363038"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:06:22.141108"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:07:21.367284"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:07:23.163069"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:08:24.204885"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:09:21.371167"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:09:25.238773"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:10:26.277170"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:11:21.375134"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:11:27.324815"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:12:28.363584"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:13:21.379266"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:13:29.382777"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:14:30.430803"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:15:21.383524"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:15:31.449828"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:16:32.480264"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:17:21.387847"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:17:33.526292"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:18:34.546343"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:19:21.391851"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:19:35.570981"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:20:36.594182"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:21:21.396064"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:21:37.628231"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:22:38.666072"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:23:21.399661"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:23:39.687954"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:24:40.716041"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:25:21.404713"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:25:41.759113"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:26:42.785115"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:27:21.408230"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:27:43.814091"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:28:44.842555"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:29:21.411741"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:29:45.871103"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:30:46.917968"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:31:21.416519"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:31:47.935293"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:32:48.959208"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:33:21.421222"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:33:49.994344"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:34:51.033336"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:35:21.425391"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:35:52.078627"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:36:53.119297"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:37:21.429340"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:37:54.142239"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:38:55.162210"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:39:21.433525"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:39:56.208369"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:40:57.239727"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:41:21.437533"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:41:58.265118"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:42:59.312691"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:43:21.441906"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:44:00.338222"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:45:01.365998"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:45:21.445672"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:46:02.400449"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:47:03.431424"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:47:21.449930"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:48:04.454822"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:49:05.473836"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:49:21.454376"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:50:06.502949"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:51:07.521614"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:51:21.458777"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:52:08.554682"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:53:09.588879"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:53:21.462240"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:54:10.632688"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:55:11.674118"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:55:21.466401"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:56:12.707440"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:57:13.727301"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:57:21.470248"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:58:14.765731"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T04:59:15.805914"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T04:59:21.474728"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:00:16.848504"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:01:17.875838"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:01:21.478490"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:02:18.913640"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:03:19.938855"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:03:21.482332"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:04:20.982341"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:05:21.486133"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:05:22.031989"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:06:23.063418"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:07:21.490724"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:07:24.107063"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:08:25.136515"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:09:21.494887"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:09:26.177866"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:10:27.203301"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:11:21.499104"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:11:28.242505"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:12:29.269228"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:13:21.502956"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:13:30.306884"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:14:31.340235"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:15:21.507761"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:15:32.364750"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:16:33.390460"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:17:21.511922"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:17:34.432343"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:18:35.455531"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:19:21.515758"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:19:36.500213"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:20:37.533489"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:21:21.520495"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:21:38.572559"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:22:39.613717"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:23:21.523946"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:23:40.638307"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:24:41.677990"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:25:21.527713"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:25:42.700091"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:26:43.734856"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:27:21.531197"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:27:44.758542"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:28:45.765593"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:29:21.535813"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:29:46.798160"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:30:47.830438"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:31:21.539537"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:31:48.869317"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:32:49.907400"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:33:21.544069"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:33:50.935026"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:34:51.978292"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:35:21.549716"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:35:53.008130"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:36:54.029047"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:37:21.554028"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:37:55.049547"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:38:56.070465"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:39:21.557548"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:39:57.104794"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:40:58.137724"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:41:21.561646"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:41:59.160717"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:43:00.208662"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:43:21.565341"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:44:01.254541"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:45:02.290607"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:45:21.569190"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:46:03.310004"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:47:04.337579"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:47:21.572708"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:48:05.376826"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:49:06.398563"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:49:21.577299"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:50:07.421597"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:51:08.441998"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:51:21.582585"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:52:09.477926"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:53:10.518285"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:53:21.586296"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:54:11.551383"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:55:12.564349"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:55:21.590710"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:56:13.601103"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:57:14.626122"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:57:21.594226"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:58:15.645537"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T05:59:16.674388"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T05:59:21.597681"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:00:17.689165"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:01:18.694246"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:01:21.601994"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:02:19.730880"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:03:20.758588"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:03:21.605993"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:04:21.799832"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:05:21.610274"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:05:22.831077"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:06:23.877813"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:07:21.614394"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:07:24.918275"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:08:25.959602"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:09:21.618361"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:09:26.990605"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:10:28.020298"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:11:21.623516"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:11:29.064341"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:12:30.107373"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:13:21.628397"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:13:31.132539"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:14:32.177174"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:15:21.632643"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:15:33.201671"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:16:34.230577"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:17:21.636397"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:17:35.237247"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:18:36.272015"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:19:21.640260"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:19:37.301725"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:20:38.331162"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:21:21.645069"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:21:39.365668"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:22:40.384680"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:23:21.650990"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:23:41.405242"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:24:42.427880"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:25:21.656580"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:25:43.459469"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:26:44.501977"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:27:21.660908"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:27:45.542888"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:28:46.568388"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:29:21.664921"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:29:47.611638"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:30:48.631247"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:31:21.668949"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:31:49.667705"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:32:50.703849"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:33:21.673354"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:33:51.741764"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:34:52.765481"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:35:21.677022"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:35:53.783211"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:36:54.809554"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:37:21.680534"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:37:55.833812"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:38:56.853008"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:39:21.684035"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:39:57.878608"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:40:58.898443"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:41:21.688298"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:41:59.926203"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:43:00.957602"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:43:21.692474"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:44:01.984382"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:45:03.012499"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:45:21.696873"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:46:04.022632"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:47:05.048580"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:47:21.702738"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:48:06.090218"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:49:07.135245"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:49:21.707404"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:50:08.168120"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:51:09.193393"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:51:21.711723"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:52:10.219295"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:53:11.244219"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:53:21.716230"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:54:12.269627"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:55:13.303471"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:55:21.721319"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:56:14.341822"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:57:15.383963"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:57:21.725474"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:58:16.409373"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T06:59:17.441565"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T06:59:21.729117"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:00:18.478409"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:01:19.505403"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:01:21.733590"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:02:20.551263"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:03:21.596003"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:03:21.737635"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:04:22.619617"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:05:21.741920"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:05:23.640366"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:06:24.646789"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:07:21.745839"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:07:25.677181"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:08:26.706470"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:09:21.749842"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:09:27.752621"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:10:28.789130"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:11:21.753883"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:11:29.820354"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:12:30.839885"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:13:21.757993"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:13:31.860347"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:14:32.906310"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:15:21.762476"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:15:33.928793"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:16:34.955291"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:17:21.767990"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:17:35.985037"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:18:37.026653"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:19:21.772142"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:19:38.064855"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:20:39.093227"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:21:21.776054"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:21:40.117091"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:22:41.151818"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:23:21.779724"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:23:42.175437"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:24:43.213192"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:25:21.786105"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:25:44.233784"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:26:45.260646"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:27:21.792090"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:27:46.291092"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:28:47.331319"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:29:21.796830"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:29:48.372865"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:30:49.409668"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:31:21.813930"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:31:50.438257"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:32:51.473359"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:33:21.819012"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:33:52.508514"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:34:53.539311"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:35:21.823468"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:35:54.583041"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:36:55.608401"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:37:21.827025"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:37:56.634951"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:38:57.657103"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:39:21.831414"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:39:58.687495"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:40:59.712900"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:41:21.835076"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:42:00.744176"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:43:01.779581"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:43:21.839199"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:44:02.802751"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:45:03.840598"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:45:21.844286"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:46:04.856219"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:47:05.884463"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:47:21.847972"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:48:06.914977"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:49:07.957424"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:49:21.851227"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:50:08.981809"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:51:10.028100"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:51:21.855345"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:52:11.061379"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:53:12.090423"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:53:21.859685"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:54:13.116649"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:55:14.122395"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:55:21.864614"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:56:15.151878"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:57:16.176844"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:57:21.868841"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:58:17.203308"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T07:59:18.222408"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T07:59:21.874738"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:00:19.256291"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:01:20.280897"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:01:21.880108"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:02:21.318539"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:03:21.884268"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:03:22.342526"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:04:23.379973"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:05:21.889880"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:05:24.403763"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:06:25.426018"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:07:21.893914"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:07:26.458651"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:08:27.475524"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:09:21.898139"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:09:28.520758"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:10:29.558168"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:11:21.902711"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:11:30.583340"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:12:31.606221"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:13:21.908536"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:13:32.626358"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:14:33.653128"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:15:21.914001"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:15:34.671875"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:16:35.701402"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:17:21.917899"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:17:36.727417"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:18:37.764368"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:19:21.923517"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:19:38.790540"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:20:39.798142"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:21:21.927803"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:21:40.852144"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:22:41.874290"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:23:21.933709"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:23:42.896440"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:24:43.940814"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:25:21.937302"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:25:44.959661"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:26:45.983248"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:27:21.940617"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:27:47.005839"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:28:48.029945"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:29:21.946857"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:29:49.046514"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:30:50.064015"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:31:21.952501"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:31:51.100805"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:32:52.131674"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:33:21.957916"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:33:53.178692"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:34:54.228278"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:35:21.962978"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:35:55.252959"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:36:56.262322"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:37:21.966886"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:37:57.296840"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:38:58.323593"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:39:21.972101"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:39:59.348227"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:41:00.395369"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:41:21.976902"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:42:01.430604"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:43:02.457587"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:43:21.983207"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:44:03.499162"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:45:04.503548"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:45:21.987030"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:46:05.532317"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:47:06.543943"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:47:21.990440"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:48:07.558202"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:49:08.577999"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:49:21.993918"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:50:09.624545"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:51:10.667259"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:51:21.997364"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:52:11.705751"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:53:12.736646"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:53:22.001749"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:54:13.773905"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:55:14.815640"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:55:22.005854"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:56:15.839761"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:57:16.878910"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:57:22.011720"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:58:17.923282"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T08:59:18.966887"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T08:59:22.015143"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:00:20.002920"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:01:21.047168"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:01:22.018954"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:02:22.067827"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:03:22.025993"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:03:23.116556"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:04:24.157887"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:05:22.029829"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:05:25.204574"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:06:26.247912"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:07:22.033945"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:07:27.271995"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:08:28.312154"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:09:22.039333"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:09:29.361008"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:10:30.402566"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:11:22.042855"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:11:31.450034"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:12:32.480804"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:13:22.046912"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:13:33.503336"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:14:34.546123"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:15:22.050945"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:15:35.580110"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:16:36.599052"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:17:22.055466"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:17:37.634264"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:18:38.679937"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:19:22.059848"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:19:39.700322"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:20:40.736943"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:21:22.063748"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:21:41.772389"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:22:42.783319"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:23:22.067679"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:23:43.803566"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:24:44.836729"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:25:22.071246"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:25:45.887143"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:26:46.914369"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:27:22.075233"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:27:47.959705"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:28:49.001428"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:29:22.079161"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:29:50.034683"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:30:51.074416"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:31:22.083613"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:31:52.102956"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:32:53.133292"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:33:22.087930"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:33:54.164183"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:34:55.200827"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:35:22.091681"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:35:56.233046"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:36:57.276122"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:37:22.095897"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:37:58.312724"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:38:59.351576"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:39:22.099518"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:40:00.396558"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:41:01.417427"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:41:22.102921"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:42:02.460347"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:43:03.482650"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:43:22.106889"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:44:04.509599"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:45:05.542427"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:45:22.111116"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:46:06.565292"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:47:07.606145"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:47:22.114838"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:48:08.637193"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:49:09.668522"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:49:22.121037"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:50:10.707720"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:51:11.746121"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:51:22.125826"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:52:12.785992"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:53:13.827174"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:53:22.129530"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:54:14.850992"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:55:15.871280"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:55:22.133510"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:56:16.907218"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:57:17.955234"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:57:22.137841"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:58:18.993305"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T09:59:20.029731"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T09:59:22.142227"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:00:21.053704"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:01:22.098177"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:01:22.146063"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:02:23.132073"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:03:22.150325"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:03:24.174340"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:04:25.202663"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:05:22.154324"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:05:26.236624"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:06:27.271233"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:07:22.158374"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:07:28.319337"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:08:29.347341"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:09:22.162236"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:09:30.372531"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:10:31.414512"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:11:22.165963"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:11:32.453390"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:12:33.489671"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:13:22.170358"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:13:34.535040"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:14:35.577624"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:15:22.175052"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:15:36.623479"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:16:37.664032"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:17:22.178795"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:17:38.712990"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:18:39.755869"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:19:22.183361"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:19:40.800959"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:20:41.832425"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:21:22.188101"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:21:42.858517"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:22:43.893734"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:23:22.193304"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:23:44.932221"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:24:45.965471"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:25:22.197964"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:25:47.002840"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:26:48.034224"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:27:22.203460"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:27:49.076734"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:28:50.089270"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:29:22.208623"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:29:51.122387"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:30:52.149984"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:31:22.212446"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:31:53.198953"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:32:54.231337"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:33:22.216723"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:33:55.256602"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:34:56.293761"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:35:22.221179"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:35:57.321172"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:36:58.365530"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:37:22.225415"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:37:59.394941"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:39:00.433642"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:39:22.229224"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:40:01.475813"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:41:02.513723"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:41:22.233879"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:42:03.549431"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:43:04.595182"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:43:22.237911"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:44:05.643581"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:45:06.679571"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:45:22.242435"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:46:07.725924"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:47:08.766545"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:47:22.246369"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:48:09.798993"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:49:10.836333"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:49:22.250690"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:50:11.866780"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:51:12.893036"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:51:22.255038"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:52:13.928840"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:53:14.968918"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:53:22.258938"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:54:15.989449"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:55:17.035431"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:55:22.262977"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:56:18.074696"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:57:19.108152"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:57:22.266967"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:58:20.132969"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T10:59:21.173341"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T10:59:22.270303"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:00:22.194855"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:01:22.273823"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:01:23.236307"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:02:24.279973"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:03:22.277678"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:03:25.325322"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:04:26.368247"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:05:22.281586"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:05:27.410248"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:06:28.445184"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:07:22.285190"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:07:29.492458"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:08:30.526715"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:09:22.289231"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:09:31.567005"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:10:32.615266"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:11:22.293143"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:11:33.662821"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:12:34.690867"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:13:22.297141"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:13:35.735998"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:14:36.758550"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:15:22.301242"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:15:37.795308"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:16:38.832564"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:17:22.305321"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:17:39.859761"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:18:40.900032"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:19:22.309580"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:19:41.935484"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:20:42.983261"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:21:22.313767"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:21:44.032638"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:22:45.070421"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:23:22.317961"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:23:46.110384"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:24:47.132274"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:25:22.322077"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:25:48.168046"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:26:49.206465"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:27:22.326405"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:27:50.252425"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:28:51.285950"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:29:22.331144"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:29:52.319690"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:30:53.343203"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:31:22.335172"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:31:54.388129"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:32:55.431648"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:33:22.339056"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:33:56.472280"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:34:57.515182"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:35:22.343091"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:35:58.555401"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:36:59.587697"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:37:22.346786"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:38:00.636347"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:39:01.672585"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:39:22.350586"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:40:02.700561"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:41:03.741736"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:41:22.356707"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:42:04.789050"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:43:05.812795"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:43:22.360347"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:44:06.851983"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:45:07.887390"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:45:22.366223"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:46:08.926283"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:47:09.965614"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:47:22.369565"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:48:11.012610"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:49:12.052492"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:49:22.373934"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:50:13.077117"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:51:14.119106"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:51:22.379652"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:52:15.147395"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:53:16.184749"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:53:22.384831"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:54:17.228210"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:55:18.271818"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:55:22.389032"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:56:19.303669"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:57:20.344923"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:57:22.393047"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:58:21.395690"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T11:59:22.397493"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T11:59:22.438478"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:00:23.482014"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:01:22.401135"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:01:24.513317"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:02:25.559479"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:03:22.405297"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:03:26.604584"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:04:27.655369"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:05:22.409800"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:05:28.691764"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:06:29.734542"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:07:22.413769"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:07:30.767254"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:08:31.805203"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:09:22.418017"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:09:32.839558"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:10:33.879336"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:11:22.422600"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:11:34.926277"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:12:35.984755"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:13:22.427199"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:13:37.008108"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:14:38.055612"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:15:22.432122"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:15:39.100895"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:16:40.142985"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:17:22.436018"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:17:41.167303"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:18:42.206655"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:19:22.440267"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:19:43.251956"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:20:44.273046"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:21:22.444151"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:21:45.325930"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:22:46.368480"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:23:22.449424"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:23:47.395589"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:24:48.439012"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:25:22.454659"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:25:49.475509"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:26:50.511746"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:27:22.459230"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:27:51.524241"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:28:52.562797"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:29:22.463860"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:29:53.606364"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:30:54.650122"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:31:22.468343"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:31:55.681888"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:32:56.729769"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:33:22.472614"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:33:57.767530"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:34:58.802348"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:35:22.477137"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:35:59.851939"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:37:00.889442"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:37:22.481172"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:38:01.928301"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:39:02.978921"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:39:22.485478"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:40:04.035545"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:41:05.076015"}
+{"action": "coordination_error", "error": "no such column: updated_at", "ts": "2026-06-10T12:41:22.490246"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:42:06.101962"}
+{"action": "restart_failed", "service": "hermes_gateway", "error": "name 'subprocess' is not defined", "ts": "2026-06-10T12:43:08.126916"}

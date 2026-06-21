@@ -1,0 +1,41 @@
+{
+  "version": "v17",
+  "image_size": [
+    312,
+    243
+  ],
+  "output_size": [
+    936,
+    729
+  ],
+  "planet": {
+    "cx": 187,
+    "cy": 177,
+    "r": 57
+  },
+  "markers": [
+    [
+      "S",
+      204,
+      27
+    ],
+    [
+      "Q",
+      179,
+      99
+    ],
+    [
+      "P",
+      232,
+      230
+    ]
+  ],
+  "trajectory": {
+    "method": "视觉精确定位→4点三次贝塞尔(保守)",
+    "cv_detected": false,
+    "control_points": 4
+  },
+  "ocr": [
+    "火星"
+  ]
+}

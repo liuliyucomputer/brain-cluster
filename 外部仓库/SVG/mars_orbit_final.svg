@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="953" height="760"
+     viewBox="0 0 953 760" style="background:#fff;">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#C00"/>
+    </marker>
+    <style>
+      .o{stroke:#000;fill:none;stroke-dasharray:6,4;stroke-width:1.5}
+      .t{stroke:#C00;fill:none;stroke-width:1.8;marker-end:url(#a)}
+      .b{fill:#fff;stroke:#000;stroke-width:1.5}
+      .d{fill:#000}
+      .l{font-size:16px;font-family:'Noto Sans SC', SimSun, 'Times New Roman', serif;fill:#000}
+      .lb{font-size:16px;font-family:'Noto Sans SC', SimSun, 'Times New Roman', serif;fill:#000;font-weight:bold}
+      .tg{font-size:14px;font-family:'Noto Sans SC', SimSun, 'Times New Roman', serif;fill:#000;font-style:italic}
+    </style>
+  </defs>
+  <rect width="953" height="760" fill="#fff"/>
+
+  <!-- 轨道 -->
+  <g data-orbit="I">
+    <circle cx="432.0" cy="306.0" r="294.0" class="o"/>
+    <text x="614.3" y="429.5" class="tg">I</text>
+  </g>
+  <g data-orbit="II">
+    <circle cx="516.0" cy="362.0" r="218.4" class="o"/>
+    <text x="651.4" y="453.7" class="tg">II</text>
+  </g>
+  <g data-orbit="III">
+    <circle cx="530.0" cy="474.0" r="140.0" class="o"/>
+    <text x="616.8" y="532.8" class="tg">III</text>
+  </g>
+
+  <!-- 火星 -->
+  <g data-type="planet">
+    <circle cx="611.2" cy="406.8" r="86.8" class="b"/>
+    <text x="611.2" y="412.8" class="lb" text-anchor="middle">火星</text>
+  </g>
+
+  <!-- 探测点 -->
+  <g data-marker="S">
+    <circle cx="613.5" cy="117.2" r="8.7" class="d"/>
+    <text x="627.1" y="121.2" class="lb">S</text>
+  </g>
+  <g data-marker="Q">
+    <circle cx="623.0" cy="296.8" r="8.7" class="d"/>
+    <text x="636.7" y="300.8" class="lb">Q</text>
+  </g>
+  <g data-marker="P">
+    <circle cx="623.0" cy="698.1" r="9.2" class="d"/>
+    <text x="637.2" y="702.1" class="lb">P</text>
+  </g>
+
+  <!-- 轨迹曲线 -->
+  <path d="M73.6,314.4 L82.0,336.8 L546.8,339.6 L135.2,412.4 L171.6,451.6 L185.6,479.6 L230.4,513.2 L280.8,563.6 L269.6,563.6 L286.4,566.4 L359.2,616.8 L378.8,630.8 L462.8,667.2 L488.0,681.2 L572.0,692.4" class="t"/>
+
+</svg>

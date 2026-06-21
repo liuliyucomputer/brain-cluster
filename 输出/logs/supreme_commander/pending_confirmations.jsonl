@@ -1,0 +1,2 @@
+{"type": "human_confirmation_required", "emergency": false, "issue": {"type": "service_down", "service": "hermes_gateway", "port": 18789, "risk": "high", "auto_fix": false, "severity": "high", "llm_fixable": false}, "ts": "2026-06-10T02:24:47.896506"}
+{"type": "human_confirmation_required", "emergency": false, "issue": {"type": "service_down", "service": "dashboard", "port": 9119, "risk": "high", "auto_fix": false, "severity": "high", "llm_fixable": false}, "ts": "2026-06-10T02:24:47.897138"}

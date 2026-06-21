@@ -1,0 +1,257 @@
+{
+  "access-control": {
+    "add-permissions": {
+      "save": "Save"
+    },
+    "permissions": {
+      "lbac-warning-basic-role": "",
+      "lbac-warning-rule": "Warning: This team might not have permission to the query the datasource.",
+      "lbac-warning-team": "Warning: This team has full data access if no LBAC rules are set."
+    }
+  },
+  "banner": {
+    "api": {
+      "result": {
+        "saved": "Banner settings saved"
+      }
+    },
+    "form": {
+      "button-save": "Save",
+      "button-saving": "Saving...",
+      "enabled": {
+        "label": "Enabled"
+      },
+      "end": {
+        "description": "If no end date is selected, the banner is displayed indefinitely.",
+        "error": "End time must be after start time",
+        "label": "Ends at"
+      },
+      "message": {
+        "description": "Text content of the banner. Supports markdown.",
+        "label": "Message"
+      },
+      "options": {
+        "error": "Error",
+        "info": "Info",
+        "warning": "Warning"
+      },
+      "start": {
+        "description": "The banner will be shown starting from this date/time.",
+        "label": "Starts at"
+      },
+      "title": "Configure banner",
+      "variant": {
+        "label": "Variant"
+      }
+    },
+    "preview": {
+      "message": {
+        "default": "Update this preview by modifying the message field."
+      },
+      "title": "Preview"
+    }
+  },
+  "caching": {
+    "alert": {
+      "readonly": {
+        "message": "This data source was added by config and caching cannot be modified using the UI. Please contact your server admin to update this data source.",
+        "title": "Provisioned data source"
+      }
+    }
+  },
+  "explore": {
+    "query-library": {
+      "cancel": "Cancel",
+      "default-description": "Public",
+      "query-template-add-error": "Error attempting to save this query to the library",
+      "query-template-added": "Query successfully saved to the library",
+      "query-template-edit-error": "Error attempting to edit this query",
+      "query-template-edited": "Query template successfully edited",
+      "save": "Save"
+    },
+    "query-template-modal": {
+      "add-info": "You're about to save this query. Once saved, you can easily access it in the Query Library tab for future use and reference.",
+      "add-title": "Add query to Query Library",
+      "data-source-name": "Data source name",
+      "description": "Description",
+      "edit-info": "You're about to edit this query. Once saved, you can easily access it in the Query Library tab for future use and reference.",
+      "query": "Query"
+    },
+    "query-template-modall": {
+      "data-source-type": "Data source type"
+    }
+  },
+  "export": {
+    "pdf": {
+      "cancel-button": "Cancel",
+      "download-button": "Generate PDF",
+      "image-alt": "PDF preview",
+      "info-text": "Export the dashboard as a PDF document",
+      "layout-label": "Layout",
+      "orientation-label": "Orientation",
+      "title": "Export dashboard PDF",
+      "zoom-description": "Zoom in to enlarge text, or zoom out to see more data (like table columns) per panel.",
+      "zoom-label": "Zoom"
+    }
+  },
+  "groupsync": {
+    "empty-state": {
+      "pro-tip": "Want to manage Grafana access through groups in your Identity Provider? Create group mappings to Grafana RBAC roles. <2>Learn more</2>",
+      "title": "You haven't created any group mappings yet"
+    }
+  },
+  "plugins": {
+    "sandbox": {
+      "enable-sandbox-label": "Frontend Sandbox",
+      "enable-sandbox-tooltip": "The frontend sandbox runs frontend code in isolation, restricting access to global browser scope and limiting UI modifications to the plugin area.",
+      "enable-sandbox-tooltip-link": "Read more"
+    }
+  },
+  "public-dashboard": {
+    "email-sharing": {
+      "success-confirm-access": "Access confirmed!",
+      "success-resend-recipient-invitation": "The email invitation has been resent.",
+      "success-revoke-access-description": "You have successfully revoked access for {{recipientEmail}}.",
+      "success-revoke-access-title": "Access Revoked",
+      "success-revoke-all-accesses-description": "{{email}}'s access to all public dashboards has been successfully removed.",
+      "success-revoke-all-accesses-title": "Access Revoked",
+      "success-send-recipient-invitation": "The email invitation has been sent."
+    }
+  },
+  "query-library": {
+    "actions": {
+      "delete-query-button": "Delete query",
+      "select-query-button": "Select query"
+    },
+    "delete-modal": {
+      "body-text": "You're about to remove this query from the query library. This action cannot be undone. Do you want to continue?",
+      "confirm-button": "Delete query",
+      "title": "Delete query"
+    },
+    "drawer": {
+      "title": "Query library"
+    },
+    "edit-modal": {
+      "title": "Edit query"
+    },
+    "empty-state": {
+      "message": "Start adding them from Explore or when editing a dashboard",
+      "title": "You haven't saved any queries to the library yet"
+    },
+    "error-state": {
+      "title": "Something went wrong!"
+    },
+    "filters": {
+      "datasource-label": "Datasource name(s)",
+      "search-placeholder": "Search by data source, query content or description",
+      "user-label": "User name(s)"
+    },
+    "not-found": {
+      "message": "Try adjusting your search or filter criteria",
+      "title": "No results found"
+    },
+    "notifications": {
+      "query-deleted": "Query deleted"
+    },
+    "query-details": {
+      "author": "Author",
+      "datasource": "Datasource",
+      "date-added": "Date added",
+      "edit-button": "Edit query"
+    },
+    "query-template": {
+      "error": "Error attempting to load query template metadata: {{error}}"
+    },
+    "user-info": {
+      "error": "Error attempting to get user info from the library: {{error}}"
+    }
+  },
+  "query-operation": {
+    "header": {
+      "save-to-query-library": "Save to query library",
+      "save-to-query-library-new": "New: Save to query library"
+    }
+  },
+  "reporting": {
+    "errors": {
+      "action-message": "Please contact your Grafana administrator to install the plugin.",
+      "no-renderer-description": "To generate PDF reports, you must install the <2>Grafana Image Renderer</2> plugin.",
+      "no-renderer-title": "Image renderer plugin not installed",
+      "old-renderer-description": "To generate CSV files, you must update the <2>Grafana Image Renderer</2> plugin.",
+      "old-renderer-title": "You are using an old version of the image renderer plugin"
+    },
+    "settings": {
+      "attachment-settings-fieldset-label": "Attachment settings",
+      "email-branding-fieldset-label": "Email branding",
+      "email-footer-field-label": "Email footer",
+      "email-logo-image-preview-altText": "Company logo preview",
+      "email-logo-url-field-description": "The logo will be displayed in the email header. Supported formats: png, jpg, gif.",
+      "email-logo-url-field-label": "Company logo URL",
+      "embedded-image-header": "Embedded image",
+      "embedded-image-theme-picker-description": "The theme will be applied to the dashboard image embedded in the email.",
+      "footer-link-field-label": "Footer link text",
+      "footer-link-url-field-label": "Footer link URL",
+      "none-footer-label": "None",
+      "pdf-header": "PDF",
+      "pdf-theme-picker-description": "The theme will be applied to the PDF attached to the report.",
+      "report-logo-image-preview-altText": "Company logo preview",
+      "report-logo-url-field-description": "The logo will be displayed in the document footer. Supported formats: png, jpg, gif.",
+      "report-logo-url-field-label": "Company logo URL",
+      "save-button": "Save",
+      "sent-by-footer-label": "Sent By",
+      "settings-subtitle": "Manage report template settings."
+    }
+  },
+  "saml-connect-to-idp": {
+    "validate-idp-metadata": {
+      "require-one": "One metadata type should be defined"
+    }
+  },
+  "share-dashboard": {
+    "menu": {
+      "export-pdf-title": "Export as PDF",
+      "schedule-report-title": "Schedule report"
+    }
+  },
+  "share-report": {
+    "attachments": {
+      "section-title": "Attachments"
+    },
+    "dashboard": {
+      "repeated-template-variables-description": "When adding the same dashboard multiple times in one report, template variables that you selected first are applied to all instances of that dashboard in the report.",
+      "section-title": "Dashboard",
+      "template-variables-title": "Customize template variables"
+    },
+    "email-configuration": {
+      "add-dashboard-image-label": "Embed dashboard image",
+      "add-dashboard-url-label": "Include dashboard link",
+      "dashboard-image-settings-description": "The dashboard image settings can be adjusted in the general<1>report settings</1>",
+      "invalid-email": "Invalid email",
+      "message-label": "Message",
+      "message-placeholder": "Enter a message",
+      "reply-to-label": "Reply-to-email address",
+      "section-title": "Email settings",
+      "subject-description": "The report name will be used as the email subject if this field is left empty",
+      "subject-label": "Email subject"
+    },
+    "recipients": {
+      "section-title": "Recipients"
+    },
+    "report-name": {
+      "label": "Report name",
+      "required": "Report name is required"
+    },
+    "save-draft": {
+      "button": "Save draft"
+    },
+    "schedule": {
+      "section-title": "Schedule"
+    },
+    "schedule-report": {
+      "button": "Schedule report"
+    },
+    "send-preview": {
+      "button": "Send preview"
+    }
+  }
+}

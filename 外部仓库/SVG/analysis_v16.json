@@ -1,0 +1,53 @@
+{
+  "version": "v16",
+  "method": "cv_detection + column_projection + physics_constrained_bezier",
+  "image_size": [
+    312,
+    243
+  ],
+  "output_size": [
+    936,
+    729
+  ],
+  "scale": 3.0,
+  "planet": {
+    "cx": 187,
+    "cy": 177,
+    "r": 57
+  },
+  "markers": [
+    [
+      "S",
+      204,
+      27
+    ],
+    [
+      "Q",
+      179,
+      99
+    ],
+    [
+      "P",
+      232,
+      230
+    ]
+  ],
+  "trajectory": {
+    "method": "列投影(165行)→4点三次贝塞尔",
+    "sampled_rows": 165,
+    "control_points": 4,
+    "approx_range": [
+      [
+        187.0,
+        28
+      ],
+      [
+        189.5,
+        235
+      ]
+    ]
+  },
+  "ocr": [
+    "火星"
+  ]
+}

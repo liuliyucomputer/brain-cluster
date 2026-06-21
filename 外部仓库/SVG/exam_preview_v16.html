@@ -1,0 +1,72 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>物理试卷预览 v16 — 最终版</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Noto Sans SC','Microsoft YaHei',SimSun,sans-serif;background:#f5f5f5;padding:24px;color:#222}
+.paper{background:#fff;max-width:850mm;margin:0 auto;padding:28mm 32mm;box-shadow:0 1px 6px rgba(0,0,0,.08);min-height:1100mm}
+.header{text-align:center;border-bottom:2px solid #222;padding-bottom:10px;margin-bottom:16px}
+.header h1{font-size:17pt;font-weight:normal;letter-spacing:2px}
+.q-block{margin:14mm 0} .q-text{font-size:13pt;line-height:1.85;text-indent:2em}
+.fig-wrap{margin:12mm auto;display:flex;justify-content:center;padding:6mm 0}
+.fig-wrap svg{max-width:420px;height:auto;border:1px solid #e8e8e8}
+.options{margin:8mm 0 8mm 4em;font-size:13pt;line-height:1.95}
+.wf{background:#e8f4ea;border:1px solid #a8d5b0;border-radius:6px;padding:12px 16px;margin-top:14px;font-size:12.5px;line-height:1.75}.wf h4{color:#1a6d22;margin-bottom:6px}
+.note{font-size:11px;color:#888;margin-top:18px;padding-top:12px;border-top:1px dashed #ccc}
+.tag{display:inline-block;background:#e8f4ea;color:#2a7d2e;padding:2px 8px;border-radius:3px;font-size:11px;margin-right:6px}
+.arw{color:#CC0000;font-weight:bold}
+.ok{color:#2a7d2e} .warn{color:#cc5500}
+</style></head><body><div class="paper">
+<div class="header"><h1>2026 年普通高等学校招生全国统一考试（模拟）· 物理</h1></div>
+<div class="q-block">
+<p class="q-text">如图所示，“火星”及其卫星轨道示意图。探测器从<span class="tag">S 点</span>以一定初速度进入轨道 <span class="tag">I</span>，依次经过 <span class="tag">Q 点</span> 和 <span class="tag">P 点</span>。</p>
+<div class="fig-wrap"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="936.0" height="729.0" viewBox="0 0 936.0 729.0" style="background:#fff">
+<defs>
+<marker id="a" markerWidth="30" markerHeight="21" refX="27" refY="10" orient="auto">
+<polygon points="0 0,30 10,0 21" fill="#CC0000"/></marker></defs>
+<style>.o{stroke:#000;fill:none;stroke-dasharray:9,6;stroke-width:3}
+.t{stroke:#CC0000;fill:none;stroke-width:5;marker-end:url(#a)}
+.b{fill:#fff;stroke:#000;stroke-width:4}.d{fill:#000}
+.tx{font-size:54px;font-family:'Noto Sans SC, SimSun, 'Microsoft YaHei', sans-serif';fill:#000}
+.tb{font-size:66px;font-family:'Noto Sans SC, SimSun, 'Microsoft YaHei', sans-serif';fill:#000;font-weight:bold}
+.tl{font-size:57px;font-family:'Noto Sans SC, SimSun, 'Microsoft YaHei', sans-serif';fill:#000;font-style:italic}</style>
+<rect width="936.0" height="729.0" fill="#fff"/>
+<g data-orbit="I"><circle cx="561.0" cy="531.0" r="495.9" class="o"/><text x="920.0" y="532.17" class="tl">I</text></g>
+<g data-orbit="II"><circle cx="561.0" cy="531.0" r="342.0" class="o"/><text x="920.0" y="676.35" class="tl">II</text></g>
+<g data-orbit="III"><circle cx="561.0" cy="531.0" r="230.85000000000002" class="o"/><text x="826.05" y="642.15" class="tl">III</text></g>
+<g data-type="planet"><circle cx="561.0" cy="531.0" r="171" class="b"/><text x="561.0" y="556.08" class="tb" text-anchor="middle">火星</text></g>
+<g data-marker="S"><circle cx="612.0" cy="81.0" r="13" class="d"/><text x="633.0" y="95.0" class="tb">S</text></g>
+<g data-marker="Q"><circle cx="537.0" cy="297.0" r="13" class="d"/><text x="558.0" y="311.0" class="tb">Q</text></g>
+<g data-marker="P"><circle cx="696.0" cy="690.0" r="13" class="d"/><text x="717.0" y="704.0" class="tb">P</text></g>
+<!-- traj 列投影(165行)→4点三次贝塞尔 -->
+<path d="M561.0,84.0 C473.8,219.3 429.5,284.1 402.4,330.0 C361.6,398.9 364.3,711.8 568.5,705.0" class="t"/>
+</svg></div>
+<p class="options">A．探测器在 S 点的加速度大于 Q 点<br>B．探测器从 S 到 P 的过程中动能不断减小<br>C．轨道 I 的周期大于轨道 III 的周期<br>D．若探测器在 P 点加速可进入轨道 II</p>
+
+<div class="wf">
+<h4>v16 最终版 — 列投影定位轨迹走向 + 物理约束参数化贝塞尔曲线</h4>
+<table style="width:100%;border-collapse:collapse">
+<tr style="background:#f0f0f0"><th style="padding:5px 10px;text-align:left">元素</th><th style="padding:5px 10px;text-align:left">方法</th><th style="padding:5px 10px;text-align:left">结果</th></tr>
+<tr><td style="padding:4px 10px;border-top:1px solid #eee">星球圆形</td><td>HoughCircles</td><td class="ok">(187,177) r=57</td></tr>
+<tr><td style="padding:4px 10px;border-top:1px solid #eee">同心轨道 I/II/III</td><td>几何约束（同圆心）</td><td class="ok">精确比例</td></tr>
+<tr><td style="padding:4px 10px;border-top:1px solid #eee">标记点 S/Q/P</td><td>轮廓+圆度+物理约束</td><td class="ok">3 个</td></tr>
+<tr><td style="padding:4px 10px;border-top:1px solid #eee">中文标签</td><td>RapidOCR</td><td class="ok">1 个词识别</td></tr>
+<tr><td style="padding:4px 10px;border-top:1px solid #eee;background:#f0f8ef"><strong>★ 轨迹曲线 I</strong></td><td style="background:#f0f8ef">Canny→列投影→平滑→4点贝塞尔</td><td style="background:#f0f8ef" class="ok">列投影(165行)→4点三次贝塞尔</td></tr>
+</table>
+<p style="margin-top:10px;color:#444;line-height:1.8">
+<b>为什么这个方法更稳定？</b><br>
+纯CV方法（Canny/Hough轮廓/B样条）的问题是：<br>
+① 低分辨率图片中轨迹线与文字/虚线混杂无法分离<br>
+② 像素级拟合会产生回弹振荡（过拟合）<br>
+③ 每张图的噪声模式不同，阈值难以通用<br><br>
+本方案的思路：<br>
+① 用CV只做<strong>粗定位</strong>（轨迹在哪一区域、什么走向）<br>
+② 用<strong>物理知识</strong>（轨迹是光滑圆锥曲线弧）约束输出形状<br>
+③ 贝塞尔控制点只有2-4个，不可能产生振荡<br>
+④ 结果可预期、可调试、可人工微调
+</p>
+<p style="margin-top:8px;color:#555"><b>工作流：</b>SVG源码 <span class="arw">→</span> Inkscape编辑 <span class="arw">→</span> 导出PNG 300dpi <span class="arw">→</span> Word/WPS试卷</p>
+</div>
+<div class="note">SVG所有元素独立分层，文字为 &lt;text&gt; 元素可直接选中编辑。曲线使用参数化贝塞尔保证平滑无振荡。</div>
+</div></div></body></html>

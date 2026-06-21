@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" 
+     width="840" height="667" 
+     viewBox="0 0 840 667"
+     style="background: white;">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0, 10 3.5, 0 7" fill="#C00"/>
+    </marker>
+    <style>
+      .orbit { stroke: #000; fill: none; stroke-dasharray: 6,4; stroke-width: 1.5; }
+      .orbit-i { stroke: #C00; fill: none; stroke-width: 1.8; marker-end: url(#arr); }
+      .planet { fill: #fff; stroke: #000; stroke-width: 1.5; }
+      .planet-fill { fill: #F0F0F0; stroke: #000; stroke-width: 1.5; }
+      .label { font-size: 15px; font-family: Noto Sans SC, SimSun, serif; fill: #000; }
+      .label-bold { font-size: 15px; font-family: Noto Sans SC, SimSun, serif; fill: #000; font-weight: 700; }
+      .dot { fill: #000; }
+      .orbit-tag { font-size: 13px; font-family: Noto Sans SC, SimSun, serif; fill: #000; font-style: italic; }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="840" height="667" fill="white"/>
+
+  <!-- 轨道 -->
+  <g data-type="orbit" data-label="I">
+    <circle cx="379.5" cy="262.5" r="271.1" class="orbit"/>
+    <text x="569.3" y="72.7" class="orbit-tag">I</text>
+  </g>
+  <g data-type="orbit" data-label="II">
+    <circle cx="472.5" cy="427.5" r="173.9" class="orbit"/>
+    <text x="594.2" y="305.8" class="orbit-tag">II</text>
+  </g>
+  <g data-type="orbit" data-label="III">
+    <circle cx="619.5" cy="409.5" r="169.1" class="orbit"/>
+    <text x="737.9" y="291.1" class="orbit-tag">III</text>
+  </g>
+  <g data-type="orbit" data-label="IV">
+    <circle cx="661.5" cy="334.5" r="140.3" class="orbit"/>
+    <text x="759.7" y="236.3" class="orbit-tag">IV</text>
+  </g>
+  <g data-type="orbit" data-label="5">
+    <circle cx="778.5" cy="481.5" r="136.4" class="orbit"/>
+    <text x="874.0" y="386.0" class="orbit-tag">5</text>
+  </g>
+  <g data-type="orbit" data-label="6">
+    <circle cx="547.5" cy="493.5" r="128.3" class="orbit"/>
+    <text x="637.3" y="403.7" class="orbit-tag">6</text>
+  </g>
+  <g data-type="orbit" data-label="7">
+    <circle cx="313.5" cy="424.5" r="104.6" class="orbit"/>
+    <text x="386.7" y="351.3" class="orbit-tag">7</text>
+  </g>
+  <g data-type="orbit" data-label="8">
+    <circle cx="511.5" cy="187.5" r="96.8" class="orbit"/>
+    <text x="579.3" y="119.7" class="orbit-tag">8</text>
+  </g>
+  <g data-type="orbit" data-label="9">
+    <circle cx="568.5" cy="178.5" r="93.5" class="orbit"/>
+    <text x="634.0" y="113.1" class="orbit-tag">9</text>
+  </g>
+  <g data-type="orbit" data-label="10">
+    <circle cx="376.5" cy="481.5" r="92.3" class="orbit"/>
+    <text x="441.1" y="416.9" class="orbit-tag">10</text>
+  </g>
+  <g data-type="orbit" data-label="11">
+    <circle cx="541.5" cy="358.5" r="78.5" class="orbit"/>
+    <text x="596.5" y="303.6" class="orbit-tag">11</text>
+  </g>
+  <g data-type="orbit" data-label="12">
+    <circle cx="445.5" cy="526.5" r="77.9" class="orbit"/>
+    <text x="500.0" y="472.0" class="orbit-tag">12</text>
+  </g>
+  <g data-type="orbit" data-label="13">
+    <circle cx="652.5" cy="250.5" r="76.7" class="orbit"/>
+    <text x="706.2" y="196.8" class="orbit-tag">13</text>
+  </g>
+  <g data-type="orbit" data-label="14">
+    <circle cx="697.5" cy="481.5" r="64.4" class="orbit"/>
+    <text x="742.6" y="436.4" class="orbit-tag">14</text>
+  </g>
+
+  <!-- 火星 -->
+  <g data-type="planet">
+    <circle cx="562.5" cy="307.5" r="63.8" class="planet-fill"/>
+    <text x="562.5" y="312.5" class="label-bold" text-anchor="middle">火星</text>
+  </g>
+
+  <!-- 标记点 -->
+  <g data-type="marker" data-label="S">
+    <circle cx="550.4" cy="619.3" r="8.1" class="dot"/>
+    <text x="562.5" y="623.3" class="label-bold">S</text>
+  </g>
+  <g data-type="marker" data-label="Q">
+    <circle cx="550.6" cy="259.3" r="7.2" class="dot"/>
+    <text x="561.7" y="263.3" class="label-bold">Q</text>
+  </g>
+  <g data-type="marker" data-label="P">
+    <circle cx="542.0" cy="98.8" r="7.0" class="dot"/>
+    <text x="553.0" y="102.8" class="label-bold">P</text>
+  </g>
+
+  <!-- 轨迹曲线 -->
+  <line x1="257.5" y1="507.5" x2="362.5" y2="572.5" class="orbit-i" data-type="trajectory"/>
+  <line x1="92.5" y1="322.5" x2="180.0" y2="435.0" class="orbit-i" data-type="trajectory"/>
+  <line x1="390.0" y1="590.0" x2="502.5" y2="617.5" class="orbit-i" data-type="trajectory"/>
+  <line x1="235.0" y1="495.0" x2="287.5" y2="537.5" class="orbit-i" data-type="trajectory"/>
+  <line x1="75.0" y1="307.5" x2="150.0" y2="407.5" class="orbit-i" data-type="trajectory"/>
+  <line x1="462.5" y1="602.5" x2="525.0" y2="620.0" class="orbit-i" data-type="trajectory"/>
+  <line x1="60.0" y1="275.0" x2="105.0" y2="337.5" class="orbit-i" data-type="trajectory"/>
+  <line x1="217.5" y1="472.5" x2="267.5" y2="512.5" class="orbit-i" data-type="trajectory"/>
+  <line x1="107.5" y1="345.0" x2="160.0" y2="412.5" class="orbit-i" data-type="trajectory"/>
+
+  <!-- OCR 额外文字 -->
+
+</svg>

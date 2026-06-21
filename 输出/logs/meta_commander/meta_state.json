@@ -1,0 +1,9 @@
+{
+  "scan_count": 9,
+  "issues_found_total": 1167,
+  "fixes_applied_total": 0,
+  "fixes_failed_total": 0,
+  "last_scan": "2026-06-10T02:03:33.709326",
+  "protected_skips": 0,
+  "llm_fixes_total": 0
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="936.0" height="729.0" viewBox="0 0 936.0 729.0" style="background:#fff">
+<defs>
+<marker id="a" markerWidth="30" markerHeight="21" refX="27" refY="10" orient="auto">
+<polygon points="0 0,30 10,0 21" fill="#CC0000"/></marker></defs>
+<style>.o{stroke:#000;fill:none;stroke-dasharray:9,6;stroke-width:3}
+.t{stroke:#CC0000;fill:none;stroke-width:5;marker-end:url(#a)}
+.b{fill:#fff;stroke:#000;stroke-width:4}.d{fill:#000}
+.tx{font-size:54px;font-family:'Noto Sans SC, SimSun, 'Microsoft YaHei', sans-serif';fill:#000}
+.tb{font-size:66px;font-family:'Noto Sans SC, SimSun, 'Microsoft YaHei', sans-serif';fill:#000;font-weight:bold}
+.tl{font-size:57px;font-family:'Noto Sans SC, SimSun, 'Microsoft YaHei', sans-serif';fill:#000;font-style:italic}</style>
+<rect width="936.0" height="729.0" fill="#fff"/>
+<g data-orbit="I"><circle cx="561.0" cy="531.0" r="495.9" class="o"/><text x="920.0" y="532.17" class="tl">I</text></g>
+<g data-orbit="II"><circle cx="561.0" cy="531.0" r="342.0" class="o"/><text x="920.0" y="676.35" class="tl">II</text></g>
+<g data-orbit="III"><circle cx="561.0" cy="531.0" r="230.85000000000002" class="o"/><text x="826.05" y="642.15" class="tl">III</text></g>
+<g data-type="planet"><circle cx="561.0" cy="531.0" r="171" class="b"/><text x="561.0" y="556.08" class="tb" text-anchor="middle">火星</text></g>
+<g data-marker="S"><circle cx="612.0" cy="81.0" r="13" class="d"/><text x="633.0" y="95.0" class="tb">S</text></g>
+<g data-marker="Q"><circle cx="537.0" cy="297.0" r="13" class="d"/><text x="558.0" y="311.0" class="tb">Q</text></g>
+<g data-marker="P"><circle cx="696.0" cy="690.0" r="13" class="d"/><text x="717.0" y="704.0" class="tb">P</text></g>
+<!-- traj 列投影(165行)→4点三次贝塞尔 -->
+<path d="M561.0,84.0 C473.8,219.3 429.5,284.1 402.4,330.0 C361.6,398.9 364.3,711.8 568.5,705.0" class="t"/>
+</svg>

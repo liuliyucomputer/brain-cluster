@@ -1,0 +1,43 @@
+{
+  "version": "v15",
+  "method": "hough_lines_p + greedy_chain + rdp + catmull_rom",
+  "image_size": [
+    312,
+    243
+  ],
+  "output_size": [
+    936,
+    729
+  ],
+  "planet": {
+    "cx": 187,
+    "cy": 177,
+    "r": 57
+  },
+  "markers": [
+    [
+      "S",
+      204,
+      27
+    ],
+    [
+      "Q",
+      179,
+      99
+    ],
+    [
+      "P",
+      232,
+      230
+    ]
+  ],
+  "trajectory": {
+    "segments": 125,
+    "valid_segments": 125,
+    "path_points": 28,
+    "key_points": 19
+  },
+  "ocr": [
+    "火星"
+  ]
+}

@@ -1,0 +1,240 @@
+{
+  "timestamp": "2026-06-07T14:17:03.288628",
+  "skills": {
+    "count": 6,
+    "tools": [
+      {
+        "skill": "batch-github-setup",
+        "tool": "github_batch",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\batch-github-setup",
+        "description": ">"
+      },
+      {
+        "skill": "financial-analysis",
+        "tool": "financial_analyze",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\financial-analysis",
+        "description": "财务分析全流程自动化技能。整合 xlsx、data-analysis、finance、docx、pdf 等技能，实现从数据导入→自动分析→风险预警→报告生成→决策建议的完整链路。支持三张报表分析(利润"
+      },
+      {
+        "skill": "ppt-pro-master",
+        "tool": "ppt_generate",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\ppt-pro-master",
+        "description": "|"
+      },
+      {
+        "skill": "resume-screener",
+        "tool": "resume_screen",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\resume-screener",
+        "description": ">"
+      },
+      {
+        "skill": "work-report",
+        "tool": "work_report",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\work-report",
+        "description": "unknown"
+      },
+      {
+        "skill": "xhs-creator-studio",
+        "tool": "xhs_create_note",
+        "path": "C:\\Users\\Administrator\\.workbuddy\\skills\\xhs-creator-studio",
+        "description": "小红书智能内容生产与发布：从调研、选题、文案生成、自查修正、封面制作到一键发布的全链路自动化。支持爆款文案生成(3种风格)、AI内容审查、多平台适配(小红书/抖音/B站/闲鱼)。触发词：小红书发布、小"
+      }
+    ]
+  },
+  "publisher": {
+    "count": 1,
+    "tools": [
+      {
+        "tool": "publish_xiaohongshu",
+        "type": "content_publish",
+        "path": "C:\\Users\\Administrator\\WorkBuddy\\Claw\\xhs_publisher.py",
+        "description": "发布小红书图文：自动填表 + 手动点击发布",
+        "params": [
+          "title",
+          "body",
+          "images",
+          "tags"
+        ],
+        "mode": "semi_auto (manual_click=True)"
+      }
+    ],
+    "status": "ready"
+  },
+  "connectors": {
+    "total": 0,
+    "alert_channels": 0,
+    "doc_channels": 0,
+    "connectors": [],
+    "alert_ready": false
+  },
+  "agentteam": {
+    "count": 12,
+    "profiles": [
+      "expert-coordinator",
+      "hierarchy-delegator",
+      "strategic-planner",
+      "swarm-coordinator",
+      "pipeline-orchestrator",
+      "observer-monitor",
+      "consensus-builder",
+      "feedback-collector",
+      "knowledge-synthesizer",
+      "task-router",
+      "quality-gate",
+      "incident-responder"
+    ],
+    "harness_exists": false,
+    "status": "partial"
+  },
+  "codewhale": {
+    "count": 1,
+    "profile": "codewhale-executor",
+    "status": "ready"
+  },
+  "finance": {
+    "count": 1,
+    "profile": "finance-analyzer",
+    "status": "ready"
+  },
+  "verification": {
+    "skills": {
+      "batch-github-setup": {
+        "exists": true,
+        "scripts": false,
+        "references": false,
+        "assets": false,
+        "status": "partial"
+      },
+      "financial-analysis": {
+        "exists": true,
+        "scripts": true,
+        "references": true,
+        "assets": true,
+        "status": "ok"
+      },
+      "ppt-pro-master": {
+        "exists": true,
+        "scripts": true,
+        "references": true,
+        "assets": true,
+        "status": "ok"
+      },
+      "resume-screener": {
+        "exists": true,
+        "scripts": true,
+        "references": true,
+        "assets": true,
+        "status": "ok"
+      },
+      "work-report": {
+        "exists": true,
+        "scripts": true,
+        "references": false,
+        "assets": false,
+        "status": "ok"
+      },
+      "xhs-creator-studio": {
+        "exists": true,
+        "scripts": true,
+        "references": true,
+        "assets": false,
+        "status": "ok"
+      }
+    },
+    "publisher": {
+      "xhs_publisher.py": true,
+      "importable": false,
+      "status": "not_importable"
+    },
+    "connectors": {
+      "count": 0,
+      "status": "empty",
+      "connectors": []
+    },
+    "agentteam": {
+      "profiles": 12,
+      "status": "ok",
+      "souls": [
+        {
+          "name": "consensus-builder",
+          "has_role": true,
+          "has_model": true,
+          "content_quality": "ok"
+        },
+        {
+          "name": "expert-coordinator",
+          "has_role": true,
+          "has_model": true,
+          "content_quality": "ok"
+        },
+        {
+          "name": "feedback-collector",
+          "has_role": true,
+          "has_model": true,
+          "content_quality": "ok"
+        },
+        {
+          "name": "hierarchy-delegator",
+          "has_role": true,
+          "has_model": true,
+          "content_quality": "ok"
+        },
+        {
+          "name": "incident-responder",
+          "has_role": true,
+          "has_model": true,
+          "content_quality": "ok"
+        },
+        {
+          "name": "knowledge-synthesizer",
+          "has_role": true,
+          "has_model": true,
+          "content_quality": "ok"
+        },
+        {
+          "name": "observer-monitor",
+          "has_role": true,
+          "has_model": true,
+          "content_quality": "ok"
+        },
+        {
+          "name": "pipeline-orchestrator",
+          "has_role": true,
+          "has_model": true,
+          "content_quality": "ok"
+        },
+        {
+          "name": "quality-gate",
+          "has_role": true,
+          "has_model": true,
+          "content_quality": "ok"
+        },
+        {
+          "name": "strategic-planner",
+          "has_role": true,
+          "has_model": true,
+          "content_quality": "ok"
+        },
+        {
+          "name": "swarm-coordinator",
+          "has_role": true,
+          "has_model": true,
+          "content_quality": "ok"
+        },
+        {
+          "name": "task-router",
+          "has_role": true,
+          "has_model": true,
+          "content_quality": "ok"
+        }
+      ]
+    },
+    "codewhale": {
+      "status": "ok"
+    },
+    "finance": {
+      "status": "ok"
+    }
+  },
+  "summary": "6/6 lines integrated"
+}

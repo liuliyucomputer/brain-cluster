@@ -1,0 +1,257 @@
+{
+  "access-control": {
+    "add-permissions": {
+      "save": "Ŝävę"
+    },
+    "permissions": {
+      "lbac-warning-basic-role": "",
+      "lbac-warning-rule": "Ŵäřŉįŉģ: Ŧĥįş ŧęäm mįģĥŧ ŉőŧ ĥävę pęřmįşşįőŉ ŧő ŧĥę qūęřy ŧĥę đäŧäşőūřčę.",
+      "lbac-warning-team": "Ŵäřŉįŉģ: Ŧĥįş ŧęäm ĥäş ƒūľľ đäŧä äččęşş įƒ ŉő ĿßÅC řūľęş äřę şęŧ."
+    }
+  },
+  "banner": {
+    "api": {
+      "result": {
+        "saved": "ßäŉŉęř şęŧŧįŉģş şävęđ"
+      }
+    },
+    "form": {
+      "button-save": "Ŝävę",
+      "button-saving": "Ŝävįŉģ...",
+      "enabled": {
+        "label": "Ēŉäþľęđ"
+      },
+      "end": {
+        "description": "Ĩƒ ŉő ęŉđ đäŧę įş şęľęčŧęđ, ŧĥę þäŉŉęř įş đįşpľäyęđ įŉđęƒįŉįŧęľy.",
+        "error": "Ēŉđ ŧįmę mūşŧ þę äƒŧęř şŧäřŧ ŧįmę",
+        "label": "Ēŉđş äŧ"
+      },
+      "message": {
+        "description": "Ŧęχŧ čőŉŧęŉŧ őƒ ŧĥę þäŉŉęř. Ŝūppőřŧş mäřĸđőŵŉ.",
+        "label": "Męşşäģę"
+      },
+      "options": {
+        "error": "Ēřřőř",
+        "info": "Ĩŉƒő",
+        "warning": "Ŵäřŉįŉģ"
+      },
+      "start": {
+        "description": "Ŧĥę þäŉŉęř ŵįľľ þę şĥőŵŉ şŧäřŧįŉģ ƒřőm ŧĥįş đäŧę/ŧįmę.",
+        "label": "Ŝŧäřŧş äŧ"
+      },
+      "title": "Cőŉƒįģūřę þäŉŉęř",
+      "variant": {
+        "label": "Väřįäŉŧ"
+      }
+    },
+    "preview": {
+      "message": {
+        "default": "Ůpđäŧę ŧĥįş přęvįęŵ þy mőđįƒyįŉģ ŧĥę męşşäģę ƒįęľđ."
+      },
+      "title": "Přęvįęŵ"
+    }
+  },
+  "caching": {
+    "alert": {
+      "readonly": {
+        "message": "Ŧĥįş đäŧä şőūřčę ŵäş äđđęđ þy čőŉƒįģ äŉđ čäčĥįŉģ čäŉŉőŧ þę mőđįƒįęđ ūşįŉģ ŧĥę ŮĨ. Pľęäşę čőŉŧäčŧ yőūř şęřvęř äđmįŉ ŧő ūpđäŧę ŧĥįş đäŧä şőūřčę.",
+        "title": "Přővįşįőŉęđ đäŧä şőūřčę"
+      }
+    }
+  },
+  "explore": {
+    "query-library": {
+      "cancel": "Cäŉčęľ",
+      "default-description": "Pūþľįč",
+      "query-template-add-error": "Ēřřőř äŧŧęmpŧįŉģ ŧő şävę ŧĥįş qūęřy ŧő ŧĥę ľįþřäřy",
+      "query-template-added": "Qūęřy şūččęşşƒūľľy şävęđ ŧő ŧĥę ľįþřäřy",
+      "query-template-edit-error": "Ēřřőř äŧŧęmpŧįŉģ ŧő ęđįŧ ŧĥįş qūęřy",
+      "query-template-edited": "Qūęřy ŧęmpľäŧę şūččęşşƒūľľy ęđįŧęđ",
+      "save": "Ŝävę"
+    },
+    "query-template-modal": {
+      "add-info": "Ÿőū'řę äþőūŧ ŧő şävę ŧĥįş qūęřy. Øŉčę şävęđ, yőū čäŉ ęäşįľy äččęşş įŧ įŉ ŧĥę Qūęřy Ŀįþřäřy ŧäþ ƒőř ƒūŧūřę ūşę äŉđ řęƒęřęŉčę.",
+      "add-title": "Åđđ qūęřy ŧő Qūęřy Ŀįþřäřy",
+      "data-source-name": "Đäŧä şőūřčę ŉämę",
+      "description": "Đęşčřįpŧįőŉ",
+      "edit-info": "Ÿőū'řę äþőūŧ ŧő ęđįŧ ŧĥįş qūęřy. Øŉčę şävęđ, yőū čäŉ ęäşįľy äččęşş įŧ įŉ ŧĥę Qūęřy Ŀįþřäřy ŧäþ ƒőř ƒūŧūřę ūşę äŉđ řęƒęřęŉčę.",
+      "query": "Qūęřy"
+    },
+    "query-template-modall": {
+      "data-source-type": "Đäŧä şőūřčę ŧypę"
+    }
+  },
+  "export": {
+    "pdf": {
+      "cancel-button": "Cäŉčęľ",
+      "download-button": "Ğęŉęřäŧę PĐF",
+      "image-alt": "PĐF přęvįęŵ",
+      "info-text": "Ēχpőřŧ ŧĥę đäşĥþőäřđ äş ä PĐF đőčūmęŉŧ",
+      "layout-label": "Ŀäyőūŧ",
+      "orientation-label": "Øřįęŉŧäŧįőŉ",
+      "title": "Ēχpőřŧ đäşĥþőäřđ PĐF",
+      "zoom-description": "Żőőm įŉ ŧő ęŉľäřģę ŧęχŧ, őř žőőm őūŧ ŧő şęę mőřę đäŧä (ľįĸę ŧäþľę čőľūmŉş) pęř päŉęľ.",
+      "zoom-label": "Żőőm"
+    }
+  },
+  "groupsync": {
+    "empty-state": {
+      "pro-tip": "Ŵäŉŧ ŧő mäŉäģę Ğřäƒäŉä äččęşş ŧĥřőūģĥ ģřőūpş įŉ yőūř Ĩđęŉŧįŧy Přővįđęř? Cřęäŧę ģřőūp mäppįŉģş ŧő Ğřäƒäŉä ŖßÅC řőľęş. <2>Ŀęäřŉ mőřę</2>",
+      "title": "Ÿőū ĥävęŉ'ŧ čřęäŧęđ äŉy ģřőūp mäppįŉģş yęŧ"
+    }
+  },
+  "plugins": {
+    "sandbox": {
+      "enable-sandbox-label": "Fřőŉŧęŉđ Ŝäŉđþőχ",
+      "enable-sandbox-tooltip": "Ŧĥę ƒřőŉŧęŉđ şäŉđþőχ řūŉş ƒřőŉŧęŉđ čőđę įŉ įşőľäŧįőŉ, řęşŧřįčŧįŉģ äččęşş ŧő ģľőþäľ þřőŵşęř şčőpę äŉđ ľįmįŧįŉģ ŮĨ mőđįƒįčäŧįőŉş ŧő ŧĥę pľūģįŉ äřęä.",
+      "enable-sandbox-tooltip-link": "Ŗęäđ mőřę"
+    }
+  },
+  "public-dashboard": {
+    "email-sharing": {
+      "success-confirm-access": "Åččęşş čőŉƒįřmęđ!",
+      "success-resend-recipient-invitation": "Ŧĥę ęmäįľ įŉvįŧäŧįőŉ ĥäş þęęŉ řęşęŉŧ.",
+      "success-revoke-access-description": "Ÿőū ĥävę şūččęşşƒūľľy řęvőĸęđ äččęşş ƒőř {{recipientEmail}}.",
+      "success-revoke-access-title": "Åččęşş Ŗęvőĸęđ",
+      "success-revoke-all-accesses-description": "{{email}}'ş äččęşş ŧő äľľ pūþľįč đäşĥþőäřđş ĥäş þęęŉ şūččęşşƒūľľy řęmővęđ.",
+      "success-revoke-all-accesses-title": "Åččęşş Ŗęvőĸęđ",
+      "success-send-recipient-invitation": "Ŧĥę ęmäįľ įŉvįŧäŧįőŉ ĥäş þęęŉ şęŉŧ."
+    }
+  },
+  "query-library": {
+    "actions": {
+      "delete-query-button": "Đęľęŧę qūęřy",
+      "select-query-button": "Ŝęľęčŧ qūęřy"
+    },
+    "delete-modal": {
+      "body-text": "Ÿőū'řę äþőūŧ ŧő řęmővę ŧĥįş qūęřy ƒřőm ŧĥę qūęřy ľįþřäřy. Ŧĥįş äčŧįőŉ čäŉŉőŧ þę ūŉđőŉę. Đő yőū ŵäŉŧ ŧő čőŉŧįŉūę?",
+      "confirm-button": "Đęľęŧę qūęřy",
+      "title": "Đęľęŧę qūęřy"
+    },
+    "drawer": {
+      "title": "Qūęřy ľįþřäřy"
+    },
+    "edit-modal": {
+      "title": "Ēđįŧ qūęřy"
+    },
+    "empty-state": {
+      "message": "Ŝŧäřŧ äđđįŉģ ŧĥęm ƒřőm Ēχpľőřę őř ŵĥęŉ ęđįŧįŉģ ä đäşĥþőäřđ",
+      "title": "Ÿőū ĥävęŉ'ŧ şävęđ äŉy qūęřįęş ŧő ŧĥę ľįþřäřy yęŧ"
+    },
+    "error-state": {
+      "title": "Ŝőmęŧĥįŉģ ŵęŉŧ ŵřőŉģ!"
+    },
+    "filters": {
+      "datasource-label": "Đäŧäşőūřčę ŉämę(ş)",
+      "search-placeholder": "Ŝęäřčĥ þy đäŧä şőūřčę, qūęřy čőŉŧęŉŧ őř đęşčřįpŧįőŉ",
+      "user-label": "Ůşęř ŉämę(ş)"
+    },
+    "not-found": {
+      "message": "Ŧřy äđĵūşŧįŉģ yőūř şęäřčĥ őř ƒįľŧęř čřįŧęřįä",
+      "title": "Ńő řęşūľŧş ƒőūŉđ"
+    },
+    "notifications": {
+      "query-deleted": "Qūęřy đęľęŧęđ"
+    },
+    "query-details": {
+      "author": "Åūŧĥőř",
+      "datasource": "Đäŧäşőūřčę",
+      "date-added": "Đäŧę äđđęđ",
+      "edit-button": "Ēđįŧ qūęřy"
+    },
+    "query-template": {
+      "error": "Ēřřőř äŧŧęmpŧįŉģ ŧő ľőäđ qūęřy ŧęmpľäŧę męŧäđäŧä: {{error}}"
+    },
+    "user-info": {
+      "error": "Ēřřőř äŧŧęmpŧįŉģ ŧő ģęŧ ūşęř įŉƒő ƒřőm ŧĥę ľįþřäřy: {{error}}"
+    }
+  },
+  "query-operation": {
+    "header": {
+      "save-to-query-library": "Ŝävę ŧő qūęřy ľįþřäřy",
+      "save-to-query-library-new": "Ńęŵ: Ŝävę ŧő qūęřy ľįþřäřy"
+    }
+  },
+  "reporting": {
+    "errors": {
+      "action-message": "Pľęäşę čőŉŧäčŧ yőūř Ğřäƒäŉä äđmįŉįşŧřäŧőř ŧő įŉşŧäľľ ŧĥę pľūģįŉ.",
+      "no-renderer-description": "Ŧő ģęŉęřäŧę PĐF řępőřŧş, yőū mūşŧ įŉşŧäľľ ŧĥę <2>Ğřäƒäŉä Ĩmäģę Ŗęŉđęřęř</2> pľūģįŉ.",
+      "no-renderer-title": "Ĩmäģę řęŉđęřęř pľūģįŉ ŉőŧ įŉşŧäľľęđ",
+      "old-renderer-description": "Ŧő ģęŉęřäŧę CŜV ƒįľęş, yőū mūşŧ ūpđäŧę ŧĥę <2>Ğřäƒäŉä Ĩmäģę Ŗęŉđęřęř</2> pľūģįŉ.",
+      "old-renderer-title": "Ÿőū äřę ūşįŉģ äŉ őľđ vęřşįőŉ őƒ ŧĥę įmäģę řęŉđęřęř pľūģįŉ"
+    },
+    "settings": {
+      "attachment-settings-fieldset-label": "Åŧŧäčĥmęŉŧ şęŧŧįŉģş",
+      "email-branding-fieldset-label": "Ēmäįľ þřäŉđįŉģ",
+      "email-footer-field-label": "Ēmäįľ ƒőőŧęř",
+      "email-logo-image-preview-altText": "Cőmpäŉy ľőģő přęvįęŵ",
+      "email-logo-url-field-description": "Ŧĥę ľőģő ŵįľľ þę đįşpľäyęđ įŉ ŧĥę ęmäįľ ĥęäđęř. Ŝūppőřŧęđ ƒőřmäŧş: pŉģ, ĵpģ, ģįƒ.",
+      "email-logo-url-field-label": "Cőmpäŉy ľőģő ŮŖĿ",
+      "embedded-image-header": "Ēmþęđđęđ įmäģę",
+      "embedded-image-theme-picker-description": "Ŧĥę ŧĥęmę ŵįľľ þę äppľįęđ ŧő ŧĥę đäşĥþőäřđ įmäģę ęmþęđđęđ įŉ ŧĥę ęmäįľ.",
+      "footer-link-field-label": "Főőŧęř ľįŉĸ ŧęχŧ",
+      "footer-link-url-field-label": "Főőŧęř ľįŉĸ ŮŖĿ",
+      "none-footer-label": "Ńőŉę",
+      "pdf-header": "PĐF",
+      "pdf-theme-picker-description": "Ŧĥę ŧĥęmę ŵįľľ þę äppľįęđ ŧő ŧĥę PĐF äŧŧäčĥęđ ŧő ŧĥę řępőřŧ.",
+      "report-logo-image-preview-altText": "Cőmpäŉy ľőģő přęvįęŵ",
+      "report-logo-url-field-description": "Ŧĥę ľőģő ŵįľľ þę đįşpľäyęđ įŉ ŧĥę đőčūmęŉŧ ƒőőŧęř. Ŝūppőřŧęđ ƒőřmäŧş: pŉģ, ĵpģ, ģįƒ.",
+      "report-logo-url-field-label": "Cőmpäŉy ľőģő ŮŖĿ",
+      "save-button": "Ŝävę",
+      "sent-by-footer-label": "Ŝęŉŧ ßy",
+      "settings-subtitle": "Mäŉäģę řępőřŧ ŧęmpľäŧę şęŧŧįŉģş."
+    }
+  },
+  "saml-connect-to-idp": {
+    "validate-idp-metadata": {
+      "require-one": "Øŉę męŧäđäŧä ŧypę şĥőūľđ þę đęƒįŉęđ"
+    }
+  },
+  "share-dashboard": {
+    "menu": {
+      "export-pdf-title": "Ēχpőřŧ äş PĐF",
+      "schedule-report-title": "Ŝčĥęđūľę řępőřŧ"
+    }
+  },
+  "share-report": {
+    "attachments": {
+      "section-title": "Åŧŧäčĥmęŉŧş"
+    },
+    "dashboard": {
+      "repeated-template-variables-description": "Ŵĥęŉ äđđįŉģ ŧĥę şämę đäşĥþőäřđ mūľŧįpľę ŧįmęş įŉ őŉę řępőřŧ, ŧęmpľäŧę väřįäþľęş ŧĥäŧ yőū şęľęčŧęđ ƒįřşŧ äřę äppľįęđ ŧő äľľ įŉşŧäŉčęş őƒ ŧĥäŧ đäşĥþőäřđ įŉ ŧĥę řępőřŧ.",
+      "section-title": "Đäşĥþőäřđ",
+      "template-variables-title": "Cūşŧőmįžę ŧęmpľäŧę väřįäþľęş"
+    },
+    "email-configuration": {
+      "add-dashboard-image-label": "Ēmþęđ đäşĥþőäřđ įmäģę",
+      "add-dashboard-url-label": "Ĩŉčľūđę đäşĥþőäřđ ľįŉĸ",
+      "dashboard-image-settings-description": "Ŧĥę đäşĥþőäřđ įmäģę şęŧŧįŉģş čäŉ þę äđĵūşŧęđ įŉ ŧĥę ģęŉęřäľ<1>řępőřŧ şęŧŧįŉģş</1>",
+      "invalid-email": "Ĩŉväľįđ ęmäįľ",
+      "message-label": "Męşşäģę",
+      "message-placeholder": "Ēŉŧęř ä męşşäģę",
+      "reply-to-label": "Ŗępľy-ŧő-ęmäįľ äđđřęşş",
+      "section-title": "Ēmäįľ şęŧŧįŉģş",
+      "subject-description": "Ŧĥę řępőřŧ ŉämę ŵįľľ þę ūşęđ äş ŧĥę ęmäįľ şūþĵęčŧ įƒ ŧĥįş ƒįęľđ įş ľęƒŧ ęmpŧy",
+      "subject-label": "Ēmäįľ şūþĵęčŧ"
+    },
+    "recipients": {
+      "section-title": "Ŗęčįpįęŉŧş"
+    },
+    "report-name": {
+      "label": "Ŗępőřŧ ŉämę",
+      "required": "Ŗępőřŧ ŉämę įş řęqūįřęđ"
+    },
+    "save-draft": {
+      "button": "Ŝävę đřäƒŧ"
+    },
+    "schedule": {
+      "section-title": "Ŝčĥęđūľę"
+    },
+    "schedule-report": {
+      "button": "Ŝčĥęđūľę řępőřŧ"
+    },
+    "send-preview": {
+      "button": "Ŝęŉđ přęvįęŵ"
+    }
+  }
+}

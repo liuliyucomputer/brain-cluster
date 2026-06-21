@@ -1,0 +1,244 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================
+   Brain Cluster Design System v2.0
+   五层质感 · 三品牌色 · 暗色主题 · AI 原生
+   ============================================================ */
+
+@layer base {
+  :root {
+    /* ---- Surface Layers (deep → elevated) ---- */
+    --surface-0: 240 8% 4%;     /* #0a0a0f — page background */
+    --surface-1: 240 7% 9%;     /* #15151a — primary cards / panels */
+    --surface-2: 240 6% 12%;    /* #1c1c22 — nested cards / hover */
+    --surface-3: 240 5% 15%;    /* #24242a — elevated / modal */
+
+    /* ---- Text Hierarchy ---- */
+    --text-primary:   240 10% 94%;   /* #f0f0f5 */
+    --text-secondary: 240 5% 60%;    /* #9595a0 */
+    --text-tertiary:  240 4% 38%;    /* #5c5c68 */
+
+    /* ---- Border ---- */
+    --border-default: 240 6% 14%;    /* #202028 */
+    --border-hover:   240 6% 20%;    /* #2e2e38 */
+    --border-accent:  239 68% 65%;   /* indigo ~ #7777f5 */
+
+    /* ---- Brand Colors (HSL) ---- */
+    --brand-indigo: 239 84% 67%;     /* #6366f1 */
+    --brand-cyan:   186 94% 53%;     /* #22d3ee */
+    --brand-violet: 271 91% 65%;     /* #a855f7 */
+
+    /* ---- Semantic ---- */
+    --success: 160 84% 39%;          /* #10b981 */
+    --warning: 38 92% 50%;           /* #f59e0b */
+    --danger:  0 84% 60%;            /* #ef4444 */
+    --info:    239 84% 67%;          /* same as brand-indigo */
+
+    /* ---- Glow (decorative, translucent) ---- */
+    --glow-indigo:  239 84% 67%;
+    --glow-cyan:    186 94% 53%;
+    --glow-violet:  271 91% 65%;
+
+    /* ---- Radius ---- */
+    --radius-sm:  0.5rem;     /* 8px */
+    --radius-md:  0.75rem;    /* 12px */
+    --radius-lg:  1rem;       /* 16px */
+
+    /* ---- Typography ---- */
+    --font-sans:   "Inter", "HarmonyOS Sans SC", "PingFang SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+    --font-mono:   "JetBrains Mono", "Fira Code", "Cascadia Code", monospace;
+
+    /* ---- Motion Easing ---- */
+    --ease-out-expo:  cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-spring:    cubic-bezier(0.34, 1.56, 0.64, 1);
+    --ease-in-out:    cubic-bezier(0.76, 0, 0.24, 1);
+
+    /* Backward compat — map old shadcn-style vars */
+    --background: var(--surface-0);
+    --foreground: var(--text-primary);
+    --card: var(--surface-1);
+    --card-foreground: var(--text-primary);
+    --border: var(--border-default);
+    --muted: var(--surface-2);
+    --muted-foreground: var(--text-secondary);
+    --accent: var(--brand-indigo);
+    --accent-foreground: 0 0% 100%;
+  }
+
+  * { border-color: hsl(var(--border-default)); }
+  html { color-scheme: dark; }
+
+  body {
+    background: hsl(var(--surface-0));
+    color: hsl(var(--text-primary));
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Selection */
+  ::selection {
+    background: hsl(var(--brand-indigo) / 0.25);
+    color: hsl(var(--text-primary));
+  }
+}
+
+/* ============================================================
+   Component Classes — Five-Layer Texture System
+   ============================================================ */
+
+@layer components {
+  /* Layer 1 — Floating Card (most common) */
+  .surface-card {
+    background: hsl(var(--surface-1));
+    border: 1px solid hsl(var(--border-default));
+    border-radius: var(--radius-md);
+    /* Subtle top-light inset: glass thickness illusion */
+    box-shadow:
+      0 1px 3px rgba(0, 0, 0, 0.3),
+      inset 0 0.5px 0 rgba(255, 255, 255, 0.04);
+    transition:
+      border-color 0.2s var(--ease-out-expo),
+      box-shadow 0.2s var(--ease-out-expo),
+      transform 0.2s var(--ease-out-expo);
+  }
+
+  .surface-card.interactive:hover {
+    border-color: hsl(var(--border-accent) / 0.3);
+    box-shadow:
+      0 8px 30px rgba(0, 0, 0, 0.4),
+      0 0 0 1px hsl(var(--border-accent) / 0.25),
+      inset 0 0.5px 0 rgba(255, 255, 255, 0.06);
+    transform: translateY(-2px);
+  }
+
+  /* Layer 2 — Glass Panel (nav / sidebar / modals) */
+  .glass-panel {
+    background: hsl(0 0% 100% / 0.03);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid hsl(0 0% 100% / 0.06);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Top light-leak effect */
+  .glass-panel::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent,
+      hsl(0 0% 100% / 0.1),
+      transparent
+    );
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  /* Layer 4 — Active / Selected glow */
+  .surface-active {
+    box-shadow:
+      0 0 0 1px hsl(var(--brand-indigo)),
+      0 0 20px hsl(var(--brand-indigo) / 0.15);
+    background: hsl(var(--brand-indigo) / 0.06);
+  }
+
+  /* Stat value numbers */
+  .stat-value {
+    font-variant-numeric: tabular-nums;
+    font-feature-settings: "tnum";
+    letter-spacing: -0.03em;
+  }
+
+  /* Status indicator dot */
+  .status-dot {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    flex-shrink: 0;
+  }
+
+  .status-dot.online {
+    background: hsl(var(--success));
+    box-shadow: 0 0 8px hsl(var(--success) / 0.5);
+    animation: status-pulse 2s ease-in-out infinite;
+  }
+
+  .status-dot.offline {
+    background: hsl(var(--danger) / 0.4);
+  }
+
+  .status-dot.busy {
+    background: hsl(var(--warning));
+    box-shadow: 0 0 6px hsl(var(--warning) / 0.4);
+  }
+
+  /* Keyframe: status breathe */
+  @keyframes status-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+
+  /* Keyframe: glow flash (for data arrival) */
+  @keyframes glow-flash {
+    0% { box-shadow: 0 0 0 0 hsl(var(--brand-cyan) / 0.4); }
+    50% { box-shadow: 0 0 12px 2px hsl(var(--brand-cyan) / 0.15); }
+    100% { box-shadow: 0 0 0 0 hsl(var(--brand-cyan) / 0); }
+  }
+}
+
+/* ============================================================
+   Utility Classes
+   ============================================================ */
+
+@layer utilities {
+  /* Thin scrollbar — terminal style */
+  .scrollbar-thin {
+    scrollbar-width: thin;
+    scrollbar-color: hsl(var(--border-default)) transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar {
+    width: 4px;
+    height: 4px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb {
+    background: hsl(var(--border-default));
+    border-radius: 2px;
+  }
+
+  .scrollbar-thin::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--border-hover));
+  }
+
+  /* Glow accent border */
+  .border-glow-indigo {
+    box-shadow: 0 0 0 1px hsl(var(--brand-indigo) / 0.25);
+  }
+
+  .border-glow-cyan {
+    box-shadow: 0 0 0 1px hsl(var(--brand-cyan) / 0.25);
+  }
+
+  /* Text gradients sparingly used */
+  .text-gradient-brand {
+    background: linear-gradient(135deg, hsl(var(--brand-indigo)), hsl(var(--brand-violet)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}

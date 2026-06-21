@@ -1,0 +1,224 @@
+{
+  "pass": 43,
+  "fail": 0,
+  "warn": 0,
+  "checks": [
+    {
+      "name": "检测 stdout+stderr",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "err_msg 包含 stdout",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "Profiles 已注册",
+      "status": "pass",
+      "detail": "11/11 核心 profiles"
+    },
+    {
+      "name": "tools/ab_test/ab_runner.py 路径已修复",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "tools/reputation/scorer.py 路径已修复",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "staroffice-ui/backend/app.py 路径已修复",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "grafana/datasource.yaml 路径已修复",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "output/memory 目录存在",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "源代码无硬编码密钥",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "使用正确列名",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "回退仅限 task% 表",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "不再读取全部表",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "审查闭环: parent_groups",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "SPLIT 触发仲裁",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "移除硬编码密钥",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "schema 自适应探测",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "score_content 函数",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "dual_review 函数",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "merge_verdict 函数",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "审查日志",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "arbitrate 函数",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "投票逻辑",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "escalate_to_human",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "仲裁日志",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "datasource 路径指向 output",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "publisher 功能验证",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "connectors 读实际 JSON",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "agentteam 内容检查",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "publisher 未 falsely verified",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "connectors 未 falsely verified",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "agentteam verified",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "bat 无硬编码密钥",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "bat 含 Orchestrator",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "bat 7 组件",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "ps1 无硬编码密钥",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "ps1 从 endpoint.json 加载",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "ps1 含 Orchestrator",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "tools/__init__.py",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "tools/ab_test/__init__.py",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "tools/reputation/__init__.py",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "tools/dual_review/__init__.py",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "tools/arbiter_vote/__init__.py",
+      "status": "pass",
+      "detail": ""
+    },
+    {
+      "name": "AgentTeam 全含 Instructions",
+      "status": "pass",
+      "detail": "12/12"
+    }
+  ],
+  "timestamp": "2026-06-07T07:50:36.187410",
+  "total": 43
+}

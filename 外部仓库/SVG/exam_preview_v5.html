@@ -1,0 +1,105 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<title>物理试卷 SVG 预览</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;700&family=Noto+Serif+SC:wght@400;700&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}body{background:#e8e4df;font-family:'Noto Serif SC',SimSun,serif;display:flex;flex-direction:column;align-items:center;padding:30px 20px}
+.page{background:white;width:210mm;min-height:297mm;padding:25mm 30mm;box-shadow:0 2px 20px rgba(0,0,0,.15);margin-bottom:30px;position:relative}
+.page::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:#c00}
+.hdr{text-align:center;border-bottom:2px solid #000;padding-bottom:15px;margin-bottom:25px}
+.hdr h1{font-size:22px;font-weight:700;letter-spacing:8px}.hdr p{font-size:13px;color:#666;margin-top:5px}
+.sec{font-size:15px;font-weight:700;margin:20px 0 12px 0;border-left:3px solid #c00;padding-left:10px}
+.q{margin:18px 0;font-size:15px;line-height:1.8}.qn{font-weight:700}
+.fig{display:flex;justify-content:center;margin:15px 0;padding:10px}.fig svg{max-width:340px}
+.op{margin:8px 0 8px 24px;line-height:2}
+.card{background:white;width:210mm;padding:25mm 30mm;box-shadow:0 2px 20px rgba(0,0,0,.15)}
+.card h2{font-size:18px;margin-bottom:15px;color:#333}
+.st{background:#f8f7f5;border-left:4px solid #c00;padding:12px 15px;margin:10px 0;border-radius:0 6px 6px 0}
+.n{display:inline-block;background:#c00;color:white;width:24px;height:24px;border-radius:50%;text-align:center;line-height:24px;font-size:13px;margin-right:8px;font-weight:700}
+code{background:#eee;padding:2px 6px;border-radius:3px;font-size:13px}.hl{color:#c00;font-weight:700}
+.tbl{width:100%;border-collapse:collapse;margin:15px 0;font-size:14px}
+.th{background:#f0f0ec;padding:8px 12px;text-align:left}.td{padding:8px 12px;border-bottom:1px solid #e0e0dc}.rec{background:#fffbe6}
+.anl{background:#f5f5f0;padding:15px;border-radius:8px;margin-top:15px;font-size:13px;line-height:1.8}.anl h4{margin:0 0 8px 0}.anl ul{margin-left:20px}
+.tip{background:#fffbe6;padding:12px;border-radius:6px;margin-top:15px;font-size:14px}
+</style></head><body>
+
+<div class="page"><div class="hdr"><h1>物理试题</h1><p>2026年普通高等学校招生全国统一考试（模拟）</p></div>
+<div class="sec">二、选择题</div>
+<div class="q"><span class="qn">6.</span>如图，火星绕太阳做匀速圆周运动，火星与太阳的间距为r₁，火星的运行周期为T₁。某航天器绕火星做匀速圆周运动，航天器与火星的间距为r₂，航天器的运行周期为T₂。已知火星的质量为M，引力常量为G，则（　　）<div class="fig"><?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="953" height="760"
+     viewBox="0 0 953 760" style="background:#fff;">
+  <defs>
+    <marker id="a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#C00"/>
+    </marker>
+    <style>
+      .o{stroke:#000;fill:none;stroke-dasharray:6,4;stroke-width:1.5}
+      .t{stroke:#C00;fill:none;stroke-width:1.8;marker-end:url(#a)}
+      .b{fill:#fff;stroke:#000;stroke-width:1.5}
+      .d{fill:#000}
+      .l{font-size:16px;font-family:'Noto Sans SC', SimSun, 'Times New Roman', serif;fill:#000}
+      .lb{font-size:16px;font-family:'Noto Sans SC', SimSun, 'Times New Roman', serif;fill:#000;font-weight:bold}
+      .tg{font-size:14px;font-family:'Noto Sans SC', SimSun, 'Times New Roman', serif;fill:#000;font-style:italic}
+    </style>
+  </defs>
+  <rect width="953" height="760" fill="#fff"/>
+
+  <!-- 轨道 -->
+  <g data-orbit="I">
+    <circle cx="432.0" cy="306.0" r="294.0" class="o"/>
+    <text x="614.3" y="429.5" class="tg">I</text>
+  </g>
+  <g data-orbit="II">
+    <circle cx="516.0" cy="362.0" r="218.4" class="o"/>
+    <text x="651.4" y="453.7" class="tg">II</text>
+  </g>
+  <g data-orbit="III">
+    <circle cx="530.0" cy="474.0" r="140.0" class="o"/>
+    <text x="616.8" y="532.8" class="tg">III</text>
+  </g>
+
+  <!-- 火星 -->
+  <g data-type="planet">
+    <circle cx="611.2" cy="406.8" r="86.8" class="b"/>
+    <text x="611.2" y="412.8" class="lb" text-anchor="middle">火星</text>
+  </g>
+
+  <!-- 探测点 -->
+  <g data-marker="S">
+    <circle cx="613.5" cy="117.2" r="8.7" class="d"/>
+    <text x="627.1" y="121.2" class="lb">S</text>
+  </g>
+  <g data-marker="Q">
+    <circle cx="623.0" cy="296.8" r="8.7" class="d"/>
+    <text x="636.7" y="300.8" class="lb">Q</text>
+  </g>
+  <g data-marker="P">
+    <circle cx="623.0" cy="698.1" r="9.2" class="d"/>
+    <text x="637.2" y="702.1" class="lb">P</text>
+  </g>
+
+  <!-- 轨迹曲线 -->
+  <path d="M73.6,314.4 L82.0,336.8 L546.8,339.6 L135.2,412.4 L171.6,451.6 L185.6,479.6 L230.4,513.2 L280.8,563.6 L269.6,563.6 L286.4,566.4 L359.2,616.8 L378.8,630.8 L462.8,667.2 L488.0,681.2 L572.0,692.4" class="t"/>
+
+</svg></div>
+<div class="op"><br/>A. 火星的线速度大小为 2πr₁/T₁<br/>B. 航天器的线速度大小为 2πr₂/T₂<br/>C. 火星的质量 M = 4π²r₁³/(GT₁²)<br/>D. 航天器的运行周期 T₂ = 2π√(r₂³/GM)</div></div>
+<div style="margin-top:25px;border-top:1px solid #ccc;padding-top:12px;font-size:11px;color:#999;text-align:center;">
+▲ SVG 直接嵌入 — &lt;text&gt; 元素可选中编辑 | 矢量缩放无损 | 可导出 PNG 300dpi</div></div>
+
+<div class="card"><h2>📐 工作流：从图片到可编辑试卷图</h2>
+<div class="st"><span class="n">1</span><b>原始图片</b>（jpg/png 扫描或截图）→ 输入 pipeline</div>
+<div class="st"><span class="n">2</span><b>OCR + CV 分析</b> → 自动识别文字标签 + 几何参数提取</div>
+<div class="st"><span class="n">3</span><b>SVG 重建</b> → 确定性模板生成可编辑矢量图</div>
+<div class="st"><span class="n">4</span><b>人工微调</b>（可选）→ Inkscape 打开 .svg 微调细节</div>
+<div class="st"><span class="n">5</span><b>导出嵌入试卷</b>：
+<table class="tbl"><tr><th class="th">工具</th><th class="th">格式</th><th class="th">操作</th></tr>
+<tr class="rec"><td class="td"><b>Word/WPS</b>（主流）</td><td class="td">PNG 300dpi</td><td class="td">Inkscape 导出PNG → 插入 Word</td></tr>
+<tr><td class="td">LaTeX</td><td class="td">PDF</td><td class="td">Inkscape 另存PDF → \includegraphics</td></tr>
+<tr><td class="td">HTML 在线试卷</td><td class="td">SVG 内联</td><td class="td">&lt;img src="xxx.svg"&gt;</td></tr></table></div>
+<div class="tip"><b>⚠️ 核心原则：<span class="hl">SVG 是源码，PNG 是编译产物</span></b><br/>
+永远编辑 SVG → 按需导出 PNG。<br/>
+❌ 不要把 SVG 再转回 JPG/PNG — 这会丢失全部矢量可编辑性！</div>
+
+<div class="anl"><h4>📊 本次分析结果</h4>
+<p>原始图片：312×243px | OCR 识别 1 个文字 | 检测 3 个标记点</p>
+<ul><li>"火星" @(205,131) [66%]</li><ul><p>标记点：</p><ul><li><b>S</b>: (205,28) r=4.8 圆度=0.90</li><li><b>Q</b>: (208,92) r=4.8 圆度=0.86</li><li><b>P</b>: (208,235) r=5.0 圆度=0.84</li></ul></ul></div></div>
+</body></html>

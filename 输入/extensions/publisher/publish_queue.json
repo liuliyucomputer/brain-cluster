@@ -1,0 +1,1 @@
+{"task": "t_05aac131", "status": "ready", "content": "data: {\"id\":\"\",\"object\":\"chat.completion.chunk\",\"created\":0,\"model\":\"gpt-5.5\",\"system_fingerprint\":\"\",\"choices\":[],\"usage\":{\"prompt_tokens\":14,\"completion_tokens\":0,\"total_tokens\":14,\"prompt_tokens_de"}

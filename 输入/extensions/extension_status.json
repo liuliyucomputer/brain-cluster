@@ -1,0 +1,67 @@
+{
+  "updated": "2026-06-07T14:17:03.774665",
+  "lines": {
+    "skills": {
+      "name": "CodeBuddy Skills (6)",
+      "integrated": true,
+      "tools": [
+        "batch-github-setup",
+        "financial-analysis",
+        "ppt-pro-master",
+        "resume-screener",
+        "work-report",
+        "xhs-creator-studio"
+      ],
+      "verified": false
+    },
+    "publisher": {
+      "name": "Publisher Pipeline",
+      "integrated": true,
+      "tools": [
+        "publish_xiaohongshu"
+      ],
+      "verified": false
+    },
+    "connectors": {
+      "name": "21 Connectors",
+      "integrated": true,
+      "tools": [],
+      "verified": false
+    },
+    "agentteam": {
+      "name": "AgentTeam 12 Roles",
+      "integrated": true,
+      "tools": [
+        "expert-coordinator",
+        "hierarchy-delegator",
+        "strategic-planner",
+        "swarm-coordinator",
+        "pipeline-orchestrator",
+        "observer-monitor",
+        "consensus-builder",
+        "feedback-collector",
+        "knowledge-synthesizer",
+        "task-router",
+        "quality-gate",
+        "incident-responder"
+      ],
+      "verified": true
+    },
+    "codewhale": {
+      "name": "codeWhale Executor",
+      "integrated": true,
+      "tools": [
+        "codewhale-executor"
+      ],
+      "verified": true
+    },
+    "finance": {
+      "name": "Finance Automation",
+      "integrated": true,
+      "tools": [
+        "finance-analyzer"
+      ],
+      "verified": true
+    }
+  }
+}

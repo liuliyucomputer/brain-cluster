@@ -1,0 +1,124 @@
+{
+  "timestamp": "2026-06-07T07:07:36.367331",
+  "total": 23,
+  "registered": 0,
+  "skipped": 0,
+  "failed": 23,
+  "details": [
+    {
+      "name": "arbiter",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "codewhale-executor",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "consensus-builder",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "executor-a",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "executor-b",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "executor-c",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "expert-coordinator",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "feedback-collector",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "finance-analyzer",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "hierarchy-delegator",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "incident-responder",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "knowledge-synthesizer",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "learner",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "monitor",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "observer-monitor",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "pipeline-orchestrator",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "quality-gate",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "reviewer-creative",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "reviewer-strict",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "strategic-planner",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "strategist",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "swarm-coordinator",
+      "status": "failed",
+      "reason": "create: "
+    },
+    {
+      "name": "task-router",
+      "status": "failed",
+      "reason": "create: "
+    }
+  ]
+}

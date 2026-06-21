@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 440 360"
+     width="440px" height="360px">
+    <defs>
+  <marker id="arr" markerWidth="7" markerHeight="5" refX="6" refY="2.5" orient="auto-start-reverse">
+    <polygon points="0 0,7 2.5,0 5" fill="#222" stroke="none"/>
+  </marker>
+  <style>
+    text { font-family: SimSun, Noto Sans SC, serif; fill: #222; }
+  </style>
+</defs>
+  <circle cx="220" cy="180" r="150" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="5,3"/>
+  <circle cx="220" cy="180" r="112" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="5,3"/>
+  <circle cx="220" cy="180" r="72" fill="none" stroke="#555" stroke-width="1" stroke-dasharray="5,3"/>
+  <text x="358" y="345" font-size="13" fill="#555">III</text>
+  <text x="340"  y="94" font-size="13" fill="#555">II</text>
+  <g id="mars">
+  <circle cx="220" cy="180" r="22" fill="none" stroke="#222" stroke-width="1.5"/>
+  <text x="220" y="180" font-size="15" text-anchor="middle" dominant-baseline="central">火星</text>
+</g>
+  <g id="pt-s">
+  <circle cx="220" cy="36" r="3.4" fill="#222"/>
+  <text x="227" y="32" font-size="15">S</text>
+</g>
+  <g id="pt-q">
+  <circle cx="272" cy="96" r="3.4" fill="#222"/>
+  <text x="279" y="92" font-size="15">Q</text>
+</g>
+  <g id="pt-p">
+  <circle cx="232" cy="328" r="3.4" fill="#222"/>
+  <text x="239" y="324" font-size="15">P</text>
+</g>
+  <g id="pt-O">
+  <circle cx="225" cy="148" r="2.2" fill="#666"/>
+  <text x="230" y="151" font-size="12" fill="#666">O</text>
+</g>
+  <path d="M 40 112 Q 155 218, 230 326"
+   fill="none" stroke="#222" stroke-width="1.5" marker-end="url(#arr)"/>
+  <text x="89" y="165" font-size="13">I</text>
+
+</svg>

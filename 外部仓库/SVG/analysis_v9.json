@@ -1,0 +1,13 @@
+{
+  "version": "v9-fixed",
+  "image_size": [
+    312,
+    243
+  ],
+  "output_size": [
+    936,
+    729
+  ],
+  "scale": 3,
+  "mars": {
+    "cx": 

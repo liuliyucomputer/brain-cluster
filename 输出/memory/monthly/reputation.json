@@ -1,0 +1,92 @@
+{
+  "reviewer-creative": {
+    "xiaohongshu_copy": 0.5,
+    "ppt_design": 0.5,
+    "data_analysis": 0.5,
+    "code_execution": 0.5,
+    "strategy_planning": 0.5,
+    "content_review": 0.5,
+    "monitoring": 0.5,
+    "learning_distillation": 0.5
+  },
+  "executor-c": {
+    "xiaohongshu_copy": 0.5,
+    "ppt_design": 0.5,
+    "data_analysis": 0.5,
+    "code_execution": 0.5,
+    "strategy_planning": 0.5,
+    "content_review": 0.5,
+    "monitoring": 0.5,
+    "learning_distillation": 0.5
+  },
+  "arbiter": {
+    "xiaohongshu_copy": 0.6964,
+    "ppt_design": 0.6964,
+    "data_analysis": 0.6964,
+    "code_execution": 0.6964,
+    "strategy_planning": 0.6964,
+    "content_review": 0.6964,
+    "monitoring": 0.6964,
+    "learning_distillation": 0.6964
+  },
+  "learner": {
+    "xiaohongshu_copy": 0.5,
+    "ppt_design": 0.5,
+    "data_analysis": 0.5,
+    "code_execution": 0.5,
+    "strategy_planning": 0.5,
+    "content_review": 0.5,
+    "monitoring": 0.5,
+    "learning_distillation": 0.5
+  },
+  "reviewer-strict": {
+    "xiaohongshu_copy": 0.5,
+    "ppt_design": 0.5,
+    "data_analysis": 0.5,
+    "code_execution": 0.5,
+    "strategy_planning": 0.5,
+    "content_review": 0.5,
+    "monitoring": 0.5,
+    "learning_distillation": 0.5
+  },
+  "strategist": {
+    "xiaohongshu_copy": 0.5,
+    "ppt_design": 0.5,
+    "data_analysis": 0.5,
+    "code_execution": 0.5,
+    "strategy_planning": 0.5,
+    "content_review": 0.5,
+    "monitoring": 0.5,
+    "learning_distillation": 0.5
+  },
+  "executor-b": {
+    "xiaohongshu_copy": 0.5,
+    "ppt_design": 0.5,
+    "data_analysis": 0.5,
+    "code_execution": 0.5,
+    "strategy_planning": 0.5,
+    "content_review": 0.5,
+    "monitoring": 0.5,
+    "learning_distillation": 0.5
+  },
+  "executor-a": {
+    "xiaohongshu_copy": 0.646,
+    "ppt_design": 0.7004,
+    "data_analysis": 0.7004,
+    "code_execution": 0.7004,
+    "strategy_planning": 0.7004,
+    "content_review": 0.7004,
+    "monitoring": 0.7004,
+    "learning_distillation": 0.7004
+  },
+  "monitor": {
+    "xiaohongshu_copy": 0.5,
+    "ppt_design": 0.5,
+    "data_analysis": 0.5,
+    "code_execution": 0.5,
+    "strategy_planning": 0.5,
+    "content_review": 0.5,
+    "monitoring": 0.5,
+    "learning_distillation": 0.5
+  }
+}

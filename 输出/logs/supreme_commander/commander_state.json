@@ -1,0 +1,17 @@
+{
+  "version": "3.0",
+  "status": "active",
+  "scan_count": 4,
+  "fixes_auto": 5,
+  "fixes_manual": 2,
+  "fixes_failed": 0,
+  "crisis_count": 0,
+  "last_scan": "2026-06-10T02:24:47.804670",
+  "active_issues": [],
+  "resolved_issues": [],
+  "agent_health": {
+    "hermes_gateway": false,
+    "staroffice_ui": true,
+    "grafana": true
+  }
+}

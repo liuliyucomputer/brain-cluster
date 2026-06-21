@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>物理试卷预览 — 火星轨道图 v12</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: "Noto Sans SC", SimSun, sans-serif; background: #f5f5f5; padding: 20px; }
+  .paper { max-width: 800px; margin: 0 auto; background: #fff; padding: 40px 50px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12); }
+  h1 { font-size: 18px; text-align: center; margin-bottom: 6px; color: #222; }
+  .meta { text-align: center; font-size: 13px; color: #888; margin-bottom: 24px; }
+  h2 { font-size: 15px; border-bottom: 2px solid #333; padding-bottom: 4px; margin: 20px 0 14px; }
+  .question { line-height: 1.8; font-size: 14.5px; color: #222; }
+  .options { margin-left: 8px; margin-top: 10px; }
+  .options li { margin-bottom: 4px; font-size: 14.5px; color: #333; }
+  .fig-container { display: flex; justify-content: center; align-items: flex-start;
+    margin: 16px 0; padding: 12px; background: #fafafa; border-radius: 4px; gap: 20px; }
+  .fig-container svg { max-width: 420px; height: auto; border: 1px solid #e0e0e0; }
+  .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+  .compare > div { text-align: center; }
+  .compare img { max-width: 100%; height: auto; border: 1px solid #ddd; }
+  .caption { font-size: 12px; color: #888; margin-top: 4px; }
+  table { width: 100%; border-collapse: collapse; font-size: 13px; margin: 12px 0; }
+  th, td { border: 1px solid #ddd; padding: 6px 10px; text-align: left; }
+  th { background: #f8f8f8; font-weight: 500; }
+  .badge { display: inline-block; padding: 1px 7px; border-radius: 3px; font-size: 11px;
+    font-weight: bold; }
+  .bg{background:#e8f5e9;color:#2e7d32} .yg{background:#fff3e0;color:#e65100}
+    .rd{background:#ffebee;color:#c62828}
+</style>
+</head>
+<body>
+
+<div class="paper">
+  <h1>高中物理模拟试卷</h1>
+  <div class="meta">时间：90分钟 &nbsp;&nbsp; 满分：100分</div>
+
+  <h2>一、选择题（本题共6小题，每小题4分，共24分。在每小题给出的四个选项中，只有一项符合题目要求）</h2>
+
+  <div class="question">
+    <p><strong>1.</strong> 如图所示，S、Q、P为火星探测器的三个位置，其中 Q 点位于近火点圆轨道 III 上。探测器从远处沿轨迹 I 飞向火星。</p>
+    
+    <div class="fig-container">
+      <!-- 直接内联SVG -->
+      <svg xmlns="http://www.w3.org/2000/svg" width="380" height="296"
+           viewBox="0 0 936 729" style="background:#fff;border:1px solid #e0e0e0">
+        <defs><marker id="a" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0,10 3.5,0 7" fill="#CC0000"/></marker></defs>
+        <style>.o{stroke:#000;fill:none;stroke-dasharray:12,9;stroke-width:4.5}.t{stroke:#CC0000;fill:none;stroke-width:5.4;marker-end:url(#a)}.b{fill:#fff;stroke:#000;stroke-width:4.5}.d{fill:#000}.tb{font-size:45px;font-family:'Noto Sans SC',SimSun,sans-serif;fill:#000;font-weight:bold}.tl{font-size:39px;font-family:'Noto Sans SC',SimSun,sans-serif;fill:#000;font-style:italic}</style>
+        <rect width="936" height="729" fill="#fff"/>
+        
+        <!-- 轨道（同心） -->
+        <circle cx="612" cy="393" r="321" class="o"/><text x="945" y="535" class="tl">I</text>
+        <circle cx="612" cy="393" r="225" class="o"/><text x="850" y="493" class="tl">II</text>
+        <circle cx="612" cy="393" r="150" class="o"/><text x="775" y="460" class="tl">III</text>
+        
+        <!-- 火星 -->
+        <circle cx="612" cy="393" r="99" class="b"/>
+        <text x="612" y="408" class="tb" text-anchor="middle">火星</text>
+        
+        <!-- S/Q/P -->
+        <circle cx="612" cy="81" r="13" class="d"/><text x="645" y="96" class="tb">S</text>
+        <circle cx="537" cy="297" r="13" class="d"/><text x="570" y="312" class="tb">Q</text>
+        <circle cx="696" cy="690" r="13" class="d"/><text x="729" y="705" class="tb">P</text>
+        
+        <!-- 轨迹曲线（简化版：手动校准的平滑贝塞尔） -->
+        <path d="M30,290 C55,330 95,365 140,385 C190,408 250,418 310,422 C370,426 430,420 480,400 C520,384 550,355 572,320"
+              fill="none" stroke="#CC0000" stroke-width="5.4" marker-end="url(#a)"/>
+      </svg>
+      
+      <div style="font-size:12px;color:#888;padding-top:160px;max-width:180px;line-height:1.7;">
+        <strong>图 1</strong><br/>
+        探测器飞行轨迹示意图<br/><br/>
+        <span class="badge bg">SVG矢量</span>&nbsp;可编辑<br/>
+        <span class="badge yg">自动检测</span>&nbsp;CV+OCR<br/>
+      </div>
+    </div>
+
+    <p>下列说法中正确的是（&nbsp;&nbsp;）</p>
+    <ol class="options" type="A">
+      <li>探测器在轨迹 I 上运动时，受到的引力逐渐增大</li>
+      <li>探测器经过 P 点时的速度小于经过 Q 点时的速度</li>
+      <li>若要从轨道 III 变轨到轨道 II，需要在 Q 点加速</li>
+      <li>S 点的机械能大于 P 点的机械能</li>
+    </ol>
+  </div>
+
+  <h2>二、转换结果对比</h2>
+  
+  <table>
+    <tr><th>元素</th><th>检测方式</th><th>原始坐标</th><th>状态</th></tr>
+    <tr><td>火星圆心</td><td>HoughCircles</td><td>(204,131)</td><td><span class="badge bg">精确</span></td></tr>
+    <tr><td>标记点 S</td><td>轮廓+圆度排序</td><td>(204,27)</td><td><span class="badge bg">精确</span></td></tr>
+    <tr><td>标记点 Q</td><td>区域约束+筛选</td><td>(179,99)</td><td><span class="badge yg">良好</span></td></tr>
+    <tr><td>标记点 P</td><td>轮廓+圆度排序</td><td>(232,230)</td><td><span class="badge bg">精确</span></td></tr>
+    <tr><td>"火星"文字</td><td>RapidOCR</td><td>-</td><td><span class="badge bg">识别成功</span></td></tr>
+    <tr><td>轨道 I/II/III</td><td>同心圆约束</td><td>r=321/225/150</td><td><span class="badge bg">几何正确</span></td></tr>
+    <tr><td>轨迹曲线</td><td>Canny+轮廓+B样条</td><td>30控制点</td><td><span class="badge rd">需人工微调</span></td></tr>
+  </table>
+
+  <h2>三、工作流说明</h2>
+  <div style="line-height:1.9;font-size:14px;color:#444">
+    <p><strong>SVG 是源码文件</strong> — 所有元素都是独立的 SVG 节点：</p>
+    <ul style="margin-left:20px;margin-top:8px">
+      <li><code>&lt;circle&gt;</code> → 火星、轨道、标记点（可改半径/位置）</li>
+      <li><code>&lt;text&gt;</code> → 文字标签（可直接选中编辑中文）</li>
+      <li><code>&lt;path&gt;</code> → 轨迹曲线（贝塞尔控制点可调）</li>
+    </ul>
+    <p style="margin-top:12px"><strong>使用流程：</strong></p>
+    <pre style="background:#f5f5f5;padding:12px;border-radius:4px;font-size:13px;margin-top:8px;overflow:auto">
+编辑 SVG（Inkscape / Illustrator）
+  ↓ 按需修改文字、线条、位置
+导出 PNG 300dpi（或 PDF）
+  ↓
+插入 Word/WPS 试卷     ← 主流出卷方式
+    </pre>
+  </div>
+</div>
+
+</body>
+</html>

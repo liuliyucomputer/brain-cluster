@@ -1,0 +1,13 @@
+# Grafana 数据源配置
+# 安装后放到 D:\brain\grafana\
+# 启动: grafana-server --config D:\brain\grafana\custom.ini
+
+[database]
+type = sqlite3
+path = D:\brain\output\memory\kanban.db
+
+[server]
+http_port = 3001
+
+# SQLite 数据源需要安装插件:
+# grafana-cli plugins install frser-sqlite-datasource

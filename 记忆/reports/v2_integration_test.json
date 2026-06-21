@@ -1,0 +1,109 @@
+{
+  "timestamp": "2026-06-08T01:24:20.473628",
+  "total": 20,
+  "pass": 20,
+  "fail": 0,
+  "results": [
+    {
+      "name": "Test DB setup",
+      "status": "PASS",
+      "detail": "Size: 16384 bytes"
+    },
+    {
+      "name": "Watchdog detection runs",
+      "status": "PASS",
+      "detail": "Found 2 stuck tasks"
+    },
+    {
+      "name": "Watchdog state file",
+      "status": "PASS",
+      "detail": "recovery_count=0"
+    },
+    {
+      "name": "Watchdog log path configured",
+      "status": "PASS",
+      "detail": "Path: D:\\brain\\output\\logs\\watchdog\\recovery_events.jsonl"
+    },
+    {
+      "name": "Checkpoint save",
+      "status": "PASS",
+      "detail": "Size: 4.4 KB"
+    },
+    {
+      "name": "Checkpoint load",
+      "status": "PASS",
+      "detail": "7 tasks loaded"
+    },
+    {
+      "name": "Checkpoint stats",
+      "status": "PASS",
+      "detail": "Statuses: {'blocked': 1, 'done': 1, 'failed': 2, 'pending': 3}"
+    },
+    {
+      "name": "Checkpoint ETA",
+      "status": "PASS",
+      "detail": "14.3% complete"
+    },
+    {
+      "name": "TaskGraph unresolved deps",
+      "status": "PASS",
+      "detail": "All resolved (t_test_003 is done)"
+    },
+    {
+      "name": "TaskGraph pending deps",
+      "status": "PASS",
+      "detail": "Blocked by: ['t_test_005']"
+    },
+    {
+      "name": "TaskGraph is_ready (resolved)",
+      "status": "PASS",
+      "detail": "t_test_004 ready"
+    },
+    {
+      "name": "TaskGraph is_ready (blocked)",
+      "status": "PASS",
+      "detail": "t_test_007 blocked"
+    },
+    {
+      "name": "TaskGraph children",
+      "status": "PASS",
+      "detail": "Root has 2 children"
+    },
+    {
+      "name": "TaskGraph progress",
+      "status": "PASS",
+      "detail": "0/2 done"
+    },
+    {
+      "name": "Pipeline retry state save/load",
+      "status": "PASS",
+      "detail": "2 tasks in retry state"
+    },
+    {
+      "name": "Pipeline retry max detection",
+      "status": "PASS",
+      "detail": "t_test_fail should trigger escalate"
+    },
+    {
+      "name": "Memory bridge v2 counts events",
+      "status": "PASS",
+      "detail": "Synced 0 events (no table pollution)"
+    },
+    {
+      "name": "Memory bridge JSONL format",
+      "status": "PASS",
+      "detail": "Valid JSONL with 5 events"
+    },
+    {
+      "name": "Memory bridge no table pollution",
+      "status": "PASS",
+      "detail": "Clean JSONL output"
+    },
+    {
+      "name": "First checkpoint saved",
+      "status": "PASS",
+      "detail": "Path: D:\\brain\\tools\\..\\output\\memory\\checkpoints\\checkpoint_v2_integration_2026-06-08_01-24-20.json"
+    }
+  ],
+  "verdict": "ALL_PASS"
+}

@@ -1,0 +1,7 @@
+apiVersion: 1
+providers:
+  - name: 'Brain Cluster'
+    folder: 'Brain'
+    type: file
+    options:
+      path: D:/brain/grafana/dashboards

@@ -1,0 +1,53 @@
+{
+  "input": "E:\\Users\\Administrator\\Desktop\\asset_007.jpg",
+  "image_size": [
+    312,
+    243
+  ],
+  "output_size": [
+    936,
+    729
+  ],
+  "scale": 3.0,
+  "planet": {
+    "cx": 187,
+    "cy": 177,
+    "r": 57
+  },
+  "markers": [
+    {
+      "name": "S",
+      "pos": [
+        204,
+        27
+      ],
+      "inferred": false
+    },
+    {
+      "name": "Q",
+      "pos": [
+        179,
+        99
+      ],
+      "inferred": false
+    },
+    {
+      "name": "P",
+      "pos": [
+        232,
+        230
+      ],
+      "inferred": false
+    }
+  ],
+  "trajectory": {
+    "method": "canny+spatial_filter+rdp+catmull_rom",
+    "raw_points": 767,
+    "ordered_points": 639,
+    "key_points": 11,
+    "candidate_info": {
+      "perimeter": 962.3,
+      "area": 383.5,
+      "aspect": 1.41,
+      "openness": 0.001,
+      "start_x": 

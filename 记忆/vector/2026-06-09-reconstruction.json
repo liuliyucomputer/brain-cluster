@@ -1,0 +1,143 @@
+{
+  "stage": "long_term",
+  "reconstructed_at": "2026-06-09T00:07:48.203878",
+  "period": "过去7天 (2026-06-09)",
+  "total_events": 42,
+  "kind_summary": {
+    "fix": 11,
+    "implement": 8,
+    "deploy": 5,
+    "verify": 4,
+    "e2e_test": 2,
+    "data_pollution": 2,
+    "task_run": 1,
+    "audit": 1,
+    "migrate": 1,
+    "refactor": 1
+  },
+  "reputation_snapshot": {
+    "reviewer-creative": {
+      "xiaohongshu_copy": 0.5,
+      "ppt_design": 0.5,
+      "data_analysis": 0.5,
+      "code_execution": 0.5,
+      "strategy_planning": 0.5,
+      "content_review": 0.5,
+      "monitoring": 0.5,
+      "learning_distillation": 0.5
+    },
+    "executor-c": {
+      "xiaohongshu_copy": 0.5,
+      "ppt_design": 0.5,
+      "data_analysis": 0.5,
+      "code_execution": 0.5,
+      "strategy_planning": 0.5,
+      "content_review": 0.5,
+      "monitoring": 0.5,
+      "learning_distillation": 0.5
+    },
+    "arbiter": {
+      "xiaohongshu_copy": 0.6964,
+      "ppt_design": 0.6964,
+      "data_analysis": 0.6964,
+      "code_execution": 0.6964,
+      "strategy_planning": 0.6964,
+      "content_review": 0.6964,
+      "monitoring": 0.6964,
+      "learning_distillation": 0.6964
+    },
+    "learner": {
+      "xiaohongshu_copy": 0.5,
+      "ppt_design": 0.5,
+      "data_analysis": 0.5,
+      "code_execution": 0.5,
+      "strategy_planning": 0.5,
+      "content_review": 0.5,
+      "monitoring": 0.5,
+      "learning_distillation": 0.5
+    },
+    "reviewer-strict": {
+      "xiaohongshu_copy": 0.5,
+      "ppt_design": 0.5,
+      "data_analysis": 0.5,
+      "code_execution": 0.5,
+      "strategy_planning": 0.5,
+      "content_review": 0.5,
+      "monitoring": 0.5,
+      "learning_distillation": 0.5
+    },
+    "strategist": {
+      "xiaohongshu_copy": 0.5,
+      "ppt_design": 0.5,
+      "data_analysis": 0.5,
+      "code_execution": 0.5,
+      "strategy_planning": 0.5,
+      "content_review": 0.5,
+      "monitoring": 0.5,
+      "learning_distillation": 0.5
+    },
+    "executor-b": {
+      "xiaohongshu_copy": 0.5,
+      "ppt_design": 0.5,
+      "data_analysis": 0.5,
+      "code_execution": 0.5,
+      "strategy_planning": 0.5,
+      "content_review": 0.5,
+      "monitoring": 0.5,
+      "learning_distillation": 0.5
+    },
+    "executor-a": {
+      "xiaohongshu_copy": 0.646,
+      "ppt_design": 0.7004,
+      "data_analysis": 0.7004,
+      "code_execution": 0.7004,
+      "strategy_planning": 0.7004,
+      "content_review": 0.7004,
+      "monitoring": 0.7004,
+      "learning_distillation": 0.7004
+    },
+    "monitor": {
+      "xiaohongshu_copy": 0.5,
+      "ppt_design": 0.5,
+      "data_analysis": 0.5,
+      "code_execution": 0.5,
+      "strategy_planning": 0.5,
+      "content_review": 0.5,
+      "monitoring": 0.5,
+      "learning_distillation": 0.5
+    }
+  },
+  "low_efficiency_agents": [],
+  "high_efficiency_agents": [],
+  "strategy_evolution": {
+    "previous_update": "2026-06-09T00:07:48.190537",
+    "current_update": "2026-06-09T00:07:48.203901",
+    "top_patterns_7d": [
+      {
+        "kind": "fix",
+        "count": 11
+      },
+      {
+        "kind": "implement",
+        "count": 8
+      },
+      {
+        "kind": "deploy",
+        "count": 5
+      },
+      {
+        "kind": "verify",
+        "count": 4
+      },
+      {
+        "kind": "e2e_test",
+        "count": 2
+      }
+    ]
+  },
+  "knowledge_fragments": [
+    "7天内共发生 11 次 fix 类事件，为最活跃类别",
+    "7天内共发生 8 次 implement 类事件，为最活跃类别",
+    "7天内共发生 5 次 deploy 类事件，为最活跃类别"
+  ]
+}

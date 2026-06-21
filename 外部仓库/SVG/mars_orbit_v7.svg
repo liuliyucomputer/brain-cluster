@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="953" height="760"
+     viewBox="0 0 953 760"
+     style="background:#fff;">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="7"
+            refX="9" refY="3.5" orient="auto">
+      <polygon points="0 0,10 3.5,0 7" fill="#C00"/>
+    </marker>
+    <style>
+      .orbit { stroke:#000; fill:none; stroke-dasharray:7,4; stroke-width:1.5; }
+      .traj { stroke:#C00; fill:none; stroke-width:1.8; marker-end:url(#arr); }
+      .body { fill:#fff; stroke:#000; stroke-width:1.5; }
+      .dot { fill:#000; }
+      .lbl { font-size:16px; font-family:'Noto Sans SC', SimSun, 'Times New Roman', serif; fill:#000; }
+      .lbl-b { font-size:16px; font-family:'Noto Sans SC', SimSun, 'Times New Roman', serif; fill:#000; font-weight:bold; }
+      .tag { font-size:14px; font-family:'Noto Sans SC', SimSun, 'Times New Roman', serif; fill:#000; font-style:italic; }
+    </style>
+  </defs>
+  <rect width="953" height="760" fill="#fff"/>
+
+  <!-- 轨道 -->
+  <g data-orbit="I">
+    <circle cx="426.1" cy="277.7" r="308.0" class="orbit"/>
+    <text x="626.3" y="416.3" class="tag">I</text>
+  </g>
+  <g data-orbit="II">
+    <circle cx="426.3" cy="358.2" r="254.8" class="orbit"/>
+    <text x="592.0" y="472.8" class="tag">II</text>
+  </g>
+  <g data-orbit="III">
+    <circle cx="357.2" cy="410.8" r="177.8" class="orbit"/>
+    <text x="472.7" y="490.8" class="tag">III</text>
+  </g>
+  <g data-orbit="4">
+    <circle cx="510.6" cy="515.7" r="163.2" class="orbit"/>
+    <text x="616.7" y="589.2" class="tag">4</text>
+  </g>
+  <g data-orbit="5">
+    <circle cx="746.7" cy="370.0" r="145.6" class="orbit"/>
+    <text x="841.3" y="435.5" class="tag">5</text>
+  </g>
+  <g data-orbit="6">
+    <circle cx="423.9" cy="519.6" r="134.4" class="orbit"/>
+    <text x="511.2" y="580.0" class="tag">6</text>
+  </g>
+  <g data-orbit="7">
+    <circle cx="709.5" cy="534.6" r="130.0" class="orbit"/>
+    <text x="794.0" y="593.2" class="tag">7</text>
+  </g>
+
+  <!-- 火星 -->
+  <g data-type="planet">
+    <circle cx="602.4" cy="513.3" r="191.3" class="body"/>
+    <text x="602.4" y="519.3" class="lbl-b" text-anchor="middle">火星</text>
+  </g>
+
+  <!-- 探测点 -->
+  <g data-marker="S">
+    <circle cx="623.0" cy="698.1" r="9.2" class="dot"/>
+    <text x="638.2" y="702.1" class="lbl-b">S</text>
+  </g>
+  <g data-marker="Q">
+    <circle cx="623.0" cy="296.8" r="8.7" class="dot"/>
+    <text x="637.7" y="300.8" class="lbl-b">Q</text>
+  </g>
+  <g data-marker="P">
+    <circle cx="613.5" cy="117.2" r="8.7" class="dot"/>
+    <text x="628.1" y="121.2" class="lbl-b">P</text>
+  </g>
+
+  <!-- 轨迹曲线 I -->
+  <path d="M73.6,314.4 L82.0,336.8 L135.2,412.4 L171.6,451.6 L185.6,479.6 L230.4,513.2 L269.6,563.6 L280.8,563.6 L286.4,566.4 L359.2,616.8 L378.8,630.8 L462.8,667.2 L488.0,681.2 L546.8,339.6 L572.0,692.4 L678.4,292.0" class="traj"/>
+
+</svg>

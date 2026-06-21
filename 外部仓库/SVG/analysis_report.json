@@ -1,0 +1,901 @@
+{
+  "original_size": [
+    312,
+    243
+  ],
+  "scale": 1.7308,
+  "offset": [
+    30.0,
+    39.71
+  ],
+  "elements": [
+    {
+      "type": "circle",
+      "center_px": [
+        205,
+        131
+      ],
+      "center_svg": [
+        384.8,
+        266.4
+      ],
+      "radius_px": 31,
+      "radius_svg": 53.7,
+      "role": "central_body",
+      "label": "火星"
+    },
+    {
+      "type": "circle",
+      "center_px": [
+        213,
+        37
+      ],
+      "center_svg": [
+        398.7,
+        103.8
+      ],
+      "radius_px": 199,
+      "radius_svg": 344.4,
+      "role": "orbit_reference",
+      "label": null
+    },
+    {
+      "type": "circle",
+      "center_px": [
+        195,
+        163
+      ],
+      "center_svg": [
+        367.5,
+        321.8
+      ],
+      "radius_px": 76,
+      "radius_svg": 131.5,
+      "role": "orbit_reference",
+      "label": null
+    },
+    {
+      "type": "circle",
+      "center_px": [
+        158,
+        67
+      ],
+      "center_svg": [
+        303.5,
+        155.7
+      ],
+      "radius_px": 139,
+      "radius_svg": 240.6,
+      "role": "orbit_reference",
+      "label": null
+    },
+    {
+      "type": "circle",
+      "center_px": [
+        125,
+        81
+      ],
+      "center_svg": [
+        246.3,
+        179.9
+      ],
+      "radius_px": 105,
+      "radius_svg": 181.7,
+      "role": "orbit_reference",
+      "label": null
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        20,
+        114
+      ],
+      "end_px": [
+        64,
+        166
+      ],
+      "start_svg": [
+        64.6,
+        237.0
+      ],
+      "end_svg": [
+        140.8,
+        327.0
+      ],
+      "length_px": 68.1,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        67,
+        174
+      ],
+      "end_px": [
+        130,
+        218
+      ],
+      "start_svg": [
+        146.0,
+        340.9
+      ],
+      "end_svg": [
+        255.0,
+        417.0
+      ],
+      "length_px": 76.8,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        95,
+        197
+      ],
+      "end_px": [
+        163,
+        230
+      ],
+      "start_svg": [
+        194.4,
+        380.7
+      ],
+      "end_svg": [
+        312.1,
+        437.8
+      ],
+      "length_px": 75.6,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        218,
+        29
+      ],
+      "end_px": [
+        218,
+        9
+      ],
+      "start_svg": [
+        407.3,
+        89.9
+      ],
+      "end_svg": [
+        407.3,
+        55.3
+      ],
+      "length_px": 20.0,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        226,
+        109
+      ],
+      "end_px": [
+        231,
+        73
+      ],
+      "start_svg": [
+        421.2,
+        228.4
+      ],
+      "end_svg": [
+        429.8,
+        166.1
+      ],
+      "length_px": 36.3,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        220,
+        73
+      ],
+      "end_px": [
+        221,
+        105
+      ],
+      "start_svg": [
+        410.8,
+        166.1
+      ],
+      "end_svg": [
+        412.5,
+        221.4
+      ],
+      "length_px": 32.0,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        228,
+        70
+      ],
+      "end_px": [
+        231,
+        95
+      ],
+      "start_svg": [
+        424.6,
+        160.9
+      ],
+      "end_svg": [
+        429.8,
+        204.1
+      ],
+      "length_px": 25.2,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        178,
+        110
+      ],
+      "end_px": [
+        229,
+        83
+      ],
+      "start_svg": [
+        338.1,
+        230.1
+      ],
+      "end_svg": [
+        426.3,
+        183.4
+      ],
+      "length_px": 57.7,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        221,
+        104
+      ],
+      "end_px": [
+        221,
+        72
+      ],
+      "start_svg": [
+        412.5,
+        219.7
+      ],
+      "end_svg": [
+        412.5,
+        164.3
+      ],
+      "length_px": 32.0,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        12,
+        98
+      ],
+      "end_px": [
+        47,
+        147
+      ],
+      "start_svg": [
+        50.8,
+        209.3
+      ],
+      "end_svg": [
+        111.3,
+        294.1
+      ],
+      "length_px": 60.2,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        52,
+        157
+      ],
+      "end_px": [
+        82,
+        187
+      ],
+      "start_svg": [
+        120.0,
+        311.4
+      ],
+      "end_svg": [
+        171.9,
+        363.4
+      ],
+      "length_px": 42.4,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        116,
+        211
+      ],
+      "end_px": [
+        136,
+        218
+      ],
+      "start_svg": [
+        230.8,
+        404.9
+      ],
+      "end_svg": [
+        265.4,
+        417.0
+      ],
+      "length_px": 21.2,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        215,
+        29
+      ],
+      "end_px": [
+        216,
+        9
+      ],
+      "start_svg": [
+        402.1,
+        89.9
+      ],
+      "end_svg": [
+        403.8,
+        55.3
+      ],
+      "length_px": 20.0,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        217,
+        103
+      ],
+      "end_px": [
+        219,
+        74
+      ],
+      "start_svg": [
+        405.6,
+        218.0
+      ],
+      "end_svg": [
+        409.0,
+        167.8
+      ],
+      "length_px": 29.1,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        232,
+        111
+      ],
+      "end_px": [
+        237,
+        140
+      ],
+      "start_svg": [
+        431.5,
+        231.8
+      ],
+      "end_svg": [
+        440.2,
+        282.0
+      ],
+      "length_px": 29.4,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        207,
+        141
+      ],
+      "end_px": [
+        237,
+        141
+      ],
+      "start_svg": [
+        388.3,
+        283.8
+      ],
+      "end_svg": [
+        440.2,
+        283.8
+      ],
+      "length_px": 30.0,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        137,
+        221
+      ],
+      "end_px": [
+        212,
+        238
+      ],
+      "start_svg": [
+        267.1,
+        422.2
+      ],
+      "end_svg": [
+        396.9,
+        451.6
+      ],
+      "length_px": 76.9,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        18,
+        111
+      ],
+      "end_px": [
+        44,
+        147
+      ],
+      "start_svg": [
+        61.2,
+        231.8
+      ],
+      "end_svg": [
+        106.2,
+        294.1
+      ],
+      "length_px": 44.4,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        185,
+        159
+      ],
+      "end_px": [
+        211,
+        164
+      ],
+      "start_svg": [
+        350.2,
+        314.9
+      ],
+      "end_svg": [
+        395.2,
+        323.6
+      ],
+      "length_px": 26.5,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        226,
+        70
+      ],
+      "end_px": [
+        231,
+        115
+      ],
+      "start_svg": [
+        421.2,
+        160.9
+      ],
+      "end_svg": [
+        429.8,
+        238.8
+      ],
+      "length_px": 45.3,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        198,
+        236
+      ],
+      "end_px": [
+        215,
+        212
+      ],
+      "start_svg": [
+        372.7,
+        448.2
+      ],
+      "end_svg": [
+        402.1,
+        406.6
+      ],
+      "length_px": 29.4,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        223,
+        159
+      ],
+      "end_px": [
+        248,
+        184
+      ],
+      "start_svg": [
+        416.0,
+        314.9
+      ],
+      "end_svg": [
+        459.2,
+        358.2
+      ],
+      "length_px": 35.4,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        186,
+        130
+      ],
+      "end_px": [
+        223,
+        123
+      ],
+      "start_svg": [
+        351.9,
+        264.7
+      ],
+      "end_svg": [
+        416.0,
+        252.6
+      ],
+      "length_px": 37.7,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        188,
+        137
+      ],
+      "end_px": [
+        223,
+        130
+      ],
+      "start_svg": [
+        355.4,
+        276.8
+      ],
+      "end_svg": [
+        416.0,
+        264.7
+      ],
+      "length_px": 35.7,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        208,
+        241
+      ],
+      "end_px": [
+        210,
+        210
+      ],
+      "start_svg": [
+        390.0,
+        456.8
+      ],
+      "end_svg": [
+        393.5,
+        403.2
+      ],
+      "length_px": 31.1,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        172,
+        138
+      ],
+      "end_px": [
+        235,
+        139
+      ],
+      "start_svg": [
+        327.7,
+        278.6
+      ],
+      "end_svg": [
+        436.7,
+        280.3
+      ],
+      "length_px": 63.0,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        65,
+        167
+      ],
+      "end_px": [
+        108,
+        206
+      ],
+      "start_svg": [
+        142.5,
+        328.8
+      ],
+      "end_svg": [
+        216.9,
+        396.2
+      ],
+      "length_px": 58.1,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        147,
+        225
+      ],
+      "end_px": [
+        188,
+        235
+      ],
+      "start_svg": [
+        284.4,
+        429.1
+      ],
+      "end_svg": [
+        355.4,
+        446.4
+      ],
+      "length_px": 42.2,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        202,
+        233
+      ],
+      "end_px": [
+        217,
+        212
+      ],
+      "start_svg": [
+        379.6,
+        443.0
+      ],
+      "end_svg": [
+        405.6,
+        406.6
+      ],
+      "length_px": 25.8,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        209,
+        240
+      ],
+      "end_px": [
+        212,
+        210
+      ],
+      "start_svg": [
+        391.7,
+        455.1
+      ],
+      "end_svg": [
+        396.9,
+        403.2
+      ],
+      "length_px": 30.1,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        187,
+        128
+      ],
+      "end_px": [
+        223,
+        122
+      ],
+      "start_svg": [
+        353.7,
+        261.2
+      ],
+      "end_svg": [
+        416.0,
+        250.9
+      ],
+      "length_px": 36.5,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        217,
+        78
+      ],
+      "end_px": [
+        219,
+        103
+      ],
+      "start_svg": [
+        405.6,
+        174.7
+      ],
+      "end_svg": [
+        409.0,
+        218.0
+      ],
+      "length_px": 25.1,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        173,
+        142
+      ],
+      "end_px": [
+        225,
+        133
+      ],
+      "start_svg": [
+        329.4,
+        285.5
+      ],
+      "end_svg": [
+        419.4,
+        269.9
+      ],
+      "length_px": 52.8,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        171,
+        132
+      ],
+      "end_px": [
+        182,
+        106
+      ],
+      "start_svg": [
+        326.0,
+        268.2
+      ],
+      "end_svg": [
+        345.0,
+        223.2
+      ],
+      "length_px": 28.2,
+      "role": "detected_line"
+    },
+    {
+      "type": "line_segment",
+      "start_px": [
+        194,
+        99
+      ],
+      "end_px": [
+        222,
+        102
+      ],
+      "start_svg": [
+        365.8,
+        211.1
+      ],
+      "end_svg": [
+        414.2,
+        216.2
+      ],
+      "length_px": 28.2,
+      "role": "detected_line"
+    },
+    {
+      "type": "point",
+      "pos_px": [
+        242.0,
+        177.0
+      ],
+      "pos_svg": [
+        448.8,
+        346.1
+      ],
+      "area": 280.0,
+      "label_hint": "S"
+    },
+    {
+      "type": "point",
+      "pos_px": [
+        223.7,
+        81.5
+      ],
+      "pos_svg": [
+        417.2,
+        180.7
+      ],
+      "area": 276.0,
+      "label_hint": "Q"
+    },
+    {
+      "type": "point",
+      "pos_px": [
+        286.1,
+        115.8
+      ],
+      "pos_svg": [
+        525.2,
+        240.2
+      ],
+      "area": 204.5,
+      "label_hint": "P"
+    },
+    {
+      "type": "point",
+      "pos_px": [
+        211.2,
+        216.2
+      ],
+      "pos_svg": [
+        395.6,
+        413.9
+      ],
+      "area": 164.0,
+      "label_hint": "O"
+    },
+    {
+      "type": "point",
+      "pos_px": [
+        127.1,
+        63.0
+      ],
+      "pos_svg": [
+        249.9,
+        148.8
+      ],
+      "area": 100.5,
+      "label_hint": "P5"
+    },
+    {
+      "type": "point",
+      "pos_px": [
+        36.5,
+        158.0
+      ],
+      "pos_svg": [
+        93.2,
+        313.2
+      ],
+      "area": 100.0,
+      "label_hint": "P6"
+    }
+  ]
+}

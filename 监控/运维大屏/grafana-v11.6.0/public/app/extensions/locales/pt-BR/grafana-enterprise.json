@@ -1,0 +1,220 @@
+{
+  "access-control": {
+    "add-permissions": {
+      "save": ""
+    },
+    "permissions": {
+      "lbac-warning-basic-role": "",
+      "lbac-warning-rule": "",
+      "lbac-warning-team": ""
+    }
+  },
+  "banner": {
+    "api": {
+      "result": {
+        "saved": ""
+      }
+    },
+    "form": {
+      "button-save": "",
+      "button-saving": "",
+      "enabled": {
+        "label": ""
+      },
+      "end": {
+        "description": "",
+        "error": "",
+        "label": ""
+      },
+      "message": {
+        "description": "",
+        "label": ""
+      },
+      "options": {
+        "error": "",
+        "info": "",
+        "warning": ""
+      },
+      "start": {
+        "description": "",
+        "label": ""
+      },
+      "title": "",
+      "variant": {
+        "label": ""
+      }
+    },
+    "preview": {
+      "message": {
+        "default": ""
+      },
+      "title": ""
+    }
+  },
+  "caching": {
+    "alert": {
+      "readonly": {
+        "message": "",
+        "title": ""
+      }
+    }
+  },
+  "explore": {
+    "query-library": {
+      "cancel": "",
+      "default-description": "",
+      "private": "",
+      "public": "",
+      "query-template-add-error": "",
+      "query-template-added": "",
+      "query-template-edit-error": "",
+      "query-template-edited": "",
+      "save": ""
+    },
+    "query-template-modal": {
+      "add-info": "",
+      "add-title": "",
+      "auto-star": "",
+      "data-source-name": "",
+      "description": "",
+      "edit-info": "",
+      "query": "",
+      "visibility": ""
+    },
+    "query-template-modall": {
+      "data-source-type": ""
+    }
+  },
+  "export": {
+    "pdf": {
+      "cancel-button": "",
+      "download-button": "",
+      "image-alt": "",
+      "info-text": "",
+      "layout-label": "",
+      "orientation-label": "",
+      "title": "",
+      "zoom-description": "",
+      "zoom-label": ""
+    }
+  },
+  "groupsync": {
+    "empty-state": {
+      "pro-tip": "",
+      "title": ""
+    }
+  },
+  "plugins": {
+    "sandbox": {
+      "enable-sandbox-label": "",
+      "enable-sandbox-tooltip": "",
+      "enable-sandbox-tooltip-link": ""
+    }
+  },
+  "public-dashboard": {
+    "email-sharing": {
+      "success-confirm-access": "",
+      "success-resend-recipient-invitation": "",
+      "success-revoke-access-description": "",
+      "success-revoke-access-title": "",
+      "success-revoke-all-accesses-description": "",
+      "success-revoke-all-accesses-title": "",
+      "success-send-recipient-invitation": ""
+    }
+  },
+  "query-library": {
+    "actions": {
+      "delete-query-button": "",
+      "select-query-button": ""
+    },
+    "delete-modal": {
+      "body-text": "",
+      "confirm-button": "",
+      "title": ""
+    },
+    "drawer": {
+      "title": ""
+    },
+    "edit-modal": {
+      "title": ""
+    },
+    "empty-state": {
+      "message": "",
+      "title": ""
+    },
+    "error-state": {
+      "title": ""
+    },
+    "filters": {
+      "datasource-label": "",
+      "search-placeholder": "",
+      "user-label": ""
+    },
+    "not-found": {
+      "message": "",
+      "title": ""
+    },
+    "notifications": {
+      "query-deleted": ""
+    },
+    "query-details": {
+      "author": "",
+      "datasource": "",
+      "date-added": "",
+      "edit-button": ""
+    },
+    "query-template": {
+      "error": ""
+    },
+    "user-info": {
+      "error": ""
+    }
+  },
+  "query-operation": {
+    "header": {
+      "save-to-query-library": "",
+      "save-to-query-library-new": ""
+    }
+  },
+  "reporting": {
+    "errors": {
+      "action-message": "",
+      "no-renderer-description": "",
+      "no-renderer-title": "",
+      "old-renderer-description": "",
+      "old-renderer-title": ""
+    },
+    "settings": {
+      "attachment-settings-fieldset-label": "",
+      "email-branding-fieldset-label": "",
+      "email-footer-field-label": "",
+      "email-logo-image-preview-altText": "",
+      "email-logo-url-field-description": "",
+      "email-logo-url-field-label": "",
+      "embedded-image-header": "",
+      "embedded-image-theme-picker-description": "",
+      "footer-link-field-label": "",
+      "footer-link-url-field-label": "",
+      "none-footer-label": "",
+      "pdf-header": "",
+      "pdf-theme-picker-description": "",
+      "report-logo-image-preview-altText": "",
+      "report-logo-url-field-description": "",
+      "report-logo-url-field-label": "",
+      "save-button": "",
+      "sent-by-footer-label": "",
+      "settings-subtitle": ""
+    }
+  },
+  "saml-connect-to-idp": {
+    "validate-idp-metadata": {
+      "require-one": ""
+    }
+  },
+  "share-dashboard": {
+    "menu": {
+      "export-pdf-title": "",
+      "schedule-report-title": ""
+    }
+  }
+}
